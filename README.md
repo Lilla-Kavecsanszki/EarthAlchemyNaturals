@@ -126,3 +126,9 @@ The unique_booking constraint in the Booking model ensures that a user can creat
 </details>
 
 ### Theme
+
+
+Inspiration: 
+
+https://www.naturisimo.com/
+<https://www.beautypie.com>
