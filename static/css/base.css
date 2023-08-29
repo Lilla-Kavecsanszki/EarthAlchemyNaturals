@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/homepage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 10px);
+    color: #555;
+    font-family: 'Poppins',
+        sans-serif;
+}
+
+.logo-font {
+    font-family: 'Cinzel Decorative',
+        cursive;
+    color: black;
+}
+
+.banner-font {
+    font-family: 'Quicksand',
+        sans-serif;
+    color: #DAA520;
+}
+
+.banner-background {
+    background-color: #555;
+}
+
+/* from Bulma */
+.icon {
+    color: black;
+    /* height: 1.5rem;
+    width: 1.5rem; */
+}
+
+.nav-background {
+    background-color: #d4c9c5;
+}
+
+.nav-link {
+    color: black;
+}

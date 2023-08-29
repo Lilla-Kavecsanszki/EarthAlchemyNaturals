@@ -17,7 +17,18 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Quicksand:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% endblock %} {% block extra_css %} {% endblock %} {% block corejs %}
+    <script
+      src="https://kit.fontawesome.com/b4a11e6ad7.js"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -33,13 +44,145 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+
     {% endblock %} {% block extra_js %} {% endblock %}
 
     <title>EarthAlchemy Naturals {% block extra_title %}{% endblock %}</title>
   </head>
 
   <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid fixed-top">
+      <!-- Membership Banner -->
+      <div id="top-banner" class="row text-center">
+        <div class="col banner-background">
+          <h4 class="banner-font my-1">Become a member today and save!</h4>
+        </div>
+      </div>
+
+      <!-- Logo, Sign-In, Search, Shopping Bag -->
+      <div
+        id="topnav"
+        class="row nav-background pt-lg-2 d-flex justify-content-between align-items-center"
+      >
+        <div class="col-2 d-flex justify-content-start">
+          <!-- Sign-In Link -->
+          <li class="list-inline-item dropdown">
+            <a
+              class="text-black nav-link"
+              href="#"
+              id="user-options"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="text-center icon">
+                <div><i class="fas fa-user fa-lg"></i></div>
+                <p class="my-0">My Account</p>
+              </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+              {% if request.user.is_authenticated %}
+              <!-- superuser -->
+              {% if request.user.is_superuser %}
+              <a href="" class="dropdown-item">Product Management</a>
+              {% endif %}
+              <a href="" class="dropdown-item">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item"
+                >Logout</a
+              >
+              {% else %}
+              <a href="{% url 'account_signup' %}" class="dropdown-item"
+                >Register</a
+              >
+              <a href="{% url 'account_login' %}" class="dropdown-item"
+                >Login</a
+              >
+              {% endif %}
+            </div>
+          </li>
+        </div>
+        <div class="col-8 d-flex justify-content-center">
+          <!-- Logo -->
+          <a href="{% url 'home' %}" class="nav-link main-logo-link">
+            <h2 class="logo-font my-0">
+              <strong>EarthAlchemy</strong> Naturals
+            </h2>
+          </a>
+
+          <!-- Search Bar -->
+          <form method="GET" action="{% url 'home' %}" class="mx-3">
+            <div class="input-group w-100">
+              <input
+                class="form-control border border-black rounded-0"
+                type="text"
+                name="q"
+                placeholder="Search our site"
+              />
+              <div class="input-group-append">
+                <button
+                  class="form-control btn btn-black border border-black rounded-0"
+                  type="submit"
+                >
+                  <span class="icon">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-2 d-flex justify-content-end">
+          <!-- Shopping Bag -->
+          <a href="{% url 'home' %}" class="nav-link">
+            <div class="text-center icon">
+              <i class="fas fa-shopping-bag fa-lg"></i>
+              <p class="my-0">
+                {% if grand_total %} ${{ grand_total|floatformat:2 }} {% else %}
+                $0.00 {% endif %}
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row nav-background">
+        <nav class="navbar navbar-expand-lg w-100">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#main-nav"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Menu -->
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Delivery Banner -->
+      <div id="delivery-banner" class="row text-center">
+        <div class="col banner-background text-white">
+          <h4 class="banner-font my-1">
+            Free delivery on orders over ${{ free_delivery_threshold }}!
+          </h4>
+        </div>
+      </div>
+    </header>
 
     {% if messages %}
     <div class="message-container"></div>
