@@ -138,4 +138,9 @@ code:
 
 shimmer button : <https://codepen.io/Amarjit/pen/mrbjNy>
 
+Technologies:
+
 <https://favicon.io/favicon-converter/>
+canva - to photoshop
+https://colorkit.co/color-palette-generator/00563F-DAA520-FDFDFD-d4c9c5-d6c9c0-808080-555-000000/
+

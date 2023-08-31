@@ -46,6 +46,10 @@ body {
     font-size: large;
 }
 
+.navbar-toggler-icon {
+    background: red;
+}
+
 .attention-text {
     background: #d4c9c5;
     border-radius: 50px;
@@ -121,6 +125,12 @@ body {
     }
 }
 
+@media (max-width: 991px) {
+    .attention-text {
+        font-size: 2rem;
+    }
+}
+
 /* fixed top navbar only on medium and up - double check maybe not to keep*/
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -132,6 +142,6 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 174px;
     }
 }
