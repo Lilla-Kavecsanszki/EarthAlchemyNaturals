@@ -55,15 +55,14 @@
       <!-- Membership Banner -->
       <div id="top-banner" class="row text-center">
         <div class="col banner-background">
-          <h4 class="banner-font my-1">Become a member today and save!</h4>
+          <h4 class="banner-font my-1">
+            Free delivery on orders over €{{ free_delivery_threshold }}!
+          </h4>
         </div>
       </div>
 
       <!-- Logo, Sign-In, Search, Shopping Bag -->
-      <div
-        id="topnav"
-        class="row nav-background pt-lg-2 d-flex justify-content-between align-items-center"
-      >
+      <div id="topnav" class="row nav-background pt-lg-2 d-none d-lg-flex">
         <div class="col-2 d-flex justify-content-start">
           <!-- Sign-In Link -->
           <li class="list-inline-item dropdown">
@@ -161,29 +160,16 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
-          <!-- Navigation Menu -->
-          <div class="collapse navbar-collapse" id="main-nav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
-              </li>
-            </ul>
-          </div>
+          <!-- include mobile top header -->
+          {% include 'includes/mobile-top-header.html' %}
+          <!-- include main nav bar -->
+          {% include 'includes/main-nav.html' %}
         </nav>
       </div>
       <!-- Delivery Banner -->
       <div id="delivery-banner" class="row text-center">
         <div class="col banner-background text-white">
-          <h4 class="banner-font my-1">
-            Free delivery on orders over €{{ free_delivery_threshold }}!
-          </h4>
+          <h4 class="banner-font my-1">Become a member today and save!</h4>
         </div>
       </div>
     </header>

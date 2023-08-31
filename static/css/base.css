@@ -32,12 +32,18 @@ body {
     color: black;
 }
 
+.search-bar {
+    border-bottom: 1px solid #222;
+}
+
 .nav-background {
     background-color: #d4c9c5;
 }
 
 .nav-link {
+    
     color: black;
+    font-size: large;
 }
 
 .attention-text {
@@ -55,7 +61,7 @@ body {
 .shop-now-button {
     background: #DAA520;
     color: #222;
-    font-weight: bol;
+    font-weight: bold;
     border-radius: 50px;
 }
 
