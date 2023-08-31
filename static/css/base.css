@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/homepage.jpg') no-repeat center center fixed;
+    background: url('/media/photoshopped_homepage.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 10px);
     color: #555;
@@ -30,8 +30,6 @@ body {
 /* from Bulma */
 .icon {
     color: black;
-    /* height: 1.5rem;
-    width: 1.5rem; */
 }
 
 .nav-background {
@@ -40,4 +38,94 @@ body {
 
 .nav-link {
     color: black;
+}
+
+.attention-text {
+    background: #d4c9c5;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Vertically center */
+    height: 80px;
+    padding: 0 10px;
+}
+
+.shop-now-button {
+    background: #DAA520;
+    color: #222;
+    font-weight: bol;
+    border-radius: 50px;
+}
+
+/* Gold shimmer - https: //codepen.io/Amarjit/pen/mrbjNy */
+
+.light {
+    background: -moz-linear-gradient(-45deg, #DAA520 0%, #DAA520 40%, #ffffff 50%, #DAA520 60%, #DAA520 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #DAA520), color-stop(40%, #DAA520), color-stop(50%, #ffffff), color-stop(60%, #DAA520), color-stop(100%, #DAA520));
+    background: -webkit-linear-gradient(-45deg, #DAA520 0%, #DAA520 40%, #ffffff 50%, #DAA520 60%, #DAA520 100%);
+    background: -o-linear-gradient(-45deg, #DAA520 0%, #DAA520 40%, #ffffff 50%, #DAA520 60%, #DAA520 100%);
+    background: -ms-linear-gradient(-45deg, #DAA520 0%, #DAA520 40%, #ffffff 50%, #DAA520 60%, #DAA520 100%);
+    background: linear-gradient(135deg, #DAA520 0%, #DAA520 40%, #ffffff 50%, #DAA520 60%, #DAA520 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DAA520', endColorstr='#DAA520', GradientType=1);
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 300%;
+}
+
+.light:hover {
+    animation: light 1s;
+    -webkit-animation: light 1s;
+
+}
+
+@keyframes light {
+    0% {
+        background-position: -600px;
+    }
+
+    100% {
+        background-position: 0px;
+    }
+}
+
+@-webkit-keyframes light {
+    0% {
+        background-position: -600px;
+    }
+
+    100% {
+        background-position: 0px;
+    }
+}
+
+.bounce:hover {
+    animation: bounce 1s;
+    -webkit-animation: bounce 1s;
+
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up - double check maybe not to keep*/
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
 }

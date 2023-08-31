@@ -113,18 +113,22 @@
           <form method="GET" action="{% url 'home' %}" class="mx-3">
             <div class="input-group w-100">
               <input
-                class="form-control border border-black rounded-0"
+                class="form-control border-0 bg-transparent"
                 type="text"
                 name="q"
                 placeholder="Search our site"
+                style="border-bottom: 1px solid #222"
               />
               <div class="input-group-append">
                 <button
-                  class="form-control btn btn-black border border-black rounded-0"
+                  class="form-control btn btn-black border-0"
                   type="submit"
                 >
                   <span class="icon">
-                    <i class="fas fa-search"></i>
+                    <i
+                      class="fa-solid fa-magnifying-glass fa-beat fa-lg"
+                      style="color: #000000"
+                    ></i>
                   </span>
                 </button>
               </div>
@@ -178,7 +182,7 @@
       <div id="delivery-banner" class="row text-center">
         <div class="col banner-background text-white">
           <h4 class="banner-font my-1">
-            Free delivery on orders over ${{ free_delivery_threshold }}!
+            Free delivery on orders over €{{ free_delivery_threshold }}!
           </h4>
         </div>
       </div>
