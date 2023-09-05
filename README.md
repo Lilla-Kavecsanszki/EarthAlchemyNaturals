@@ -137,6 +137,7 @@ https://www.naturisimo.com/
 code:
 
 shimmer button : <https://codepen.io/Amarjit/pen/mrbjNy>
+admin site list_display: <https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display>
 
 Technologies:
 

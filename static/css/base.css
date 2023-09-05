@@ -116,6 +116,17 @@ body {
 
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: url('/media/bakcground_tone.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

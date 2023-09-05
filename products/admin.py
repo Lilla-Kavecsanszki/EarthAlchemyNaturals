@@ -11,11 +11,16 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'price',
         'member_price',
-        'skin_types',
+        'display_skin_types',
         'image',
     )
 
     ordering = ('sku',)
+
+    def display_skin_types(self, obj):
+        return ", ".join([str(skin_type) for skin_type in obj.skin_types.all()])
+
+    display_skin_types.short_description = 'Skin Types'
 
 
 class CategoryAdmin(admin.ModelAdmin):
