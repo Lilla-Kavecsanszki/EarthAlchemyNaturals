@@ -23,6 +23,20 @@ body {
     color: #DAA520;
 }
 
+.product_name {
+    font-family: 'Quicksand',
+        sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    color: #222;
+}
+
+.product_detail {
+    color: #222;
+    font-family: 'Poppins',
+        sans-serif;
+}
+
 .banner-background {
     background-color: #555;
 }
@@ -116,6 +130,8 @@ body {
 
 }
 
+/* Product and product detail pages */
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -127,6 +143,10 @@ body {
     z-index: -1;
 }
 
+.p_image_padding {
+    padding-right: 5%;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -136,13 +156,7 @@ body {
     }
 }
 
-@media (max-width: 991px) {
-    .attention-text {
-        font-size: 2rem;
-    }
-}
-
-/* fixed top navbar only on medium and up - double check maybe not to keep*/
+/* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -153,6 +167,17 @@ body {
     }
 
     .header-container {
-        padding-top: 174px;
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }

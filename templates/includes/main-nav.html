@@ -3,7 +3,7 @@
     <li class="nav-item dropdown">
       <a
         class="banner-font font-weight-bold nav-link text-black mr-5"
-        href="#"
+        href="{% url 'home' %}"
         id="all-products-link"
         data-toggle="dropdown"
         aria-haspopup="true"
@@ -25,9 +25,9 @@
       </a>
       <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
         <a href="" class="dropdown-item">By Price</a>
-        <a href="" class="dropdown-item">By Rating</a>
+        <a href="" class="dropdown-item">By Skin Type</a>
         <a href="" class="dropdown-item">By Category</a>
-        <a href="" class="dropdown-item">All Products</a>
+        <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
       </div>
     </li>
 
