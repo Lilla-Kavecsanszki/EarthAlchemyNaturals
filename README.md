@@ -127,6 +127,15 @@ The unique_booking constraint in the Booking model ensures that a user can creat
 
 ### Theme
 
+dark forest green - #00563F
+gold - #DAA520
+white powder - #FDFDFD
+light pink - #f2eeed
+dusk pink - #d4c9c5
+light grey - #808080
+medium grey - #555
+dark grey - #222
+black - #000000
 
 Inspiration: 
 
