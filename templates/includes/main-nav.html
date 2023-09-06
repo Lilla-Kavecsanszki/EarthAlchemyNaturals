@@ -31,21 +31,43 @@
       <a
         class="banner-font font-weight-bold nav-link text-black mr-5"
         href="#"
-        id="clothing-link"
+        id="shop-link"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false"
       >
-        Shop
+        Skin Types
       </a>
-      <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-        <a href="" class="dropdown-item">Cleansers & Exfoliators</a>
-        <a href="" class="dropdown-item">Toners</a>
-        <a href="" class="dropdown-item">Moisturisers & Mists</a>
-        <a href="" class="dropdown-item">Serums & Drops</a>
-        <a href="" class="dropdown-item">Eye Creams</a>
-        <a href="" class="dropdown-item">SPF</a>
-        <a href="" class="dropdown-item">All Clothing</a>
+      <div class="dropdown-menu border-0" aria-labelledby="shop-link">
+        <a
+          href="{% url 'products' %}?category=cleansersandexfoliators"
+          class="dropdown-item"
+          >Cleansers & Exfoliators</a
+        >
+        <a href="{% url 'products' %}?category=toners" class="dropdown-item"
+          >Toners</a
+        >
+        <a
+          href="{% url 'products' %}?category=moisturisersandmists"
+          class="dropdown-item"
+          >Moisturisers & Mists</a
+        >
+        <a
+          href="{% url 'products' %}?category=serumsanddrops"
+          class="dropdown-item"
+          >Serums & Drops</a
+        >
+        <a href="{% url 'products' %}?category=eyecreams," class="dropdown-item"
+          >Eye Creams</a
+        >
+        <a href="{% url 'products' %}?category=spf" class="dropdown-item"
+          >SPF</a
+        >
+        <a
+          href="{% url 'products' %}?category=cleansersandexfoliators,toners,moisturisersandmists,serumsanddrops,eyecreams,spf"
+          class="dropdown-item"
+          >All Skin Types</a
+        >
       </div>
     </li>
 
@@ -53,14 +75,58 @@
       <a
         class="banner-font font-weight-bold nav-link text-black mr-5"
         href="#"
-        id="homeware-link"
+        id="shop-link"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Shop
+      </a>
+      <div class="dropdown-menu border-0" aria-labelledby="shop-link">
+        <a
+          href="{% url 'products' %}?category=cleansersandexfoliators"
+          class="dropdown-item"
+          >Cleansers & Exfoliators</a
+        >
+        <a href="{% url 'products' %}?category=toners" class="dropdown-item"
+          >Toners</a
+        >
+        <a
+          href="{% url 'products' %}?category=moisturisersandmists"
+          class="dropdown-item"
+          >Moisturisers & Mists</a
+        >
+        <a
+          href="{% url 'products' %}?category=serumsanddrops"
+          class="dropdown-item"
+          >Serums & Drops</a
+        >
+        <a href="{% url 'products' %}?category=eyecreams," class="dropdown-item"
+          >Eye Creams</a
+        >
+        <a href="{% url 'products' %}?category=spf" class="dropdown-item"
+          >SPF</a
+        >
+        <a
+          href="{% url 'products' %}?category=cleansersandexfoliators,toners,moisturisersandmists,serumsanddrops,eyecreams,spf"
+          class="dropdown-item"
+          >All Skin Care</a
+        >
+      </div>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a
+        class="banner-font font-weight-bold nav-link text-black mr-5"
+        href="#"
+        id="about-link"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false"
       >
         About
       </a>
-      <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
+      <div class="dropdown-menu border-0" aria-labelledby="about-link">
         <a href="" class="dropdown-item">Us</a>
         <a href="" class="dropdown-item">Events</a>
         <a href="" class="dropdown-item">Articles</a>
@@ -71,25 +137,23 @@
       <a
         class="banner-font font-weight-bold nav-link text-black"
         href="#"
-        id="specials-link"
+        id="membership-link"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false"
       >
         Membership
       </a>
-      <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-        <a href="" class="dropdown-item">New Arrivals</a>
-        <a href="" class="dropdown-item">Deals</a>
-        <a href="" class="dropdown-item">Clearance</a>
-        <a href="" class="dropdown-item">All Specials</a>
+      <div class="dropdown-menu border-0" aria-labelledby="membership-link">
+        <a href="" class="dropdown-item">Membership</a>
+        <a href="" class="dropdown-item">VIP</a>
       </div>
     </li>
     <li class="nav-item dropdown">
       <a
         class="banner-font font-weight-bold nav-link text-black"
         href="#"
-        id="specials-link"
+        id="contact-link"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false"
