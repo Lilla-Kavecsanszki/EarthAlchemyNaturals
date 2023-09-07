@@ -13,4 +13,4 @@ def star_ingredient(request, herb_id):
         'herb': herb,
     }
 
-    return render(request, 'templates/herbs.html', context)
+    return render(request, 'herbs/herbs.html', context)

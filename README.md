@@ -142,6 +142,9 @@ Inspiration:
 https://www.naturisimo.com/
 <https://www.beautypie.com>
 
+Resources:
+https://www.medicalnewstoday.com/articles/262982#_noHeaderPrefixedContent
+
 
 code:
 

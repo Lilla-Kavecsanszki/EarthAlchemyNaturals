@@ -32,7 +32,16 @@
     <div class="col-md-6">
       <div class="product-details-container mb-5 mt-md-5">
         <p class="mb-4 product_name">{{ product.name }}</p>
-        <p>Star Ingredient:</p>
+        <p class="product_detail">
+          <i class="fa-solid fa-star fa-beat-fade" style="color: #daa520"></i>
+          Star Ingredient:
+          <a
+            class="star"
+            href="{% url 'star_ingredient' product.star_ingredients_id %}"
+          >
+            {{ product.star_ingredients }}
+          </a>
+        </p>
         <div class="mb-2">
           <div class="row product_detail">
             <div class="col">

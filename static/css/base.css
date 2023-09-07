@@ -147,6 +147,18 @@ body {
     padding-right: 5%;
 }
 
+/* Herb */
+
+.star {
+    color: #DAA520;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.herb-details-container {
+    padding: 5% 8%;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
