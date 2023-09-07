@@ -130,7 +130,7 @@ The unique_booking constraint in the Booking model ensures that a user can creat
 dark forest green - #00563F
 gold - #DAA520
 white powder - #FDFDFD
-light pink - #f2eeed
+light pink - #eae4e2
 dusk pink - #d4c9c5
 light grey - #808080
 medium grey - #555
@@ -143,7 +143,10 @@ https://www.naturisimo.com/
 <https://www.beautypie.com>
 
 Resources:
+ginseng:
 https://www.medicalnewstoday.com/articles/262982#_noHeaderPrefixedContent
+rosemary:
+<https://www.medicalnewstoday.com/articles/266370#_noHeaderPrefixedContent>
 
 
 code:

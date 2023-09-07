@@ -1,0 +1,9 @@
+.us_overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #eae4e2;
+    z-index: -1;
+}
