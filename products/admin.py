@@ -32,6 +32,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class SkinTypeAdmin(admin.ModelAdmin):
     list_display = (
+        'friendly_name',
         'name',
     )
 
