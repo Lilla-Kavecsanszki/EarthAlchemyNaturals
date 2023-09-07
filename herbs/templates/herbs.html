@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% load static %} {% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+<h1>{{ herb.name }}</h1>
+
+<div class="herb-details">
+  <img src="{{ herb.image.url }}" alt="{{ herb.name }} Image" />
+  <br />
+  <p>{{ herb.benefits }}</p>
+  <p>{{ herb.description }}</p>
+</div>
+
+<a href="{% url 'product_detail' herb.product.id %}">Back to Product</a>
+{% endblock %}

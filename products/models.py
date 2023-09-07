@@ -1,7 +1,9 @@
 from django.db import models
-
+from herbs.models import Herb
 
 # Category model
+
+
 class Category(models.Model):
 
     class Meta:
@@ -20,14 +22,20 @@ class Category(models.Model):
 # SkinType model
 class SkinType(models.Model):
     name = models.CharField(max_length=50)
+    friendly_name = models.CharField(max_length=250, null=True, blank=True)
 
     def __str__(self):
         return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
 
 
 # Product model
 class Product(models.Model):
     name = models.CharField(max_length=250)
+    star_ingredients = models.ForeignKey(
+        'herbs.Herb', null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField()
     sku = models.CharField(max_length=250)
     price = models.DecimalField(max_digits=10, decimal_places=2)
