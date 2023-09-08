@@ -37,29 +37,61 @@
         <div class="card-body pb-0">
           <p class="mb-2">{{ product.name }}</p>
         </div>
-        <div class="card-footer bg-white pt-0 border-0 text-center">
-          <div class="row">
-            <div class="col">
-              <p class="mb-0 font-weight-bold">€{{ product.price }}</p>
-              <p class="mb-0">Price</p>
-            </div>
-            <!-- separator symbol -->
-            <div class="col">
-              <p class="mb-0">|</p>
-            </div>
-            <div class="col">
-              <p class="mb-0 font-weight-bold">€{{ product.member_price }}</p>
-              <p class="mb-0">Member's Price</p>
+        <div>
+          {% if product.category %}
+          <p class="small mt-1 mb-3">
+            <a
+              class="text-muted"
+              href="{% url 'products' %}?category={{ product.category.name }}"
+            >
+              <i class="fas fa-tag mr-1"></i>
+              <!-- category name -->
+              {{ product.category.friendly_name }}
+            </a>
+          </p>
+          {% endif %}
+        </div>
+          <div>
+            <!-- ManyToMany relationship to the SkinType model -->
+            {% if product.skin_types.all %}
+            <p class="small mt-0 mb-3">
+              {% for skin_type in product.skin_types.all %}
+              <a
+                class="text-muted"
+                href="{% url 'products' %}?skintypes={{ skin_type.name }}"
+              >
+                <i class="fa-solid fa-flask"></i>
+                <!-- skin type name -->
+                {{ skin_type.friendly_name }}
+              </a>
+              {% endfor %}
+            </p>
+            {% endif %}
+          </div>
+          <div class="card-footer bg-white pt-0 border-0 text-center">
+            <div class="row">
+              <div class="col">
+                <p class="mb-0 font-weight-bold">€{{ product.price }}</p>
+                <p class="mb-0">Price</p>
+              </div>
+              <!-- separator symbol -->
+              <div class="col">
+                <p class="mb-0">|</p>
+              </div>
+              <div class="col">
+                <p class="mb-0 font-weight-bold">€{{ product.member_price }}</p>
+                <p class="mb-0">Member's Price</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      {% if forloop.counter|divisibleby:2 %}
+      <div class="col-12 d-md-none d-lg-none mb-5">
+        <hr />
+      </div>
+      {% endif %} {% endfor %}
     </div>
-    {% if forloop.counter|divisibleby:2 %}
-    <div class="col-12 d-md-none d-lg-none mb-5">
-      <hr />
-    </div>
-    {% endif %} {% endfor %}
   </div>
+  {% endblock %}
 </div>
-{% endblock %}

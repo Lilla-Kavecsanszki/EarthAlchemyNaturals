@@ -32,35 +32,66 @@
     <div class="col-md-6">
       <div class="product-details-container mb-5 mt-md-5">
         <p class="mb-4 product_name">{{ product.name }}</p>
-        <p class="product_detail">
-          <i class="fa-solid fa-star fa-beat-fade" style="color: #daa520"></i>
-          Star Ingredient:
-          <a
-            class="star"
-            href="{% url 'star_ingredient' product.star_ingredients_id %}"
-          >
-            {{ product.star_ingredients }}
-          </a>
-        </p>
-        <div class="mb-2">
-          <div class="row product_detail">
-            <div class="col">
-              <p class="mb-0 font-weight-bold">€{{ product.price }}</p>
-              <p class="mb-0">Price</p>
-            </div>
-            <!-- separator symbol -->
-            <div class="col">
-              <p class="mb-0">|</p>
-            </div>
-            <div class="col">
-              <p class="mb-0 font-weight-bold">€{{ product.member_price }}</p>
-              <p class="mb-0">Member's Price</p>
+        <div>
+          {% if product.category %}
+          <p class="small mt-0 mb-3">
+            <a
+              class="text-muted"
+              href="{% url 'products' %}?category={{ product.category.name }}"
+            >
+              <i class="fas fa-tag mr-1"></i>
+              <!-- category name -->
+              {{ product.category.friendly_name }}
+            </a>
+          </p>
+          {% endif %}
+        </div>
+          <div>
+            {% if product.skin_types.all %}
+            <p class="small mt-0 mb-3">
+              {% for skin_type in product.skin_types.all %}
+              <a
+                class="text-muted"
+                href="{% url 'products' %}?skintypes={{ skin_type.name }}"
+              >
+                <i class="fa-solid fa-flask"></i>
+                <!-- skin type name -->
+                {{ skin_type.friendly_name }}
+              </a>
+              {% endfor %}
+            </p>
+            {% endif %}
+          </div>
+          <p class="product_detail">
+            <i class="fa-solid fa-star fa-beat-fade" style="color: #daa520"></i>
+            Star Ingredient:
+            <a
+              class="star"
+              href="{% url 'star_ingredient' product.star_ingredients_id %}"
+            >
+              {{ product.star_ingredients }}
+            </a>
+          </p>
+          <div class="mb-2">
+            <div class="row product_detail">
+              <div class="col">
+                <p class="mb-0 font-weight-bold">€{{ product.price }}</p>
+                <p class="mb-0">Price</p>
+              </div>
+              <!-- separator symbol -->
+              <div class="col">
+                <p class="mb-0">|</p>
+              </div>
+              <div class="col">
+                <p class="mb-0 font-weight-bold">€{{ product.member_price }}</p>
+                <p class="mb-0">Member's Price</p>
+              </div>
             </div>
           </div>
+          <p class="mt-3 product_detail">{{ product.description }}</p>
         </div>
-        <p class="mt-3 product_detail">{{ product.description }}</p>
       </div>
     </div>
   </div>
+  {% endblock %}
 </div>
-{% endblock %}

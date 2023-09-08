@@ -26,11 +26,6 @@
           >By Price</a
         >
         <a
-          href="{% url 'products' %}?sort=skin_types&direction=asc"
-          class="dropdown-item"
-          >By Skin Type</a
-        >
-        <a
           href="{% url 'products' %}?sort=category&direction=asc"
           class="dropdown-item"
           >By Category</a
@@ -51,26 +46,22 @@
         Skin Types
       </a>
       <div class="dropdown-menu border-0" aria-labelledby="shop-link">
-        <a
-          href="{% url 'products' %}?category=cleansersandexfoliators"
-          class="dropdown-item"
+        <a href="{% url 'products' %}?skintypes=oilyskin" class="dropdown-item"
           >Oily Skin</a
         >
-        <a href="{% url 'products' %}?category=toners" class="dropdown-item"
+        <a href="{% url 'products' %}?skintypes=dryskin" class="dropdown-item"
           >Dry Skin</a
         >
-        <a
-          href="{% url 'products' %}?category=moisturisersandmists"
-          class="dropdown-item"
+        <a href="{% url 'products' %}?skintypes=agingskin" class="dropdown-item"
           >Aging Skin</a
         >
         <a
-          href="{% url 'products' %}?category=serumsanddrops"
+          href="{% url 'products' %}?skintypes=normalskin"
           class="dropdown-item"
           >Normal Skin</a
         >
         <a
-          href="{% url 'products' %}?category=cleansersandexfoliators,toners,moisturisersandmists,serumsanddrops,eyecreams,spf"
+          href="{% url 'products' %}?skintypes=oilyskin,dryskin,agingskin,normalskin"
           class="dropdown-item"
           >All Skin Types</a
         >
