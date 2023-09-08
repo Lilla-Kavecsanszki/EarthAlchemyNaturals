@@ -7,12 +7,56 @@
 {% endblock %} {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
-  <div class="row mt-5">
-    <div class="col text-center mt-5">
-      <h2 class="logo-font">Collection</h2>
-      <hr class="w-50 mb-1" />
+    <div class="top-container col-10 offset-1">
+        <div class="col-md-6 top-container-info">
+           <div class="row mt-5">
+    <div class="col mt-5">
+      <h2 class="logo-font">Collection{% if current_categories %}
+    - {{ current_categories.0.friendly_name }}
+    {% elif current_skin_types %}
+    - {{ current_skin_types.0.friendly_name }}
+    {% endif %}</h2>
+      <hr/>
     </div>
-  </div>
+           </div>
+           <div class="row mt-1 mb-2">
+    <div class="col-12 col-md-6 order-md-first">
+        <div class="sort-select-wrapper w-50">
+            <select id="sort-selector"
+                class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to
+                    high)</option>
+                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to
+                    low)</option>
+                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)
+                </option>
+                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category
+                    (A-Z)</option>
+                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category
+                    (Z-A)</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center">
+        <p class="text-muted mt-3 text-center text-md-left">
+            {% if search_term or current_categories or current_sorting != 'None_None' %}
+            <span class="small"><a href="{% url 'products' %}">All Skin Care</a> | </span>
+            {% endif %}
+            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>
+            <!-- end -->
+            {% endif %}
+        </p>
+    </div>
+           </div>
+        </div>
+        <div class="col-md-6 top-container-image">
+            <img src="{{ MEDIA_URL }}cream_spot.jpg" alt="cream smudge" />
+        </div>
+    </div>
+</div>
+<div class="product-container col-10 offset-1">
   <div class="row">
     {% for product in products %}
     <div class="col-lg-4 col-md-6">
