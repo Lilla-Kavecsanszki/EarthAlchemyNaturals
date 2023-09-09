@@ -9,6 +9,7 @@ class ProductAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'category',
+        'milliliter',
         'price',
         'member_price',
         'display_skin_types',

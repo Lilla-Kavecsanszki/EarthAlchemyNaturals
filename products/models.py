@@ -36,6 +36,7 @@ class Product(models.Model):
     name = models.CharField(max_length=250)
     star_ingredients = models.ForeignKey(
         'herbs.Herb', null=True, blank=True, on_delete=models.SET_NULL)
+    milliliter = models.IntegerField(null=True, blank=True)
     description = models.TextField()
     sku = models.CharField(max_length=250)
     price = models.DecimalField(max_digits=10, decimal_places=2)
