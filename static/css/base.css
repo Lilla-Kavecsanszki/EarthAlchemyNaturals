@@ -159,6 +159,29 @@ body {
     cursor: pointer;
 }
 
+.btn-back {
+    background-color: #555;
+    color: #eae4e2;
+    border-radius: 50px;
+}
+
+.btn-back:hover {
+    background-color: #222;
+    color: #eae4e2;
+}
+
+.btn-shopping {
+    background-color: #555;
+    color: #eae4e2;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-shopping:hover {
+    background-color: #DAA520;
+    color: #222;
+}
+
 /* Herb */
 
 .star {

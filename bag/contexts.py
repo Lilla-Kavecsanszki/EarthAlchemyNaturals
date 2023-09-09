@@ -1,7 +1,8 @@
 from decimal import Decimal
 from django.conf import settings
 
-# delivery calculation
+# delivery cost calculation
+
 
 def bag_contents(request):
 
