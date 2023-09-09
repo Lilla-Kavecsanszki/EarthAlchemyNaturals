@@ -146,7 +146,7 @@
             <div class="text-center icon">
               <i class="fas fa-shopping-bag fa-lg"></i>
               <p class="my-0">
-                {% if grand_total %} ${{ grand_total|floatformat:2 }} {% else %}
+                {% if grand_total %} €{{ grand_total|floatformat:2 }} {% else %}
                 €0.00 {% endif %}
               </p>
             </div>
@@ -174,7 +174,7 @@
       </div>
       <!-- Delivery Banner -->
       <div id="delivery-banner" class="row text-center">
-        <div class="col banner-background text-white">
+        <div class="col banner-background">
           <h4 class="banner-font my-1">Become a member today and save!</h4>
         </div>
       </div>
