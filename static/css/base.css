@@ -206,6 +206,12 @@ body {
     z-index: -1;
 }
 
+/* shopping bag page */
+
+.table-custom tr {
+    border-bottom-color: red;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
