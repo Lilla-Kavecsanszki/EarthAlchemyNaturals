@@ -208,9 +208,14 @@ body {
 
 /* shopping bag page */
 
-.table-custom tr {
-    border-bottom-color: red;
+.update-link {
+    cursor: pointer;
+    color: #DAA520;
 }
+
+
+
+
 
 /* -------------------------------- Media Queries */
 
