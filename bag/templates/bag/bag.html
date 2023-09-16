@@ -46,12 +46,6 @@
                   <div>
                     <p><strong>{{ item.product.name }}</strong></p>
                     <p>{{ item.product.milliliter }} ml</p>
-                    <p class="mb-3">
-                      <strong>Personalisation: </strong>
-                      {% if item.product.name_print %}
-                      <!-- name print -->
-                      {{ item.personal | upper }}{% else %}N/A{% endif %}
-                    </p>
                     <p>€{{ item.product.price }}</p>
                   </div>
                 </div>
