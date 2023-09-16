@@ -103,7 +103,6 @@
                 <button
                   class="btn btn-link remove-item"
                   id="remove_{{ item.item_id }}"
-                  data-poduct_personal="{{ item.personal }}"
                 >
                   <i class="fa-solid fa-trash-can" style="color: #555555"></i>
                 </button>
@@ -175,9 +174,8 @@
   $(".remove-item").click(function (e) {
     var csrfToken = "{{ csrf_token }}";
     var itemId = $(this).attr("id").split("remove_")[1];
-    var size = $(this).data("product_size");
     var url = `/bag/remove/${itemId}/`;
-    var data = { csrfmiddlewaretoken: csrfToken, product_size: size };
+    var data = { csrfmiddlewaretoken: csrfToken,};
 
     $.post(url, data).done(function () {
       location.reload();
