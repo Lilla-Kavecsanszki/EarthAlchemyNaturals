@@ -3,6 +3,8 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+# delivery cost calculation
+
 
 def bag_contents(request):
 
@@ -23,14 +25,14 @@ def bag_contents(request):
             })
         else:
             product = get_object_or_404(Product, pk=item_id)
-            for print, quantity in item_data['items_by_print'].items():
+            for personal, quantity in item_data['items_by_personal'].items():
                 total += quantity * product.price
                 product_count += quantity
                 bag_items.append({
                     'item_id': item_id,
-                    'quantity': item_data,
+                    'quantity': quantity,
                     'product': product,
-                    'print': print,
+                    'personal': personal,
                 })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:

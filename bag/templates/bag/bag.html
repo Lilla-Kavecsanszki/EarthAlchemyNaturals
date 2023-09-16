@@ -47,14 +47,18 @@
                       <strong>Personalisation: </strong>
                       {% if item.product.name_print %}
                       <!-- name print -->
-                      {{ item.print | upper }}{% else %}N/A{% endif %}
+                      {{ item.personal | upper }}{% else %}N/A{% endif %}
                     </p>
                     <p>€{{ item.product.price }}</p>
                   </div>
                 </div>
               </td>
               <td class="col-md-2">
-                <form class="form update-form" method="POST" action="">
+                <form
+                  class="form update-form"
+                  method="POST"
+                  action="{% url 'adjust_bag' item.item_id %}"
+                >
                   {% csrf_token %}
                   <div class="form-group">
                     <div class="input-group">
@@ -102,7 +106,7 @@
                 <button
                   class="btn btn-link remove-item"
                   id="remove_{{ item.item_id }}"
-                  data-size="{{ item.size }}"
+                  data-poduct_personal="{{ item.personal }}"
                 >
                   <i class="fa-solid fa-trash-can" style="color: #555555"></i>
                 </button>
@@ -159,8 +163,9 @@
     </div>
   </div>
 </div>
-{% endblock %} {% block postloadjs %} {{ block.super }} {% include
-'products/includes/quantity_input_script.html' %}
+{% endblock %} {% block postloadjs %} {{ block.super }}
+<!-- include -->
+{% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
   // Update quantity on click
@@ -173,7 +178,9 @@
   $(".remove-item").click(function (e) {
     var csrfToken = "{{ csrf_token }}";
     var itemId = $(this).attr("id").split("remove_")[1];
-    var url = `/bag/remove/${itemId}`;
+    var size = $(this).data("product_size");
+    var url = `/bag/remove/${itemId}/`;
+    var data = { csrfmiddlewaretoken: csrfToken, product_size: size };
 
     $.post(url, data).done(function () {
       location.reload();
