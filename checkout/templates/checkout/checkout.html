@@ -158,18 +158,25 @@
               <i class="fas fa-lock"></i>
             </span>
           </button>
-          <p class="small text-danger my-0">
-            <span class="icon">
-              <i class="fas fa-exclamation-circle"></i>
-            </span>
-            <span
-              >Your card will be charged
-              <strong>${{ grand_total|floatformat:2 }}</strong></span
-            >
+          <p class="small my-0" style="color: #C62F3E;">
+              <span>
+                  <i class="fas fa-exclamation-circle"></i>
+              </span>
+              <span>
+                Your card will be charged
+                  <strong>${{ grand_total|floatformat:2 }}</strong>
+              </span>
           </p>
         </div>
       </form>
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
