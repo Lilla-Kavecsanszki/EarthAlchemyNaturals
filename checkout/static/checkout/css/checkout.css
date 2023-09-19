@@ -1,0 +1,43 @@
+.text-gold {
+    color: #DAA520;
+    text-decoration: underline;
+}
+
+.StripeElement,
+.stripe-style-input {
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 1px 3px 0 #DAA520;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+    box-shadow: 0 2px 4px 0 #DAA520;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #eae4e2 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #d4c9c5;
+}
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#card-element {
+    color: #222;
+    border: 1px solid #DAA520;
+}
+
+.form-control {
+    border: transparent;
+}
