@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% load static %} {% block page_header %}
+<!-- load filter, tools -->
 {% load bag_tools %}
-
 
 <div class="container header-container">
   <div class="row">
@@ -107,7 +107,9 @@
                   <i class="fa-solid fa-trash-can" style="color: #555555"></i>
                 </button>
               </td>
-              <td class="col-md-1">€{{ item.product.price | calc_subtotal:item.quantity }}</td>
+              <td class="col-md-1">
+                €{{ item.product.price | calc_subtotal:item.quantity }}
+              </td>
             </tr>
             {% endfor %}
             <tr>
@@ -118,7 +120,7 @@
                   <strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong>
                 </h4>
                 {% if free_delivery_delta > 0 %}
-                <p class="mb-1 text-danger">
+                <p class="mb-1 delivery-text">
                   You could get free delivery by spending just
                   <strong>€{{ free_delivery_delta }}</strong> more!
                 </p>
@@ -175,7 +177,7 @@
     var csrfToken = "{{ csrf_token }}";
     var itemId = $(this).attr("id").split("remove_")[1];
     var url = `/bag/remove/${itemId}/`;
-    var data = { csrfmiddlewaretoken: csrfToken,};
+    var data = { csrfmiddlewaretoken: csrfToken };
 
     $.post(url, data).done(function () {
       location.reload();
