@@ -93,7 +93,7 @@
               {% if request.user.is_superuser %}
               <a href="" class="dropdown-item">Product Management</a>
               {% endif %}
-              <a href="" class="dropdown-item">My Profile</a>
+              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
               <a href="{% url 'account_logout' %}" class="dropdown-item"
                 >Logout</a
               >
@@ -184,30 +184,25 @@
 
     {% if messages %}
     <div class="message-container">
-        {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
+      {% for message in messages %} {% with message.level as level %}
+      <!-- level 40 -->
+      {% if level == 40 %}
+      <!-- level 30 -->
+      {% include 'includes/toasts/toast_error.html' %} {% elif level == 30 %}
+      <!-- level 25 -->
+      {% include 'includes/toasts/toast_warning.html' %} {% elif level == 25 %}
+      <!-- else -->
+      {% include 'includes/toasts/toast_success.html' %} {% else %}
+      <!-- end -->
+      {% include 'includes/toasts/toast_info.html' %} {% endif %} {% endwith %}
+      {% endfor %}
     </div>
     {% endif %} {% block page_header %} {% endblock %} {% block content %}
     <!-- so they stay on the same line -->
-    {% endblock %}
-
-    {% block postloadjs %}
+    {% endblock %} {% block postloadjs %}
     <script type="text/javascript">
-        $('.toast').toast('show');
+      $(".toast").toast("show");
     </script>
     {% endblock %}
-
-    
   </body>
 </html>
