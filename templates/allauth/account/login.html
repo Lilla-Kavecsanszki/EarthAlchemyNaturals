@@ -2,12 +2,10 @@
 <!-- socialaccount -->
 {% load account socialaccount %} {% block head_title %}{% trans "Sign In" %}
 <!-- endblock -->
-{% endblock %}
-<!-- inner content -->
-{% block inner_content %}
+{% endblock %} {% block inner_content %}
 
 <hr />
-<h2 class="mt-5 mb-4">{% trans "Sign In" %}</h2>
+<h2 class="logo-font mt-5 mb-4">{% trans "Sign In" %}</h2>
 <hr />
 
 {% get_providers as socialaccount_providers %} {% if socialaccount_providers %}
