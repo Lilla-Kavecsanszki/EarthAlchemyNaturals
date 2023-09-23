@@ -95,18 +95,18 @@
             Delivery
           </legend>
           {{ order_form.phone_number | as_crispy_field }}
-          <!-- country field -->
-          {{ order_form.country | as_crispy_field }}
-          <!-- postcode field -->
-          {{ order_form.postcode | as_crispy_field }}
-          <!-- city field -->
-          {{ order_form.town_or_city | as_crispy_field }}
           <!-- address 1 field -->
           {{ order_form.street_address1 | as_crispy_field }}
           <!-- address 2 field -->
           {{ order_form.street_address2 | as_crispy_field }}
+          <!-- city field -->
+          {{ order_form.town_or_city | as_crispy_field }}
           <!-- county field -->
           {{ order_form.county | as_crispy_field }}
+          <!-- postcode field -->
+          {{ order_form.postcode | as_crispy_field }}
+          <!-- country field -->
+          {{ order_form.country | as_crispy_field }}
           <div class="form-check form-check-inline float-right mr-0">
             {% if user.is_authenticated %}
             <label class="form-check-label" for="id-save-info"
@@ -141,7 +141,11 @@
           <!-- Used to display form errors -->
           <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
           <!-- Pass the client secret to the view so we can get the payment intent id -->
-          <input type="hidden" value="{{ client_secret }}" name="client_secret">
+          <input
+            type="hidden"
+            value="{{ client_secret }}"
+            name="client_secret"
+          />
         </fieldset>
 
         <div class="submit-button text-right mt-5 mb-2">
@@ -160,14 +164,14 @@
               <i class="fas fa-lock"></i>
             </span>
           </button>
-          <p class="small my-0" style="color: #C62F3E;">
-              <span>
-                  <i class="fas fa-exclamation-circle"></i>
-              </span>
-              <span>
-                Your card will be charged
-                  <strong>${{ grand_total|floatformat:2 }}</strong>
-              </span>
+          <p class="small my-0" style="color: #c62f3e">
+            <span>
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+            <span>
+              Your card will be charged
+              <strong>${{ grand_total|floatformat:2 }}</strong>
+            </span>
           </p>
         </div>
       </form>
@@ -175,17 +179,19 @@
   </div>
 </div>
 <div id="loading-overlay">
-        <h1 class="logo-font loading-spinner">
-            <span class="icon">
-                <i class="fa-solid fa-arrows-rotate fa-spin fa-3x" style="color: #222222;"></i>
-            </span>
-        </h1>
-    </div>
-{% endblock %}
-
-{% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+  <h1 class="logo-font loading-spinner">
+    <span class="icon">
+      <i
+        class="fa-solid fa-arrows-rotate fa-spin fa-3x"
+        style="color: #222222"
+      ></i>
+    </span>
+  </h1>
+</div>
+{% endblock %} {% block postloadjs %} {{ block.super }}
+<!-- public key -->
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+<!-- secret -->
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

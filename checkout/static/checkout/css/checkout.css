@@ -46,10 +46,20 @@
     color: red;
 }
 
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #d4c9c5 !important;
+}
+
 /* Checkout success page */
 
 .custom-border {
-    box-shadow:  1px 3px 6px 0 #DAA520;
+    box-shadow: 1px 3px 6px 0 #DAA520;
 }
 
 .text-info {
@@ -59,8 +69,8 @@
 /* overlay spinner */
 
 #loading-overlay {
-	display: none;
-	position: fixed;
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -70,7 +80,7 @@
 }
 
 .loading-spinner {
-	display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
