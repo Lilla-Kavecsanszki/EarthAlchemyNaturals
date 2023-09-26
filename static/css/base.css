@@ -362,6 +362,13 @@ input[name='q']::placeholder {
     border-color: #222;
 }
 
+/* Product Management page */
+
+.product-form {
+    box-shadow: 1px 3px 6px 0 #DAA520;
+    border-radius: 10px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
