@@ -369,6 +369,38 @@ input[name='q']::placeholder {
     border-radius: 10px;
 }
 
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.select-image {
+    box-shadow: 1px 3px 6px 0 #DAA520;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
