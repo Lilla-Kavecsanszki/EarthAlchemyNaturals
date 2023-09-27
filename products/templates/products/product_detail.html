@@ -33,6 +33,14 @@
       <div class="product-details-container mb-5 mt-md-5">
         <p class="mb-4 product_name">{{ product.name }}</p>
         <div>
+            <p class="mb-3">
+            {% if request.user.is_superuser %}
+            <small class="ml-3">
+                <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+            </small>
+            {% endif %}
+            </p>
           {% if product.category %}
           <p class="small mt-0 mb-3">
             <a
