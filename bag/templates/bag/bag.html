@@ -37,11 +37,19 @@
               <td class="col-md-8">
                 <div class="d-flex">
                   <div class="w-25 mr-3">
+                    {% if item.product.image %}
                     <img
                       class="img-fluid rounded"
                       src="{{ item.product.image.url }}"
                       alt="{{ item.product.name }}"
                     />
+                    {% else %}
+                    <img
+                      class="img-fluid rounded"
+                      src="{{ MEDIA_URL }}noimage.png"
+                      alt="{{ item.product.name }}"
+                    />
+                    {% endif %}
                   </div>
                   <div>
                     <p><strong>{{ item.product.name }}</strong></p>
