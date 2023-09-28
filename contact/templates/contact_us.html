@@ -11,26 +11,39 @@
   <div class="row">
     <div class="col">
       <hr />
-      <h2 class="logo-font mb-4">Contact US</h2>
+      <h2 class="logo-font text-center mb-4">Contact US</h2>
       <hr />
     </div>
   </div>
 
   <div class="row">
-    <div class="col">
+   <div class="col text-center">
       <form method="post">
-        {% csrf_token %} {{ form.as_p }}
-        <button type="submit">Submit</button>
-      </form>
-      <div class="back-to-shop">
-        <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
-          <span class="icon">
-            <i class="fas fa-chevron-left"></i>
-          </span>
-          <span class="text-back-shop btn-back">back to the Shop</span>
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="{{ form.name.id }}" class="custom-label">Name:</label>
+    {{ form.name }}
+  </div>
+  <div class="form-group">
+    <label for="{{ form.email.id }}" class="custom-label">Email:</label>
+    {{ form.email }}
+  </div>
+  <div class="form-group">
+    <label for="{{ form.subject.id }}" class="custom-label">Subject:</label>
+    {{ form.subject }}
+  </div>
+  <div class="form-group">
+    <label for="{{ form.message.id }}" class="custom-label">Message:</label>
+    {{ form.message }}
+  </div>
+  <button type="submit" class="btn contact-button">Submit</button>
+</form>
+      <div class="back-to-shop mt-3">
+        <a href="{% url 'products' %}" class="btn btn-back">
+          <i class="fas fa-chevron-left"></i>back to the Shop
         </a>
       </div>
-    </div>
+    </div> 
   </div>
 </div>
 {% endblock %}

@@ -423,6 +423,36 @@ input[name="q"]::placeholder {
     border-radius: 0;
 }
 
+/* Contact Form */
+
+.custom-label {
+  font-weight: bold;
+}
+
+.custom-field {
+  box-shadow: 1px 3px 6px 0 #daa520;
+  border: transparent;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  padding: 5px;
+  width: 50%;
+}
+
+.contact-button {
+  box-shadow: 1px 3px 6px 0 #daa520;
+  border: transparent;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  padding: 1%;
+}
+
+.contact-button:hover,
+.contact-button:active {
+    background-color: #DAA520;
+    color: #222;
+    box-shadow: 1px 3px 6px 0 #fefefe;
+}
+
 /* Footer */
 
 .footer-background {

@@ -159,6 +159,9 @@ https://docs.djangoproject.com/en/3.2/ref/forms/fields/
 contact - email send: <https://docs.djangoproject.com/en/3.2/topics/email/>
 <https://medium.com/powered-by-django/send-emails-with-django-contact-form-example-d8820c875731>
 
+customising the form fields
+https://stackoverflow.com/questions/65730017/using-widgets-to-change-the-css-of-label-in-django-forms
+https://stackoverflow.com/questions/43762471/how-to-use-the-attrs-in-forms-charfieldwidget-forms-passwordinput
 
 Technologies:
 
