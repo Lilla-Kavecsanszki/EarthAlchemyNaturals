@@ -149,13 +149,15 @@ https://www.medicalnewstoday.com/articles/262982#_noHeaderPrefixedContent
 rosemary:
 <https://www.medicalnewstoday.com/articles/266370#_noHeaderPrefixedContent>
 
-
 code:
 
 shimmer button : <https://codepen.io/Amarjit/pen/mrbjNy>
 admin site list_display: <https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display>
 forms: https://docs.djangoproject.com/en/3.2/ref/forms/fields/
 https://docs.djangoproject.com/en/3.2/ref/forms/fields/
+
+contact - email send: <https://docs.djangoproject.com/en/3.2/topics/email/>
+<https://medium.com/powered-by-django/send-emails-with-django-contact-form-example-d8820c875731>
 
 
 Technologies:

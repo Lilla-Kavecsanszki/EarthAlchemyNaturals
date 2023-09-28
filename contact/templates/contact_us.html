@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% load static %} {% block page_header %}
+
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+<div class="overlay"></div>
+<div class="container mb-2 mt-5">
+  <div class="row">
+    <div class="col">
+      <hr />
+      <h2 class="logo-font mb-4">Contact US</h2>
+      <hr />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Submit</button>
+      </form>
+      <div class="back-to-shop">
+        <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
+          <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+          </span>
+          <span class="text-back-shop btn-back">back to the Shop</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
