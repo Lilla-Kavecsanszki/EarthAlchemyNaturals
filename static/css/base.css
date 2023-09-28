@@ -423,6 +423,12 @@ input[name="q"]::placeholder {
     border-radius: 0;
 }
 
+/* Footer */
+
+.footer-background {
+    background-color: #555;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

@@ -201,7 +201,42 @@
     </div>
     {% endif %} {% block page_header %} {% endblock %} {% block content %}
     <!-- so they stay on the same line -->
-    {% endblock %} {% block postloadjs %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer mt-auto footer-background container-fluid">
+        <div class="row text-center">
+            <div class="col">
+                <p class="m-0 mb-1 mt-1 banner-font">Made by Lilla Kavecsanszki</p>
+                <p class="m-0 mb-1 banner-font">
+        Find me on:
+        <a
+          href="https://github.com/Lilla-Kavecsanszki"
+          target="_blank"
+          title="Github"
+        >
+          <i class="fa-brands fa-github fa-lg" style="color: #daa520"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/lilla-kavecsanszki-31888a100/"
+          target="_blank"
+          title="My_LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in fa-lg" style="color: #daa520"></i
+        ></a>
+        <br />
+        <!-- Disclaimer -->
+      </p>
+      <div class="row">
+        <div class="col-12">
+          <p class="m-0 mb-1 banner-font">
+            This website is for educational use only
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    {% block after_footer %} {% endblock %} {% block postloadjs %}
     <script type="text/javascript">
       $(".toast").toast("show");
     </script>
