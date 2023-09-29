@@ -6,6 +6,8 @@ from membership.models import Membership
 
 from django_countries.fields import CountryField
 
+def get_non_member_status():
+    return Membership.objects.get(status='Non-Member')
 
 class UserProfile(models.Model):
     """
@@ -28,8 +30,7 @@ class UserProfile(models.Model):
     membership_status = models.ForeignKey(
         Membership,
         on_delete=models.PROTECT,
-        # default is 'Non-Member'
-        default=Membership.objects.get(status='Non-Member'),
+        default=get_non_member_status,
         related_name='user_membership'
     )
 

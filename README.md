@@ -162,6 +162,8 @@ contact - email send: <https://docs.djangoproject.com/en/3.2/topics/email/>
 customising the form fields
 https://stackoverflow.com/questions/65730017/using-widgets-to-change-the-css-of-label-in-django-forms
 https://stackoverflow.com/questions/43762471/how-to-use-the-attrs-in-forms-charfieldwidget-forms-passwordinput
+how to make a form field read only, not editable
+https://stackoverflow.com/questions/324477/in-a-django-form-how-do-i-make-a-field-readonly-or-disabled-so-that-it-cannot
 
 membership
 <https://levelup.gitconnected.com/building-a-membership-system-in-django-under-5-mins-5efd7e03627d>

@@ -453,6 +453,20 @@ input[name="q"]::placeholder {
     box-shadow: 1px 3px 6px 0 #fefefe;
 }
 
+/* Profile page */
+
+.profile-field {
+    text-align: center;
+}
+
+.order-history-table {
+    box-shadow: 1px 3px 6px 0 #daa520;
+    border: transparent;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    padding: 3%;
+}
+
 /* Footer */
 
 .footer-background {
