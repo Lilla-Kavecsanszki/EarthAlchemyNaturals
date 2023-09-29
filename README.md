@@ -163,6 +163,9 @@ customising the form fields
 https://stackoverflow.com/questions/65730017/using-widgets-to-change-the-css-of-label-in-django-forms
 https://stackoverflow.com/questions/43762471/how-to-use-the-attrs-in-forms-charfieldwidget-forms-passwordinput
 
+membership
+<https://levelup.gitconnected.com/building-a-membership-system-in-django-under-5-mins-5efd7e03627d>
+
 Technologies:
 
 <https://favicon.io/favicon-converter/>
