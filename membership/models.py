@@ -6,17 +6,18 @@ class Membership(models.Model):
     Represents the membership status.
     """
 
-    # membership status (e.g., "Member" or "Non-Member")
+    # Membership status ("Member" or "Non-Member")
     status = models.CharField(max_length=100)
 
-    # provide information about the benefits of being a member
+    # Information about the benefits of being a member
     description = models.TextField()
 
     # Price for the membership (annual fee)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    price = models.DecimalField(
+        max_digits=10, decimal_places=2, blank=True, null=True)
 
     # Duration of the membership (1 year)
-    duration_months = models.PositiveIntegerField()
+    duration_months = models.PositiveIntegerField(blank=True, null=True)
 
     def __str__(self):
-        return self.name
+        return self.status

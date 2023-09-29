@@ -8,6 +8,7 @@ from .models import Order, OrderLineItem
 
 from products.models import Product
 from profiles.models import UserProfile
+from membership.models import Membership
 from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
 
@@ -136,6 +137,18 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+
+    # Check if the user purchased the membership product
+    membership_product_sku = 'member100'
+    has_membership = any(
+        item.product.sku == membership_product_sku for item in order.lineitems.all())
+
+    if has_membership:
+        # Set the user's membership status to "Member"
+        user_profile = UserProfile.objects.get(user=request.user)
+        user_profile.membership_status = Membership.objects.get(
+            status="Member")
+        user_profile.save()
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)

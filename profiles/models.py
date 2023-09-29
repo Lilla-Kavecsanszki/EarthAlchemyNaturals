@@ -27,9 +27,9 @@ class UserProfile(models.Model):
         blank_label='Country', null=True, blank=True)
     membership_status = models.ForeignKey(
         Membership,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
+        on_delete=models.PROTECT,
+        # default is 'Non-Member'
+        default=Membership.objects.get(status='Non-Member'),
         related_name='user_membership'
     )
 
@@ -37,7 +37,7 @@ class UserProfile(models.Model):
         return self.user.username
 
 
-@receiver(post_save, sender=User)
+@ receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     Create or update the user profile
