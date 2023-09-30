@@ -137,6 +137,9 @@ medium grey - #555
 dark grey - #222
 black - #000000
 
+## Bugs
+
+The checkout_success function brake when I added the membership purchase logic to it. The error occured essentially because the profile variable was not defined in the scope of the checkout_success function when however it was called. I could resolve the problem by adding the 'profile = UserProfile.objects.get(user=request.user)' line inside the if statement, just as it was done under this for the authentication bit. 
 
 Inspiration: 
 

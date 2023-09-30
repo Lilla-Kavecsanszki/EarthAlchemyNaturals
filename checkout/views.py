@@ -140,10 +140,11 @@ def checkout_success(request, order_number):
 
     # Check if the user purchased the membership product
     membership_product_sku = 'member100'
-    has_membership = any(item.product.sku == membership_product_sku for item in order.lineitems.all())
-
+    has_membership = any(
+        item.product.sku == membership_product_sku for item in order.lineitems.all())
 
     if has_membership:
+        profile = UserProfile.objects.get(user=request.user)
         # Set the user's membership status to "Member"
         profile.membership_status = Membership.objects.get(
             status="Member")
