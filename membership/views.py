@@ -1,12 +1,24 @@
 from django.shortcuts import render
 from .models import VIPBox
 from django.contrib.auth.decorators import login_required
+from products.models import Product
 
-# Create your views here.
+
+def membership_view(request):
+    # Fetch the membersip product with SKU 'member100'
+    member_product = Product.objects.filter(sku='member100').first()
+
+    context = {
+        'member_product': member_product
+    }
+
+    return render(request, 'membership.html', context)
 
 
 @login_required
 def create_vip_box(request):
+    context = {}
+
     if request.method == 'POST':
         selected_packaging_color = request.POST.get('selected_packaging_color')
         user = request.user
@@ -26,4 +38,6 @@ def create_vip_box(request):
 
         return redirect('profile')
     else:
+        context['user'] = request.user
+
         return render(request, 'profile', context)
