@@ -23,6 +23,36 @@
                     <div class="membership mt-5">
                         <strong>Price:</strong> €{{ member_product.price }}
                     </div>
+                    <form
+          class="form"
+          action="{% url 'add_to_bag' member_product.id %}"
+          method="POST"
+        >
+          {% csrf_token %}
+          <div class="form-row">
+            <div class="col-12">
+              <a href="{% url 'products' %}" class="btn btn-back mt-5">
+                Shop
+              </a>
+              <input
+                type="submit"
+                class="btn btn-shopping text-uppercase mt-5"
+                value="Add to Bag"
+              />
+            </div>
+            <input
+                type="hidden"
+                name="quantity"
+                value="1"
+            />
+
+            <input
+              type="hidden"
+              name="redirect_url"
+              value="{{ request.path }}"
+            />
+          </div>
+        </form>
                 </div>                
             </div>
         </div>
