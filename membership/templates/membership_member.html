@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% load static %} {% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %} {% block content %}
+<div class="overlay"></div>
+<div class="container-fluid mt-2">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-1 p_image_padding">
+            <div class="image-container my-5">
+                <img src="{{ MEDIA_URL }}membership.png" alt="Membership Card" class="img-fluid" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="product-details-container mb-5 mt-5">
+                <h2 class="mb-4 mt-5 product_name">VIP Status</h2>
+                <div class="mb-2">
+                    <p>Would you like to upgrade your packaging to a fancy VIP box?</p>
+                    <p>It is free for our members too!</p>
+                    <hr>
+                    <div class="membership">
+                        {% if user.is_authenticated and user.userprofile.membership_status == 'Member' %}
+                        <div class="form-group">
+                            <label for="id_packaging_choice" class="custom-label">Packaging Choice:</label>
+                            <select id="id_packaging_choice" name="packaging_choice" class="custom-field profile-field">
+                                <option value="pink">Pink Box</option>
+                                <option value="gold">Gold Box</option>
+                            </select>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</div>

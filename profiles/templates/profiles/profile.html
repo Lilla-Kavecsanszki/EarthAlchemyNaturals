@@ -29,14 +29,6 @@
         <button class="btn contact-button mb-3 mt-3">
           Update Profile Information
         </button>
-        {% if user.is_authenticated and user.userprofile.membership_status == 'Member' %}
-        <div class="form-group">
-            <label for="{{ form.packaging_choice.id }}" class="custom-label">Packaging Choice:</label>
-            {{ form.packaging_choice }}
-        </div>
-        {% endif %}
-        
-        <button type="submit" class="btn contact-button">Submit</button>
         </form>
       </form>
     </div>

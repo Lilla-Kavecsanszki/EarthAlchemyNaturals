@@ -7,12 +7,21 @@ from products.models import Product
 def membership_view(request):
     # Fetch the membersip product with SKU 'member100'
     member_product = Product.objects.filter(sku='member100').first()
+    user = request.user if request.user.is_authenticated else None
+    is_member = user and user.userprofile.membership_status == 'Member'
 
     context = {
-        'member_product': member_product
+        'member_product': member_product,
+        'is_member': is_member,
     }
+    
+    if is_member:
+        template_name = 'membership_member.html'
+    else:
+        template_name = 'membership.html'
 
-    return render(request, 'membership.html', context)
+    return render(request, template_name, context)
+
 
 
 @login_required
@@ -36,8 +45,8 @@ def create_vip_box(request):
                 user=user, selected_packaging_color=selected_packaging_color)
             vip_option.save()
 
-        return redirect('profile')
+        return redirect('create_vip_box')
     else:
         context['user'] = request.user
 
-        return render(request, 'profile', context)
+        return render(request, 'create_vip_box', context)

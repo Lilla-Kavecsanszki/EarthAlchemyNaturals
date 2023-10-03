@@ -141,6 +141,26 @@ black - #000000
 
 The checkout_success function brake when I added the membership purchase logic to it. The error occured essentially because the profile variable was not defined in the scope of the checkout_success function when however it was called. I could resolve the problem by adding the 'profile = UserProfile.objects.get(user=request.user)' line inside the if statement, just as it was done under this for the authentication bit. 
 
+
+debugging statement in profile.html:
+
+{% if user.is_authenticated %}
+                    <p>User is authenticated</p>
+                    <p>Membership Status: {{ user.userprofile.membership_status }}</p>
+                    {% if 'packaging_choice' in form.fields %}
+                        <p>Field is present</p>
+                    {% else %}
+                        <p>Field is not present in the form</p>
+                    {% endif %}
+                {% else %}
+                    <p>User is not authenticated</p>
+                {% endif %}
+
+result: not present in the form
+
+https://stackoverflow.com/questions/46773416/rendering-different-templates-to-the-same-url-pattern-in-django
+
+
 Inspiration: 
 
 https://www.naturisimo.com/

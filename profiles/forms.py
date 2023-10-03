@@ -35,16 +35,3 @@ class UserProfileForm(forms.ModelForm):
         if 'membership_status' in self.fields:
             self.fields['membership_status'].disabled = True
 
-        # The packaging_choice field for 'Member' users only
-        if self.instance.user.is_authenticated and self.instance.user.userprofile.membership_status == 'Member':
-            PACKAGING_CHOICES = [
-                ('pink', 'Pink Box'),
-                ('gold', 'Gold Box'),
-            ]
-
-            self.fields['packaging_choice'] = forms.ChoiceField(
-                choices=PACKAGING_CHOICES,
-                required=False,
-                widget=forms.Select(
-                    attrs={'class': 'custom-field profile-field'}),
-            )
