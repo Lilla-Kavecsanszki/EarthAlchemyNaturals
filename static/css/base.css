@@ -1,426 +1,439 @@
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    background: url("/media/photoshopped_homepage.jpg") no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: "Poppins", sans-serif;
+  background: url("/media/photoshopped_homepage.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  height: calc(100vh - 164px);
+  color: #555;
+  font-family: "Poppins", sans-serif;
 }
 
 .logo-font {
-    font-family: "Cinzel Decorative", cursive;
-    color: black;
+  font-family: "Cinzel Decorative", cursive;
+  color: black;
 }
 
 .banner-font {
-    font-family: "Quicksand", sans-serif;
-    color: #daa520;
+  font-family: "Quicksand", sans-serif;
+  color: #daa520;
 }
 
 .product_name {
-    font-family: "Quicksand", sans-serif;
-    font-size: 150%;
-    font-weight: bold;
-    color: #222;
+  font-family: "Quicksand", sans-serif;
+  font-size: 150%;
+  font-weight: bold;
+  color: #222;
 }
 
 .product_detail {
-    color: #222;
-    font-family: "Poppins", sans-serif;
+  color: #222;
+  font-family: "Poppins", sans-serif;
 }
 
 .banner-background {
-    background-color: #555;
+  background-color: #555;
 }
 
 /* from Bulma */
 .icon {
-    color: black;
+  color: black;
 }
 
 .search-bar {
-    border-bottom: 1px solid #222;
+  border-bottom: 1px solid #222;
 }
 
 .nav-background {
-    background-color: #d4c9c5;
+  background-color: #d4c9c5;
 }
 
 .nav-link {
-    color: black;
-    font-size: large;
+  color: black;
+  font-size: large;
 }
 
 .navbar-toggler-icon {
-    background: red;
+  background: red;
 }
 
 .attention-text {
-    background: #d4c9c5;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    /* Horizontally center */
-    align-items: center;
-    /* Vertically center */
-    height: 80px;
-    padding: 0 10px;
+  background: #d4c9c5;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  /* Horizontally center */
+  align-items: center;
+  /* Vertically center */
+  height: 80px;
+  padding: 0 10px;
 }
 
 .shop-now-button {
-    background: #daa520;
-    color: #222;
-    font-weight: bold;
-    border-radius: 50px;
+  background: #daa520;
+  color: #222;
+  font-weight: bold;
+  border-radius: 50px;
 }
 
 /* Gold shimmer - https: //codepen.io/Amarjit/pen/mrbjNy */
 
 .light {
-    background: -moz-linear-gradient(-45deg,
-            #daa520 0%,
-            #daa520 40%,
-            #ffffff 50%,
-            #daa520 60%,
-            #daa520 100%);
-    background: -webkit-gradient(linear,
-            left top,
-            right bottom,
-            color-stop(0%, #daa520),
-            color-stop(40%, #daa520),
-            color-stop(50%, #ffffff),
-            color-stop(60%, #daa520),
-            color-stop(100%, #daa520));
-    background: -webkit-linear-gradient(-45deg,
-            #daa520 0%,
-            #daa520 40%,
-            #ffffff 50%,
-            #daa520 60%,
-            #daa520 100%);
-    background: -o-linear-gradient(-45deg,
-            #daa520 0%,
-            #daa520 40%,
-            #ffffff 50%,
-            #daa520 60%,
-            #daa520 100%);
-    background: -ms-linear-gradient(-45deg,
-            #daa520 0%,
-            #daa520 40%,
-            #ffffff 50%,
-            #daa520 60%,
-            #daa520 100%);
-    background: linear-gradient(135deg,
-            #daa520 0%,
-            #daa520 40%,
-            #ffffff 50%,
-            #daa520 60%,
-            #daa520 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DAA520', endColorstr='#DAA520', GradientType=1);
-    background-repeat: no-repeat;
-    background-position: 0px;
-    background-size: 300%;
+  background: -moz-linear-gradient(
+    -45deg,
+    #daa520 0%,
+    #daa520 40%,
+    #ffffff 50%,
+    #daa520 60%,
+    #daa520 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0%, #daa520),
+    color-stop(40%, #daa520),
+    color-stop(50%, #ffffff),
+    color-stop(60%, #daa520),
+    color-stop(100%, #daa520)
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    #daa520 0%,
+    #daa520 40%,
+    #ffffff 50%,
+    #daa520 60%,
+    #daa520 100%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    #daa520 0%,
+    #daa520 40%,
+    #ffffff 50%,
+    #daa520 60%,
+    #daa520 100%
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    #daa520 0%,
+    #daa520 40%,
+    #ffffff 50%,
+    #daa520 60%,
+    #daa520 100%
+  );
+  background: linear-gradient(
+    135deg,
+    #daa520 0%,
+    #daa520 40%,
+    #ffffff 50%,
+    #daa520 60%,
+    #daa520 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DAA520', endColorstr='#DAA520', GradientType=1);
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-size: 300%;
 }
 
 .light:hover {
-    animation: light 1s;
-    -webkit-animation: light 1s;
+  animation: light 1s;
+  -webkit-animation: light 1s;
 }
 
 @keyframes light {
-    0% {
-        background-position: -600px;
-    }
+  0% {
+    background-position: -600px;
+  }
 
-    100% {
-        background-position: 0px;
-    }
+  100% {
+    background-position: 0px;
+  }
 }
 
 @-webkit-keyframes light {
-    0% {
-        background-position: -600px;
-    }
+  0% {
+    background-position: -600px;
+  }
 
-    100% {
-        background-position: 0px;
-    }
+  100% {
+    background-position: 0px;
+  }
 }
 
 .bounce:hover {
-    animation: bounce 1s;
-    -webkit-animation: bounce 1s;
+  animation: bounce 1s;
+  -webkit-animation: bounce 1s;
 }
 
 /* Product and product detail pages */
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: #eae4e2;
-    background-size: cover;
-    z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: #eae4e2;
+  background-size: cover;
+  z-index: -1;
 }
 
 .p_image_padding {
-    padding-right: 5%;
+  padding-right: 5%;
 }
 
 .help-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
+  height: 42px;
+  width: 42px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
 
 .help-link {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .btn-back {
-    background-color: #555;
-    color: #eae4e2;
-    border-radius: 50px;
+  background-color: #555;
+  color: #eae4e2;
+  border-radius: 50px;
 }
 
 .btn-back:hover {
-    background-color: #222;
-    color: #eae4e2;
+  background-color: #222;
+  color: #eae4e2;
 }
 
 .btn-shopping {
-    background-color: #555;
-    color: #eae4e2;
-    font-weight: bold;
-    border-radius: 50px;
+  background-color: #555;
+  color: #eae4e2;
+  font-weight: bold;
+  border-radius: 50px;
 }
 
 .btn-shopping:hover {
-    background-color: #daa520;
-    color: #222;
+  background-color: #daa520;
+  color: #222;
 }
 
 input[name="q"]::placeholder {
-    color: #222;
+  color: #222;
 }
 
 /* Herb */
 
 .star {
-    color: #daa520;
-    font-weight: bold;
-    text-decoration: underline;
+  color: #daa520;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .herb-details-container {
-    padding: 5% 8%;
+  padding: 5% 8%;
 }
 
 /* About pages */
 
 .us_overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: #eae4e2;
-    z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: #eae4e2;
+  z-index: -1;
 }
 
 /* shopping bag page */
 
 .update-link {
-    cursor: pointer;
-    color: #daa520;
+  cursor: pointer;
+  color: #daa520;
 }
 
 /* toasts */
 
 .message-container {
-    position: fixed;
-    top: 72px;
-    right: 15px;
-    z-index: 99999999999;
+  position: fixed;
+  top: 72px;
+  right: 15px;
+  z-index: 99999999999;
 }
 
 .custom-toast {
-    overflow: visible;
+  overflow: visible;
 }
 
 .toast-capper {
-    height: 2px;
+  height: 2px;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 10px solid black;
+  position: absolute;
+  top: -10px;
+  right: 36px;
 }
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
-    border-bottom-color: #007bff !important;
+  border-bottom-color: #007bff !important;
 }
 
 .arrow-secondary {
-    border-bottom-color: #6c757d !important;
+  border-bottom-color: #6c757d !important;
 }
 
 .arrow-success {
-    border-bottom-color: #28a745 !important;
+  border-bottom-color: #28a745 !important;
 }
 
 .arrow-danger {
-    border-bottom-color: #dc3545 !important;
+  border-bottom-color: #dc3545 !important;
 }
 
 .arrow-warning {
-    border-bottom-color: #ffc107 !important;
+  border-bottom-color: #ffc107 !important;
 }
 
 .arrow-info {
-    border-bottom-color: #17a2b8 !important;
+  border-bottom-color: #17a2b8 !important;
 }
 
 .arrow-light {
-    border-bottom-color: #f8f9fa !important;
+  border-bottom-color: #f8f9fa !important;
 }
 
 .arrow-dark {
-    border-bottom-color: #343a40 !important;
+  border-bottom-color: #343a40 !important;
 }
 
 .bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .delivery-warning {
-    background-color: #daa520;
+  background-color: #daa520;
 }
 
 .delivery-text {
-    color: black;
-    text-shadow: 4px 4px 6px #daa520;
+  color: black;
+  text-shadow: 4px 4px 6px #daa520;
 }
 
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem;
-    /* mt-4 */
-    color: #222;
-    /* text-secondary */
+  margin-top: 1.5rem;
+  /* mt-4 */
+  color: #222;
+  /* text-secondary */
 }
 
 .allauth-form-inner-content input {
-    border-color: transparent;
-    box-shadow: 3px 4px 6px #daa520;
-    border-radius: 10px;
+  border-color: transparent;
+  box-shadow: 3px 4px 6px #daa520;
+  border-radius: 10px;
 }
 
 .allauth-form-inner-content label:not([for="id_remember"]) {
-    display: none;
+  display: none;
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #d4c9c5;
+  color: #d4c9c5;
 }
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type="submit"] {
-    /* btn */
-    display: inline-block;
-    font-weight: 400;
-    color: #daa520;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #555;
-    border: 1px solid #555;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 20px;
+  /* btn */
+  display: inline-block;
+  font-weight: 400;
+  color: #daa520;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #555;
+  border: 1px solid #555;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 20px;
 
-    /* standard bootstrap btn transitions */
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  /* standard bootstrap btn transitions */
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type="submit"]:hover {
-    color: #222;
-    background-color: #daa520;
-    border-color: #daa520;
+  color: #222;
+  background-color: #daa520;
+  border-color: #daa520;
 }
 
 .allauth-form-inner-content a {
-    color: #daa520;
-    text-decoration: solid;
-    /* text-info */
+  color: #daa520;
+  text-decoration: solid;
+  /* text-info */
 }
 
 .home-button {
-    border-radius: 20px;
-    border-color: #daa520;
+  border-radius: 20px;
+  border-color: #daa520;
 }
 
 .home-button:hover {
-    border-color: #222;
+  border-color: #222;
 }
 
 /* Product Management page */
 
 .product-form {
-    box-shadow: 1px 3px 6px 0 #daa520;
-    border-radius: 10px;
+  box-shadow: 1px 3px 6px 0 #daa520;
+  border-radius: 10px;
 }
 
 .btn-file {
-    position: relative;
-    overflow: hidden;
-    box-shadow: 1px 3px 6px 0 #daa520;
-    border-radius: 20px;
-    background-color: whitesmoke;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 1px 3px 6px 0 #daa520;
+  border-radius: 20px;
+  background-color: whitesmoke;
 }
 
 .btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
+  border-radius: 0;
+  border-color: #dc3545;
 }
 
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  border-radius: 0;
 }
 
 /* Contact Form */
@@ -448,62 +461,62 @@ input[name="q"]::placeholder {
 
 .contact-button:hover,
 .contact-button:active {
-    background-color: #DAA520;
-    color: #222;
-    box-shadow: 1px 3px 6px 0 #fefefe;
+  background-color: #daa520;
+  color: #222;
+  box-shadow: 1px 3px 6px 0 #fefefe;
 }
 
 /* Profile page */
 
 .profile-field {
-    text-align: center;
+  text-align: center;
 }
 
 .order-history-table {
-    box-shadow: 1px 3px 6px 0 #daa520;
-    border: transparent;
-    border-radius: 20px;
-    background-color: whitesmoke;
-    padding: 3%;
+  box-shadow: 1px 3px 6px 0 #daa520;
+  border: transparent;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  padding: 3%;
 }
 
 /* Footer */
 
 .footer-background {
-    background-color: #555;
+  background-color: #555;
 }
 
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
+  .container {
+    max-width: 80%;
+  }
 }
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
+  .fixed-top-desktop-only {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
 
-    .header-container {
-        padding-top: 164px;
-    }
+  .header-container {
+    padding-top: 164px;
+  }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
+  .header-container {
+    padding-top: 116px;
+  }
 
-    body {
-        height: calc(100vh - 116px);
-    }
+  body {
+    height: calc(100vh - 116px);
+  }
 }

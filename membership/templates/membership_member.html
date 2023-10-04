@@ -21,7 +21,7 @@
                     <p>It is free for our members too!</p>
                     <hr>
                     <div class="membership">
-                        {% if user.is_authenticated and user.userprofile.membership_status == 'Member' %}
+                        {% if user.is_authenticated and user.membership.membership_status == 'Member' %}
                         <div class="form-group">
                             <label for="id_packaging_choice" class="custom-label">Packaging Choice:</label>
                             <select id="id_packaging_choice" name="packaging_choice" class="custom-field profile-field">

@@ -34,4 +34,3 @@ class UserProfileForm(forms.ModelForm):
 
         if 'membership_status' in self.fields:
             self.fields['membership_status'].disabled = True
-

@@ -2,26 +2,44 @@ from django.shortcuts import render
 from .models import VIPBox
 from django.contrib.auth.decorators import login_required
 from products.models import Product
+from datetime import datetime, timedelta
+from django.utils import timezone
+from django.shortcuts import render
+from .models import Membership
+
+
+def is_membership_valid(user):
+    try:
+        # Fetch the user's membership
+        membership = Membership.objects.get(user=user)
+
+        # Calculate the expiration date by adding 365 days to the created date
+        expiration_date = membership.created_on + timedelta(days=365)
+
+        # Fetch the current date
+        today_date = timezone.now().date()
+
+        # Check if the membership is still valid
+        return today_date < expiration_date
+    except Membership.DoesNotExist:
+        # User doesn't have a membership, so it's not valid
+        return False
 
 
 def membership_view(request):
-    # Fetch the membersip product with SKU 'member100'
-    member_product = Product.objects.filter(sku='member100').first()
-    user = request.user if request.user.is_authenticated else None
-    is_member = user and user.userprofile.membership_status == 'Member'
+    if request.user.is_authenticated:
+        user = request.user
+        is_valid_membership = is_membership_valid(user)
 
-    context = {
-        'member_product': member_product,
-        'is_member': is_member,
-    }
-    
-    if is_member:
-        template_name = 'membership_member.html'
+        if is_valid_membership:
+            # Valid membership
+            return render(request, 'membership_member.html')
+        else:
+            # Membership is expired
+            return render(request, 'membership.html')
     else:
-        template_name = 'membership.html'
-
-    return render(request, template_name, context)
-
+        # User is not logged in
+        return render(request, 'membership.html')
 
 
 @login_required

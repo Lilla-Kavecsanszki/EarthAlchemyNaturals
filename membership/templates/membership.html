@@ -1,91 +1,97 @@
 {% extends "base.html" %} {% load static %} {% block page_header %}
 <div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
+  <div class="row">
+    <div class="col"></div>
+  </div>
 </div>
 {% endblock %} {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid mt-2">
-    <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-1 p_image_padding">
-            <div class="image-container my-5">
-                <img src="{{ MEDIA_URL }}membership.png" alt="Membership Card" class="img-fluid" />
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="product-details-container mb-5 mt-5">
-                <h2 class="mb-4 mt-5 product_name">EarthAlchemy Naturals Membership</h2>
-                <div class="mb-2">
-                    <div class="membership">
-                        <strong>Description:</strong> {{ member_product.description }}
-                    </div>
-                    <div class="membership mt-5">
-                        <strong>Price:</strong> €{{ member_product.price }}
-                    </div>
-                    <form
-          class="form"
-          action="{% url 'add_to_bag' member_product.id %}"
-          method="POST"
-        >
-          {% csrf_token %}
-          <div class="form-row">
-            <div class="col-12">
-              <a href="{% url 'products' %}" class="btn btn-back mt-5">
-                Shop
-              </a>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4 offset-lg-1 p_image_padding">
+      <div class="image-container my-5">
+        <img
+          src="{{ MEDIA_URL }}membership.png"
+          alt="Membership Card"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="product-details-container mb-5 mt-5">
+        <h2 class="mb-4 mt-5 product_name">EarthAlchemy Naturals Membership</h2>
+        <div class="mb-2">
+          <div class="membership">
+            <strong>Description:</strong> {{ member_product.description }}
+          </div>
+          <div class="membership mt-5">
+            <strong>Price:</strong> €{{ member_product.price }}
+          </div>
+          <form
+            class="form"
+            action="{% url 'add_to_bag' member_product.id %}"
+            method="POST"
+          >
+            {% csrf_token %}
+            <div class="form-row">
+              <div class="col-12">
+                <a href="{% url 'products' %}" class="btn btn-back mt-5">
+                  Shop
+                </a>
+                <input
+                  type="submit"
+                  class="btn btn-shopping text-uppercase mt-5"
+                  value="Add to Bag"
+                />
+              </div>
+              <input type="hidden" name="quantity" value="1" />
+
               <input
-                type="submit"
-                class="btn btn-shopping text-uppercase mt-5"
-                value="Add to Bag"
+                type="hidden"
+                name="redirect_url"
+                value="{{ request.path }}"
               />
             </div>
-            <input
-                type="hidden"
-                name="quantity"
-                value="1"
-            />
-
-            <input
-              type="hidden"
-              name="redirect_url"
-              value="{{ request.path }}"
-            />
-          </div>
-        </form>
-                </div>                
-            </div>
+          </form>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 <div class="product-details-container mb-5 mt-5">
-                <h2 class="mb-4 mt-5 product_name">VIP Status</h2>
-                <div class="mb-2">
-                    <p>Would you like to upgrade your packaging to a fancy VIP box?</p>
-                    <p>It is free for our members too!</p>
-                    <hr>
-                    {% if user.is_authenticated %}
-                    <p>User is authenticated</p>
-                    <p>Membership Status: {{ user.userprofile.membership_status }}</p>
-                    {% if 'packaging_choice' in form.fields %}
-                        <p>Field is present</p>
-                    {% else %}
-                        <p>Field is not present in the form</p>
-                    {% endif %}
-                {% else %}
-                    <p>User is not authenticated</p>
-                {% endif %}
-                    <div class="membership">
-                        {% if user.is_authenticated and user.userprofile.membership_status == 'Member' %}
-                        <div class="form-group">
-                            <label for="id_packaging_choice" class="custom-label">Packaging Choice:</label>
-                            <select id="id_packaging_choice" name="packaging_choice" class="custom-field profile-field">
-                                <option value="pink">Pink Box</option>
-                                <option value="gold">Gold Box</option>
-                            </select>
-                        </div>
-                        {% endif %}
-                    </div>
-                </div>
-{% endblock %}
+  <h2 class="mb-4 mt-5 product_name">VIP Status</h2>
+  <div class="mb-2">
+    <p>Would you like to upgrade your packaging to a fancy VIP box?</p>
+    <p>It is free for our members too!</p>
+    <hr />
+    {% if user.is_authenticated %}
+    <p>User is authenticated</p>
+    <p>Membership Status: {{ user.userprofile.membership_status }}</p>
+    {% if 'packaging_choice' in form.fields %}
+    <p>Field is present</p>
+    {% else %}
+    <p>Field is not present in the form</p>
+    {% endif %} {% else %}
+    <p>User is not authenticated</p>
+    {% endif %}
+    <div class="membership">
+      {% if user.is_authenticated and user.userprofile.membership_status ==
+      'Member' %}
+      <div class="form-group">
+        <label for="id_packaging_choice" class="custom-label"
+          >Packaging Choice:</label
+        >
+        <select
+          id="id_packaging_choice"
+          name="packaging_choice"
+          class="custom-field profile-field"
+        >
+          <option value="pink">Pink Box</option>
+          <option value="gold">Gold Box</option>
+        </select>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endblock %}
 </div>
