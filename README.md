@@ -188,6 +188,8 @@ membership
 
 <https://stackoverflow.com/questions/57019042/django-time-zone-and-timezone-now>
 
+https://www.geeksforgeeks.org/python-datetime-timedelta-function/
+
 Technologies:
 
 <https://favicon.io/favicon-converter/>

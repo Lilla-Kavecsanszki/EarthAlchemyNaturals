@@ -8,8 +8,17 @@ class Membership(models.Model):
     Represents the membership status.
     """
 
+    MEMBERSHIP_STATUS_CHOICES = [
+        ('Member', 'Member'),
+        ('None', 'None'),
+    ]
+
     # Membership status ("Member" or "Non-Member")
-    status = models.CharField(max_length=100)
+    status = models.CharField(
+        max_length=100,
+        choices=MEMBERSHIP_STATUS_CHOICES,
+        default='None',
+    )
 
     # Information about the benefits of being a member
     description = models.TextField()
