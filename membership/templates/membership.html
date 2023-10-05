@@ -75,8 +75,8 @@
     <p>User is not authenticated</p>
     {% endif %}
     <div class="membership">
-      {% if user.is_authenticated and user.userprofile.membership_status ==
-      'Member' %}
+      <!-- verify user to make sure they have a membership -->
+      {% if user.is_authenticated and user.userprofile.membership_status == 'Member' %}
       <div class="form-group">
         <label for="id_packaging_choice" class="custom-label"
           >Packaging Choice:</label

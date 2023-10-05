@@ -13,12 +13,16 @@ class Membership(models.Model):
         ('None', 'None'),
     ]
 
-    # Membership status ("Member" or "Non-Member")
+    # Membership status
     status = models.CharField(
         max_length=100,
         choices=MEMBERSHIP_STATUS_CHOICES,
         default='None',
     )
+
+    # Foreign keyto the User model
+    user = models.ForeignKey(User, on_delete=models.SET_NULL,
+                             related_name='membership', null=True, blank=True)
 
     # Information about the benefits of being a member
     description = models.TextField()
