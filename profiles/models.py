@@ -46,6 +46,10 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     Create or update the user profile
     """
     if created:
-        UserProfile.objects.create(user=instance)
-    # Existing users: just save the profile
+        membership_instance, created = Membership.objects.get_or_create(
+            status='None')
+        if not isinstance(membership_instance, Membership):
+            raise ValueError("Invalid Membership instance")
+        UserProfile.objects.create(user=instance, membership_status=membership_instance)
+        # Existing users: just save the profile
     instance.userprofile.save()

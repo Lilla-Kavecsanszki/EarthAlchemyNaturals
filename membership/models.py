@@ -46,7 +46,7 @@ class Membership(models.Model):
     )
 
     def __str__(self):
-        return self.status
+        return str(self.status)
 
     def has_vip(self):
         return self.choose_vip_box or (self.vip_box is not None)
