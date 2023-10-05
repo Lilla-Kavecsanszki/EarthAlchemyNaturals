@@ -136,7 +136,8 @@ black - #000000
 
 ## Bugs
 
-The checkout_success function brake when I added the membership purchase logic to it. The error occured essentially because the profile variable was not defined in the scope of the checkout_success function when however it was called. I could resolve the problem by adding the 'profile = UserProfile.objects.get(user=request.user)' line inside the if statement, just as it was done under this for the authentication bit.
+1. 
+  The checkout_success function brake when I added the membership purchase logic to it. The error occured essentially because the profile variable was not defined in the scope of the checkout_success function when however it was called. I could resolve the problem by adding the 'profile = UserProfile.objects.get(user=request.user)' line inside the if statement, just as it was done under this for the authentication bit.
 
 debugging statement in profile.html:
 
@@ -155,6 +156,13 @@ debugging statement in profile.html:
 result: not present in the form
 
 https://stackoverflow.com/questions/46773416/rendering-different-templates-to-the-same-url-pattern-in-django
+
+2. 
+   Integrity Error occured, when trying to register, login. Foreign Key constraint failed:
+
+   In the create_or_update_user_profile, needed to also pass the membership_status when we create the user profile. The user object contained all the dat needed, but not the membership_status. We use get_or_create, to set the membership status to 'None', but that also returned a tuple, so eventually the solution was to get seperated by saying: membership_instance, created. This means we get membership_instance as an instance of Membership, and created as True/False.
+
+
 
 Inspiration:
 

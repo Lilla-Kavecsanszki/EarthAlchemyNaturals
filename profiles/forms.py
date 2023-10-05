@@ -5,7 +5,7 @@ from .models import UserProfile
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        exclude = ('user',)
+        exclude = ('user', 'membership_start_date', 'membership_duration',)
 
     def __init__(self, *args, **kwargs):
         """
@@ -34,3 +34,4 @@ class UserProfileForm(forms.ModelForm):
 
         if 'membership_status' in self.fields:
             self.fields['membership_status'].disabled = True
+

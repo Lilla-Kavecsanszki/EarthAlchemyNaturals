@@ -35,6 +35,14 @@ class UserProfile(models.Model):
         default=get_non_member_status,
         related_name='user_membership'
     )
+    membership_start_date = models.DateTimeField(
+        null=True, blank=True,
+    )
+
+    membership_duration = models.DurationField(
+        null=True, blank=True,
+    )
+
 
     def __str__(self):
         return self.user.username

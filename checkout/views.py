@@ -11,6 +11,8 @@ from profiles.models import UserProfile
 from membership.models import Membership
 from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
+from datetime import datetime, timedelta
+from django.utils import timezone
 
 import stripe
 import json
@@ -148,6 +150,11 @@ def checkout_success(request, order_number):
         # Set the user's membership status to "Member"
         profile.membership_status = Membership.objects.get(
             status="Member")
+        # Set the membership_start_date to the current date and time
+        profile.membership_start_date = timezone.now()
+
+        # Set the membership_duration (365 days)
+        profile.membership_duration = timedelta(days=365)
         profile.save()
 
     if request.user.is_authenticated:
@@ -166,6 +173,7 @@ def checkout_success(request, order_number):
                 'default_street_address1': order.street_address1,
                 'default_street_address2': order.street_address2,
                 'default_county': order.county,
+                'membership_start_date': datetime.now(),
             }
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
