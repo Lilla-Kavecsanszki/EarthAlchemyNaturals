@@ -38,10 +38,11 @@ def membership_view(request):
     # Fetch the membership product with SKU 'member100'
     member_product = Product.objects.filter(sku='member100').first()
     user = request.user if request.user.is_authenticated else None
-    user_profile = UserProfile.objects.get(user=user)
-    membership_start_date = user_profile.membership_start_date
+    membership_start_date = None  # None for anonymous users
 
-    if request.user.is_authenticated:
+    if user:
+        user_profile = UserProfile.objects.get(user=user)
+        membership_start_date = user_profile.membership_start_date
         is_valid_membership = is_membership_valid(user)
     else:
         is_valid_membership = False

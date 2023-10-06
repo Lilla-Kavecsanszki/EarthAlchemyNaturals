@@ -18,12 +18,34 @@ def add_to_bag(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
-
-    if item_id in bag:
-        bag[item_id] += quantity
+    
+    # Check if the user is authenticated
+    if request.user.is_authenticated:
+        # Allow authenticated users to add any product to the bag
+        if item_id in bag:
+            bag[item_id] += quantity
+        else:
+            bag[item_id] = quantity
+            messages.success(request, f'Added {product.name} to your bag')
+    # Check if the user is authenticated
+    if request.user.is_authenticated:
+        # Allow authenticated users to add any product to the bag
+        if item_id in bag:
+            bag[item_id] += quantity
+        else:
+            bag[item_id] = quantity
+            messages.success(request, f'Added {product.name} to your bag')
     else:
-        bag[item_id] = quantity
-        messages.success(request, f'Added {product.name} to your bag')
+        # Prevent anonymous users from adding the membership product to the bag
+        if product.sku == 'member100':
+            messages.error(
+                request, 'You must be logged in to purchase a membership.')
+        else:
+            if item_id in bag:
+                bag[item_id] += quantity
+            else:
+                bag[item_id] = quantity
+                messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
     return redirect(redirect_url)

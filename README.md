@@ -162,6 +162,10 @@ https://stackoverflow.com/questions/46773416/rendering-different-templates-to-th
 
    In the create_or_update_user_profile, needed to also pass the membership_status when we create the user profile. The user object contained all the dat needed, but not the membership_status. We use get_or_create, to set the membership status to 'None', but that also returned a tuple, so eventually the solution was to get seperated by saying: membership_instance, created. This means we get membership_instance as an instance of Membership, and created as True/False.
 
+3. UnboundLocalError
+It was due to the fact that the profile variable in the checkout_success function is referenced before i was assigned. This issue occursd when the user who placed the order was not authenticated and didn't have a user profile.
+
+To fix this, needed to handle the case where the user is not authenticated and doesn't have a user profile separately. Eventually the solution is to first check if the user is authenticated before accessing the user profile and setting membership-related fields. It is also necessary to handle the case where the user is not authenticated and doesn't have a profile by using 'try...except' to avoid the UnboundLocalError.
 
 
 Inspiration:
