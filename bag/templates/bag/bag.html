@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% load static %} {% block page_header %}
 <!-- load filter, tools -->
-{% load bag_tools %}
+{% load bag_tools %} 
+
 
 <div class="container header-container">
   <div class="row">
@@ -54,7 +55,8 @@
                   <div>
                     <p><strong>{{ item.product.name }}</strong></p>
                     <p>{{ item.product.milliliter }} ml</p>
-                    <p>€{{ item.product.price }}</p>
+                    <p>Price: €{{ item.product.price }}</p>
+                    <p>Member's price: €{{ item.product.member_price }}</p>
                   </div>
                 </div>
               </td>
@@ -116,7 +118,11 @@
                 </button>
               </td>
               <td class="col-md-1">
+                {% if request.user.is_authenticated and item.product.member_price %}
+                €{{ item.product.member_price | calc_subtotal:item.quantity }}
+                {% else %}
                 €{{ item.product.price | calc_subtotal:item.quantity }}
+                {% endif %}
               </td>
             </tr>
             {% endfor %}

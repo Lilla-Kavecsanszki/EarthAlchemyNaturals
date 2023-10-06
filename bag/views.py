@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
+from membership.views import is_membership_valid
 
 from products.models import Product
 
@@ -19,21 +20,32 @@ def add_to_bag(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
     
+    # Get the quantity from request.POST or default to 1 if it's not provided
+    quantity_str = request.POST.get('quantity', '1')
+
+    # Ensure quantity_str is a valid integer, defaulting to 1 if not
+    try:
+        quantity = int(quantity_str)
+    except ValueError:
+        quantity = 1
+
     # Check if the user is authenticated
     if request.user.is_authenticated:
         # Allow authenticated users to add any product to the bag
         if item_id in bag:
-            bag[item_id] += quantity
+            bag[item_id]['quantity'] += quantity
         else:
-            bag[item_id] = quantity
-            messages.success(request, f'Added {product.name} to your bag')
-    # Check if the user is authenticated
-    if request.user.is_authenticated:
-        # Allow authenticated users to add any product to the bag
-        if item_id in bag:
-            bag[item_id] += quantity
-        else:
-            bag[item_id] = quantity
+            # Determine the price based on membership status
+            has_valid_membership = is_membership_valid(request.user)
+            if has_valid_membership:
+                price = product.member_price
+            else:
+                price = product.price
+
+            bag[item_id] = {
+                'quantity': quantity,
+                'price': str(price),
+            }
             messages.success(request, f'Added {product.name} to your bag')
     else:
         # Prevent anonymous users from adding the membership product to the bag
@@ -44,6 +56,8 @@ def add_to_bag(request, item_id):
             if item_id in bag:
                 bag[item_id] += quantity
             else:
+                # For anonymous users, use the regular product price and quantity
+                price = str(product.price)
                 bag[item_id] = quantity
                 messages.success(request, f'Added {product.name} to your bag')
 
@@ -59,9 +73,12 @@ def adjust_bag(request, item_id):
     bag = request.session.get('bag', {})
 
     if quantity > 0:
-        bag[item_id] = quantity
+        if item_id in bag:
+            bag[item_id] = quantity
+        else:
+            bag[item_id]['quantity'] = quantity
         messages.success(
-            request, f'Updated {product.name} quantity to {bag[item_id]}')
+            request, f'Updated {product.name} quantity to {quantity}')
     else:
         bag.pop(item_id, None)
         messages.success(request, f'Removed {product.name} from your bag')
