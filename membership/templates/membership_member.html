@@ -15,8 +15,11 @@
         </div>
         <div class="col-md-6">
             <div class="product-details-container mb-5 mt-5">
-                <h2 class="mb-4 mt-5 product_name">VIP Status</h2>
+                <h2 class="mb-4 mt-5 product_name">You are our VIP!</h2>
                 <div class="mb-2">
+                    <p>You are a member since {{ membership_start_date|date:"F d, Y" }}.</p>
+                    <p>Your membership is valid for 365 days.</p>
+                    <hr>
                     <p>Would you like to upgrade your packaging to a fancy VIP box?</p>
                     <p>It is free for our members too!</p>
                     <hr>

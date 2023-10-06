@@ -189,6 +189,9 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'membership_status': profile.membership_status,
+        'membership_start_date': profile.membership_start_date,
+        'membership_duration': profile.membership_duration,
     }
 
     return render(request, template, context)

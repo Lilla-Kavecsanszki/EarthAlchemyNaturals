@@ -2,44 +2,56 @@ from django.shortcuts import render
 from .models import VIPBox
 from django.contrib.auth.decorators import login_required
 from products.models import Product
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from django.shortcuts import render
 from .models import Membership
+from profiles.models import UserProfile
 
 
 def is_membership_valid(user):
     try:
-        # Fetch the user's membership
-        membership = Membership.objects.get(user=user)
+        # Fetch the user's profile (for the membership details)
+        user_profile = UserProfile.objects.get(user=user)
 
-        # Calculate the expiration date by adding 365 days to the created date
-        expiration_date = membership.created_on + timedelta(days=365)
+        # Check if the user has a membership start date
+        membership_start_date = user_profile.membership_start_date
 
-        # Fetch the current date
-        today_date = datetime.now().date()
+        if membership_start_date:
+            # Calculate the expiration date by adding membership duration to the start date
+            expiration_date = membership_start_date.date() + timedelta(days=365)
 
-        # Check if the membership is still valid
-        return today_date < expiration_date
-    except Membership.DoesNotExist:
-        # User doesn't have a membership, so it's not valid
+            # Fetch the current date as a date object
+            today_date = date.today()
+
+            # Check if the membership is still valid
+            return today_date < expiration_date
+
+    except UserProfile.DoesNotExist:
+        # User doesn't have a profile, so it's not valid
         return False
+
+    # User doesn't have a valid membership start date, so it's not valid
+    return False
 
 
 def membership_view(request):
     # Fetch the membership product with SKU 'member100'
     member_product = Product.objects.filter(sku='member100').first()
     user = request.user if request.user.is_authenticated else None
-    is_member = user and user.userprofile.membership_status == 'Member'
+    user_profile = UserProfile.objects.get(user=user)
+    membership_start_date = user_profile.membership_start_date
 
     if request.user.is_authenticated:
         is_valid_membership = is_membership_valid(user)
     else:
         is_valid_membership = False
 
+    print(f'is_valid_membership: {is_valid_membership}')
+
     context = {
         'member_product': member_product,
-        'is_member': is_member,
         'is_valid_membership': is_valid_membership,
+        'membership_start_date': membership_start_date,
     }
 
     if is_valid_membership:
