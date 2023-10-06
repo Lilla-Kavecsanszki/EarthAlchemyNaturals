@@ -47,8 +47,6 @@ def membership_view(request):
     else:
         is_valid_membership = False
 
-    print(f'is_valid_membership: {is_valid_membership}')
-
     context = {
         'member_product': member_product,
         'is_valid_membership': is_valid_membership,

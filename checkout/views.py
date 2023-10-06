@@ -140,12 +140,18 @@ def checkout_success(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
+    # for anonymous users
+    profile = None
+    membership_status = None
+    membership_start_date = None
+    membership_duration = None
+
     # Check if the user purchased the membership product
     membership_product_sku = 'member100'
     has_membership = any(
         item.product.sku == membership_product_sku for item in order.lineitems.all())
 
-    if has_membership:
+    if has_membership and request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Set the user's membership status to "Member"
         profile.membership_status = Membership.objects.get(
@@ -156,6 +162,9 @@ def checkout_success(request, order_number):
         # Set the membership_duration (365 days)
         profile.membership_duration = timedelta(days=365)
         profile.save()
+        membership_status = profile.membership_status
+        membership_start_date = profile.membership_start_date
+        membership_duration = profile.membership_duration
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -189,9 +198,9 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
-        'membership_status': profile.membership_status,
-        'membership_start_date': profile.membership_start_date,
-        'membership_duration': profile.membership_duration,
+        'membership_status': membership_status,
+        'membership_start_date': membership_start_date,
+        'membership_duration': membership_duration,
     }
 
     return render(request, template, context)
