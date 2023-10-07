@@ -19,7 +19,7 @@
                 <div class="mb-2">
                     <p>You are a member since {{ membership_start_date|date:"F d, Y" }}.</p>
                     <p>Your membership is valid for 365 days.</p>
-                    <h4>Your current packaging choice: <strong>{{ vip_box_color }}</strong></h4>
+                    <p>Your current packaging choice: <strong>{{ vip_box_color }}</strong></p>
                     <hr>
                     <h4>Would you like to upgrade your packaging to a fancy VIP box or change its colour?</h4>
                     <h5>It is free for our members!</h5>
@@ -35,6 +35,12 @@
                                     <option value="gold">Gold Box</option>
                                 </select>
                                 <button type="submit" class="btn btn-shopping ml-2">Get VIP Box</button>
+                            </form>
+                            <hr>
+                            <h4>Want to go back to the eco friendly packaging?</h4>
+                            <form method="post" action="{% url 'delete_vip_box' %}">
+                                {% csrf_token %}
+                                <button class="btn btn-shopping" type="submit" onclick="return confirm('Are you sure to cancel?')">Delete VIP box</button>
                             </form>
                         </div>
                     </div>

@@ -34,6 +34,7 @@ def is_membership_valid(user):
     return False
 
 
+@login_required
 def membership_view(request):
     # Fetch the membership product with SKU 'member100'
     member_product = Product.objects.filter(sku='member100').first()
@@ -95,3 +96,18 @@ def create_vip_box(request):
     context['user'] = user
     context['vip_box_color'] = vip_box_color
     return render(request, 'membership_member.html', context)
+
+
+@login_required
+def delete_vip_box(request):
+    user = request.user
+    # Check if the user has a VIP box
+    vip_box = VIPBox.objects.filter(user_profile__user=user).first()
+    if vip_box:
+        # Delete the VIP box
+        vip_box.delete()
+        messages.success(
+            request, 'Your VIP box has been cancelled successfully.')
+    else:
+        messages.info(request, 'You do not have a VIP box to cancel.')
+    return redirect('create_vip_box')
