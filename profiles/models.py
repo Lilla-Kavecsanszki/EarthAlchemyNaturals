@@ -61,3 +61,21 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance, membership_status=membership_instance)
         # Existing users: just save the profile
     instance.userprofile.save()
+
+
+class VIPBox(models.Model):
+    PACKAGING_COLOR_CHOICES = [
+        ('pink', 'Pink Box'),
+        ('gold', 'Gold Box'),
+    ]
+
+    selected_packaging_color = models.CharField(
+        max_length=10,
+        choices=PACKAGING_COLOR_CHOICES,
+        default='pink',
+    )
+
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"VIP Box ({self.selected_packaging_color})"

@@ -22,14 +22,14 @@
                     <hr>
                     <p>Would you like to upgrade your packaging to a fancy VIP box?</p>
                     <p>It is free for our members too!</p>
-                    <p>Otherwise our standard packaging will be an eco, brown box.</p>
                     <hr>
                     <div class="membership">
                         <div class="form-group">
                             <label for="id_packaging_choice" class="custom-label">Packaging Choice:</label>
                             <form method="POST" action="{% url 'create_vip_box' %}">
                                 {% csrf_token %}
-                                <select id="id_packaging_choice" name="packaging_choice" class="custom-field profile-field">
+                                <select id="id_packaging_choice" name="packaging_choice"
+                                    class="custom-field profile-field">
                                     <option value="pink">Pink Box</option>
                                     <option value="gold">Gold Box</option>
                                 </select>
@@ -37,7 +37,7 @@
                             </form>
                         </div>
                     </div>
-                </div>              
+                </div>
             </div>
         </div>
     </div>

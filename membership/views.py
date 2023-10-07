@@ -1,11 +1,11 @@
-from django.shortcuts import render
-from .models import VIPBox
+from .models import Membership
+from django.shortcuts import render, redirect
+from profiles.models import VIPBox
 from django.contrib.auth.decorators import login_required
 from products.models import Product
 from datetime import datetime, timedelta, date
-from django.shortcuts import render
-from .models import Membership
 from profiles.models import UserProfile
+from django.contrib import messages
 
 
 def is_membership_valid(user):
@@ -61,30 +61,26 @@ def membership_view(request):
         return render(request, 'membership.html', context)
 
 
-
 @login_required
 def create_vip_box(request):
     context = {}
+    user = request.user
+    user_profile, created = UserProfile.objects.get_or_create(user=user)
 
     if request.method == 'POST':
-        selected_packaging_color = request.POST.get('selected_packaging_color')
-        user = request.user
+        selected_packaging_color = request.POST.get('packaging_choice')
 
         # Check if the user already has the VIP box
-        existing_vip_box = VIPBox.objects.filter(user=user).first()
+        existing_vip_box, created = VIPBox.objects.get_or_create(
+            user_profile=user_profile)
 
-        if existing_vip_box:
-            # Update the existing VIP option
-            existing_vip_box.selected_packaging_color = selected_packaging_color
-            existing_vip_box.save()
-        else:
-            # Create a new VIP box
-            vip_option = VIPBox(
-                user=user, selected_packaging_color=selected_packaging_color)
-            vip_option.save()
+        # Update the existing VIP option
+        existing_vip_box.selected_packaging_color = selected_packaging_color
+        existing_vip_box.save()
 
+        messages.success(
+            request, 'Your VIP box choice has been updated successfully.')
         return redirect('create_vip_box')
-    else:
-        context['user'] = request.user
 
-        return render(request, 'create_vip_box', context)
+    context['user'] = user
+    return render(request, 'membership_member.html', context)
