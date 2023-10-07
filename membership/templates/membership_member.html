@@ -15,13 +15,14 @@
         </div>
         <div class="col-md-6">
             <div class="product-details-container mb-5 mt-5">
-                <h2 class="mb-4 mt-5 product_name">You are our VIP!</h2>
+                <h2 class="mb-4 mt-5 product_name">{{ user.username }}, you are our VIP!</h2>
                 <div class="mb-2">
                     <p>You are a member since {{ membership_start_date|date:"F d, Y" }}.</p>
                     <p>Your membership is valid for 365 days.</p>
+                    <h4>Your current packaging choice: <strong>{{ vip_box_color }}</strong></h4>
                     <hr>
-                    <p>Would you like to upgrade your packaging to a fancy VIP box?</p>
-                    <p>It is free for our members too!</p>
+                    <h4>Would you like to upgrade your packaging to a fancy VIP box or change its colour?</h4>
+                    <h5>It is free for our members!</h5>
                     <p>Otherwise our standard packaging will be an eco, brown box.</p>
                     <hr>
                     <div class="membership">
@@ -33,7 +34,7 @@
                                     <option value="pink">Pink Box</option>
                                     <option value="gold">Gold Box</option>
                                 </select>
-                                <button type="submit" class="btn btn-primary">Get VIP Box</button>
+                                <button type="submit" class="btn btn-shopping ml-2">Get VIP Box</button>
                             </form>
                         </div>
                     </div>

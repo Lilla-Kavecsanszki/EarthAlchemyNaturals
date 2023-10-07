@@ -55,6 +55,13 @@ def membership_view(request):
 
     if is_valid_membership:
         # Valid membership
+        user_profile, created = UserProfile.objects.get_or_create(user=user)
+        vip_box_choice = VIPBox.objects.filter(
+        user_profile=user_profile).first()
+        vip_box_color = vip_box_choice.selected_packaging_color if vip_box_choice else 'brown'
+        
+        context['vip_box_color'] = vip_box_color
+
         return render(request, 'membership_member.html', context)
     else:
         # Membership is expired or user is not logged in
@@ -66,6 +73,9 @@ def create_vip_box(request):
     context = {}
     user = request.user
     user_profile, created = UserProfile.objects.get_or_create(user=user)
+    vip_box_choice = VIPBox.objects.filter(
+        user_profile=user_profile).first()
+    vip_box_color = vip_box_choice.selected_packaging_color if vip_box_choice else 'brown'
 
     if request.method == 'POST':
         selected_packaging_color = request.POST.get('packaging_choice')
@@ -83,4 +93,5 @@ def create_vip_box(request):
         return redirect('create_vip_box')
 
     context['user'] = user
+    context['vip_box_color'] = vip_box_color
     return render(request, 'membership_member.html', context)
