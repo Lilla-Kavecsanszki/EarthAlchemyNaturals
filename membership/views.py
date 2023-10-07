@@ -34,7 +34,6 @@ def is_membership_valid(user):
     return False
 
 
-@login_required
 def membership_view(request):
     # Fetch the membership product with SKU 'member100'
     member_product = Product.objects.filter(sku='member100').first()

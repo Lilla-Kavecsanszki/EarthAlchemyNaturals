@@ -64,6 +64,10 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
 
 
 class VIPBox(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'VIP boxes'
+
     PACKAGING_COLOR_CHOICES = [
         ('pink', 'Pink Box'),
         ('gold', 'Gold Box'),
