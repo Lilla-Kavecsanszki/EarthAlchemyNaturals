@@ -1,1 +1,1 @@
-web: gunicorn earthalchemy-naturals.wsgi:application
+web: gunicorn earthalchemy_naturals.wsgi:application
