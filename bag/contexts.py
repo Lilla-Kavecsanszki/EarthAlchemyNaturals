@@ -2,6 +2,9 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
+from profiles.models import UserProfile
+from membership.views import is_membership_valid
+
 
 # Delivery cost calculation
 def bag_contents(request):
@@ -9,15 +12,22 @@ def bag_contents(request):
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
+    user = request.user
 
     for item_id, bag_item in bag.items():
         product = get_object_or_404(Product, pk=item_id)
+
         if isinstance(bag_item, int):  # Check if bag_item is an int
             quantity = bag_item
-            price = product.price  # Use regular price for anonymous users
+            if user.is_authenticated and is_membership_valid(request.user):
+                print("has valid membership for contexts")
+                price = product.member_price
+            else:
+                price = product.price
         else:
             quantity = bag_item['quantity']
             price = Decimal(bag_item['price'])
+
         total += quantity * price
         product_count += quantity
         bag_items.append({

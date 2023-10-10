@@ -38,6 +38,8 @@ def add_to_bag(request, item_id):
             # Determine the price based on membership status
             has_valid_membership = is_membership_valid(request.user)
             if has_valid_membership:
+                print("has valid membership")
+                print("has valid membership")
                 price = product.member_price
             else:
                 price = product.price
