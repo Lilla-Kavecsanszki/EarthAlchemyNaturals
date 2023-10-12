@@ -76,11 +76,7 @@
                             <i class="fa-solid fa-trash-can fa-xl" style="color: #555555"></i>
                         </button>
                         <p class="text-center">
-                            {% if request.user.is_authenticated and item.product.member_price %}
-                            Subtotal: €{{ item.product.member_price | calc_subtotal:item.quantity }}
-                            {% else %}
-                            Subtotal: €{{ item.product.price | calc_subtotal:item.quantity }}
-                            {% endif %}
+                            Subtotal: €{{ item.discounted_price | calc_subtotal:item.quantity }}
                         </p>
                     </div>
                 </div>
