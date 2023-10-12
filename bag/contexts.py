@@ -17,13 +17,15 @@ def bag_contents(request):
     for item_id, bag_item in bag.items():
         product = get_object_or_404(Product, pk=item_id)
 
+        if user.is_authenticated and is_membership_valid(user):
+            print("has valid membership for contexts")
+            price = product.member_price
+        else:
+            price = product.price
+
         if isinstance(bag_item, int):  # Check if bag_item is an int
             quantity = bag_item
-            if user.is_authenticated and is_membership_valid(request.user):
-                print("has valid membership for contexts")
-                price = product.member_price
-            else:
-                price = product.price
+            price = product.price  # Use regular price for anonymous users
         else:
             quantity = bag_item['quantity']
             price = Decimal(bag_item['price'])
