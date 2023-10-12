@@ -68,7 +68,7 @@ body {
   align-items: center;
   /* Vertically center */
   height: 80px;
-  padding: 0 10px;
+  padding: 2% 10px;
 }
 
 .shop-now-button {
@@ -569,3 +569,16 @@ input[name="q"]::placeholder {
     padding-bottom: 6%;
   }
 }
+
+@media (max-width: 576px) {
+    .attention-text {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1220px) {
+    .attention-text {
+        font-size: 32px;
+    }
+}
+
