@@ -190,9 +190,12 @@
       {% include 'includes/toasts/toast_info.html' %} {% endif %} {% endwith %}
       {% endfor %}
     </div>
-    {% endif %} {% block page_header %} {% endblock %} {% block content %}
-    <!-- so they stay on the same line -->
-    {% endblock %}
+    {% endif %} {% block page_header %} {% endblock %} 
+    <main class="flex-shrink-0 main-bg">
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
 
     <!-- Footer -->
     <footer class="footer mt-auto footer-background container-fluid">
