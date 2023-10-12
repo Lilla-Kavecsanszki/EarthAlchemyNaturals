@@ -18,7 +18,7 @@ def add_to_bag(request, item_id):
     if product.sku == 'member100' and not request.user.is_authenticated:
         messages.error(
             request, 'You must be logged in to purchase a membership.')
-        return redirect(reverse(redirect_url))
+        return redirect(request.META.get('HTTP_REFERER'))
 
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})

@@ -196,6 +196,8 @@ membership
 
 https://www.geeksforgeeks.org/python-datetime-timedelta-function/
 
+https://stackoverflow.com/questions/4406377/django-request-to-find-previous-referrer
+
 Technologies:
 
 <https://favicon.io/favicon-converter/>
