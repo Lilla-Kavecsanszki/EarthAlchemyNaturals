@@ -12,8 +12,15 @@ def view_bag(request):
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+
+    # Check if the product is the membership product and the user is not authenticated
+    if product.sku == 'member100' and not request.user.is_authenticated:
+        messages.error(
+            request, 'You must be logged in to purchase a membership.')
+        return redirect(reverse(redirect_url))
+
+    quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
