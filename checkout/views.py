@@ -41,8 +41,6 @@ def checkout(request):
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
-        print(request.session)
-        print("Contents of bag:", bag)
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -131,7 +129,6 @@ def checkout(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
-    print("Contents of intent:", intent)
     return render(request, template, context)
 
 
@@ -141,9 +138,6 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-
-    print("Order Object:", order)
-    print("Save Info:", save_info)
 
     # for anonymous users
     profile = None
@@ -156,7 +150,7 @@ def checkout_success(request, order_number):
     has_membership = any(
         item.product.sku == membership_product_sku for item in order.lineitems.all())
 
-    if has_membership:
+    if has_membership and request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Set the user's membership status to "Member"
         profile.membership_status = Membership.objects.get(
