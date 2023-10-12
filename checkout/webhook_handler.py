@@ -51,6 +51,8 @@ class StripeWH_Handler:
         pid = intent.id
         bag = intent.metadata.bag
         save_info = intent.metadata.save_info
+        print("Bag:", bag)
+        print("Save Info:", save_info)
 
         # Get the Charge object
         stripe_charge = stripe.Charge.retrieve(
@@ -106,6 +108,7 @@ class StripeWH_Handler:
                 time.sleep(1)
         if order_exists:
             self._send_confirmation_email(order)
+            print("Order already in the database:", order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
                 status=200)
@@ -135,6 +138,7 @@ class StripeWH_Handler:
                             quantity=item_data,
                         )
                         order_line_item.save()
+                print("Created order in webhook:", order)
             except Exception as e:
                 if order:
                     order.delete()
@@ -150,6 +154,7 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.payment_failed webhook from Stripe
         """
+        print(f'Webhook received: {event["type"]}')
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
