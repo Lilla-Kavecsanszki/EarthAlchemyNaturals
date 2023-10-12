@@ -156,7 +156,7 @@ def checkout_success(request, order_number):
     has_membership = any(
         item.product.sku == membership_product_sku for item in order.lineitems.all())
 
-    if has_membership and request.user.is_authenticated:
+    if has_membership:
         profile = UserProfile.objects.get(user=request.user)
         # Set the user's membership status to "Member"
         profile.membership_status = Membership.objects.get(
@@ -176,7 +176,6 @@ def checkout_success(request, order_number):
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
-        print(order)
 
         # Save the user's info
         if save_info:
@@ -208,7 +207,5 @@ def checkout_success(request, order_number):
         'membership_start_date': membership_start_date,
         'membership_duration': membership_duration,
     }
-
-    print(order)
 
     return render(request, template, context)
