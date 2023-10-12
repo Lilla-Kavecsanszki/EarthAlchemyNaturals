@@ -40,7 +40,6 @@ class Product(models.Model):
     description = models.TextField()
     sku = models.CharField(max_length=250)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    member_price = models.DecimalField(max_digits=6, decimal_places=2)
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     skin_types = models.ManyToManyField('SkinType')

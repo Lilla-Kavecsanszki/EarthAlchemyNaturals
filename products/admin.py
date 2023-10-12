@@ -11,7 +11,6 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'milliliter',
         'price',
-        'member_price',
         'display_skin_types',
         'image',
     )
