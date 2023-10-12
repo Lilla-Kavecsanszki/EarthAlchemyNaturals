@@ -261,6 +261,7 @@ input[name="q"]::placeholder {
   color: #daa520;
 }
 
+
 /* toasts */
 
 .message-container {
@@ -493,6 +494,11 @@ input[name="q"]::placeholder {
   background-color: #555;
 }
 
+.footer {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -558,8 +564,8 @@ input[name="q"]::placeholder {
   .decrement-qty {
         padding: .25rem .5rem !important;
   }
-}
 
-.order-table {
+  .order-table {
     padding-bottom: 6%;
+  }
 }
