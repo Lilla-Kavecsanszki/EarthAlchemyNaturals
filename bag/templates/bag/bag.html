@@ -23,7 +23,8 @@
     <div class="col">
       {% if bag_items %}
       <div class="rounded">
-        <table class="table table-custom">
+        <div class="table-responsive">
+          <table class="table table-custom">
           <thead>
             <tr>
               <th scope="col">Product</th>
@@ -145,34 +146,29 @@
               <td colspan="5" class="text-center">
                 <a
                   href="{% url 'products' %}"
-                  class="btn btn-outline-black rounded-0 btn-lg"
+                  class="btn btn-back btn-lg"
                 >
-                  <span class="icon">
                     <i class="fas fa-chevron-left"></i>
-                  </span>
                   <span class="text-back-shop">back to the Shop</span>
                 </a>
                 <a
                   href="{% url 'checkout' %}"
-                  class="btn btn-black rounded-0 btn-lg"
+                  class="btn btn-shopping btn-lg"
                 >
                   <span class="text-uppercase">Secure Checkout</span>
-                  <span class="icon">
                     <i class="fas fa-lock"></i>
-                  </span>
                 </a>
               </td>
             </tr>
           </tbody>
-        </table>
+          </table>
+        </div>
       </div>
       {% else %}
       <p class="lead mb-5">Your bag is empty.</p>
-      <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
-        <span class="icon">
+      <a href="{% url 'products' %}" class="btn btn-back">
           <i class="fas fa-chevron-left"></i>
-        </span>
-        <span class="text-back-shop btn-back">back to the Shop</span>
+        <span class="text-back-shop">back to the Shop</span>
       </a>
       {% endif %}
     </div>

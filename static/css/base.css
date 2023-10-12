@@ -221,6 +221,11 @@ body {
   color: #222;
 }
 
+.btn-window-shopping:hover {
+    color: #daa520;
+    text-decoration: underline;
+}
+
 input[name="q"]::placeholder {
   color: #222;
 }
@@ -527,7 +532,8 @@ input[name="q"]::placeholder {
   }
 
   .nav-link {
-        padding: 0.15rem;
+        padding: 0.10rem;
+        font-size: 1rem;
   }
 
   .nav-link i.fa-lg {
@@ -552,4 +558,8 @@ input[name="q"]::placeholder {
   .decrement-qty {
         padding: .25rem .5rem !important;
   }
+}
+
+.order-table {
+    padding-bottom: 6%;
 }
