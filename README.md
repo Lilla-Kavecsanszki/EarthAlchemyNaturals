@@ -320,6 +320,9 @@ How the Features align with and fulfill the User Stories by providing the necess
 </details>
 <br>
 
+
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
+
 # Testing
 
 <p>
