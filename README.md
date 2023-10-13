@@ -21,27 +21,28 @@ This full-stack project was built using the Django framework, Python, HTML, Boot
 
 # Contents
 
-- [User Experience (UX)](https://github.com/Lilla-Kavecsanszki/downwarddog#user-experience-ux)
-  - [Ideal client](https://github.com/Lilla-Kavecsanszki/downwarddog#ideal-client)
-  - [User stories & Epics](https://github.com/Lilla-Kavecsanszki/downwarddog#user-stories-and-epics)
-- [Planning](https://github.com/Lilla-Kavecsanszki/downwarddog#planning)
-- [Design](https://github.com/Lilla-Kavecsanszki/downwarddog#design)
-  - [Wireframes](https://github.com/Lilla-Kavecsanszki/downwarddog#wireframes)
-  - [Entity Relationship Diagrams](https://github.com/Lilla-Kavecsanszki/downwarddog#entity-relationship-diagrams)
-  - [Theme](https://github.com/Lilla-Kavecsanszki/downwarddog#theme)
-- [Languages Used](https://github.com/Lilla-Kavecsanszki/downwarddog#languages-used)
-- [Frameworks, Libraries, Programs & Technologies Used](https://github.com/Lilla-Kavecsanszki/downwarddog#frameworks-libraries-programs--technologies-used)
-- [Features](https://github.com/Lilla-Kavecsanszki/downwarddog#features)
-- [User Story - Features Cross-Reference table](https://github.com/Lilla-Kavecsanszki/downwarddog#user-story---features-cross-reference-table)
-- [Deployment](https://github.com/Lilla-Kavecsanszki/downwarddog#deployment)
-- [Testing](https://github.com/Lilla-Kavecsanszki/downwarddog#testing)
-  - [Manual Testing](https://github.com/Lilla-Kavecsanszki/downwarddog#manual-testing)
-  - [Further Testing](https://github.com/Lilla-Kavecsanszki/downwarddog#further-testing)
-  - [Bugs](https://github.com/Lilla-Kavecsanszki/downwarddog#bugs)
-- [Credits](https://github.com/Lilla-Kavecsanszki/downwarddog#credits)
-  - [Media and Content](https://github.com/Lilla-Kavecsanszki/downwarddog#media-and-content)
-  - [Acknowledgments and Code](https://github.com/Lilla-Kavecsanszki/downwarddog#acknowledgments-and-code)
-  - [Disclaimer](https://github.com/Lilla-Kavecsanszki/downwarddog#disclaimer)
+- [User Experience (UX)](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#user-experience-ux)
+  - [Ideal client](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#ideal-client)
+  - [User stories & Epics](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#user-stories-and-epics)
+- [Planning](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#planning)
+- [Design](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#design)
+  - [Wireframes](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#wireframes)
+  - [Entity Relationship Diagrams](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#entity-relationship-diagrams)
+  - [Theme](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#theme)
+  - [Typography](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#typography)
+- [Languages Used](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#languages-used)
+- [Frameworks, Libraries, Programs & Technologies Used](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#frameworks-libraries-programs--technologies-used)
+- [Features](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#features)
+- [User Story - Features Cross-Reference table](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#user-story---features-cross-reference-table)
+- [Deployment](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#deployment)
+- [Testing](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#testing)
+  - [Manual Testing](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#manual-testing)
+  - [Further Testing](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#further-testing)
+  - [Bugs](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#bugs)
+- [Credits](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#credits)
+  - [Media and Content](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#media-and-content)
+  - [Acknowledgments and Code](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#acknowledgments-and-code)
+  - [Disclaimer](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#disclaimer)
 
 # User Experience (UX)
 
@@ -76,7 +77,7 @@ This website is the best way to help them achieve these goals because:
 
 In summary, the EarthAlchemy Naturals website effectively supports visitors in achieving their goals by offering information, community engagement, discounts, personalization through the VIP box, a diverse product range, and a user-friendly shopping experience. This combination of features and offerings aligns with the needs and interests of individuals seeking natural cosmetic products while creating a supportive and engaged community.
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/downwarddog#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
 
 ### User stories and Epics
@@ -145,7 +146,7 @@ In summary, the EarthAlchemy Naturals website effectively supports visitors in a
 - US0806: Easily Contact Customer Support: As a site user, I can find clear contact information and options for reaching out to customer support so that I can get assistance when needed.
 - US0807: Share Feedback and Reviews: As a site user, I can leave reviews and feedback about products I've purchased so that I can share my experiences and help other shoppers.
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/downwarddog#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
 # Planning
 
@@ -160,7 +161,7 @@ In this project Github issues were used to create the User stories and groupped 
 
 For easy access, you can find the Epics, Issues/ User Stories with their Acceptance Criteria and Kanban board [HERE](https://github.com/users/Lilla-Kavecsanszki/projects/6).
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/downwarddog#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
 # Design
 
@@ -203,6 +204,8 @@ The unique_booking constraint in the Booking model ensures that a user can creat
 <img src="README_docs/images/booking_erd.png" alt="Booking ERD">
 </details>
 
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
+
 ### Theme
 
 Whitesmoke - #f5f5f5
@@ -230,6 +233,8 @@ The chosen color palette for the EarthAlchemy Naturals website serves the purpos
 
 Overall, this combination provides a clear distinction between body text and headers while maintaining a cohesive and balanced visual appeal, creating the desired ambiance for the shop.
 
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
+
 # Languages Used
 
 - HTML5
@@ -237,7 +242,7 @@ Overall, this combination provides a clear distinction between body text and hea
 - CSS3
 - Jquery
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/downwarddog#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
 # Frameworks, Libraries, Programs & Technologies Used
 
@@ -263,14 +268,138 @@ Overall, this combination provides a clear distinction between body text and hea
 - [EmailJS](https://www.emailjs.com/) was used to create the contact form functionality
 - [Heroku](https://heroku.com/) was used to deploy the application and provides an enviroment in which the code can execute
 
-
-[Back to top](https://github.com/Lilla-Kavecsanszki/downwarddog#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
 # Features
 
 ## Home Page
 
 ### F01 Navigation Bar
+
+### Future ambitions - Planned for the Next Sprint
+
+- I
+- S
+- E
+- j
+
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
+
+# User Story - Features Cross-Reference table
+
+How the Features align with and fulfill the User Stories by providing the necessary functionality and interactions that meet the users' needs and requirements.
+
+[Cross-reference Table](README_docs/us_f_crossreference.pdf "crossreference_table")
+
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
+
+# Deployment
+
+**How to Clone**
+<p>
+<details><summary>Steps</summary><br/>
+
+1. Go to the <https://github.com/Lilla-Kavecsanszki/downwarddog> repository.
+2. Click the Code button to the left of the green Gitpod button, then choose Local.
+3. Click on headings for HTTPS, SSH, and Github CLI to find their individual URL links. Choose the HTTPs one.
+4. Open your own terminal in your editor and change the current working directory to the location of where you want
+   the cloned directory to be.
+5. In the terminal type git clone, and then paste the URL you copied from the repository page.
+6. Press enter to complete.
+
+</details>
+<br>
+
+**How to Fork**
+<p>
+<details><summary>Steps</summary><br/>
+
+1. Go to the <https://github.com/Lilla-Kavecsanszki/downwarddog> repository.
+2. Click the fork button in the top right of the screen, between the watch, and the star buttons.
+
+</details>
+<br>
+
+# Testing
+
+<p>
+<details><summary>W3C HTML Validator result</summary><br/>
+to validate all HTML code written and used in this website
+<img src="README_docs/images/html_validator.png" alt="HTML Validator">
+</details>
+
+<p>
+<details><summary>W3C CSS Validator result</summary><br/>
+to validate all CSS code written and used in this website
+<img src="README_docs/images/css_validator.png" alt="CSS Validator">
+</details>
+
+<p>
+<details><summary>JS Hint result</summary><br/>
+to validate the javascript code written and used in this website
+<img src="README_docs/images/jshint.png" alt="JSHint">
+</details>
+
+<p>
+<details><summary>CI Python Linter - views.py</summary><br/>
+to validate python code written and used in the views.py
+<img src="README_docs/images/python_linter_views.png" alt="Python Validator views.py">
+</details>
+
+<p>
+<details><summary>CI Python Linter - models.py</summary><br/>
+to validate python code written and used in the models.py
+<img src="README_docs/images/python_linter_models.png" alt="Python Validator models.py">
+</details>
+
+<p>
+<details><summary>CI Python Linter - forms.py</summary><br/>
+to validate python code written and used in the forms.py
+<img src="README_docs/images/python_linter_forms.png" alt="Python Validator forms.py">
+</details>
+
+<p>
+<details><summary>CI Python Linter - admin.py</summary><br/>
+to validate python code written and used in the admin.py
+<img src="README_docs/images/python_linter_admin.png" alt="Python Validator admin.py">
+</details>
+
+<p>
+<details><summary>CI Python Linter - application urls.py</summary><br/>
+to validate python code written and used in the app's urls.py
+<img src="README_docs/images/python_linter_urls.png" alt="Python Validator urls.py">
+</details>
+
+<p>
+<details><summary>CI Python Linter - project urls.py</summary><br/>
+to validate python code written and used in the project's urls.py
+<img src="README_docs/images/python_linter_p_urls.png" alt="Python Validator project urls.py">
+</details>
+
+<p>
+<details><summary>CI Python Linter - project settings.py</summary><br/>
+to validate python code written and used in the project's settings.py
+<img src="README_docs/images/python_linter_p_settings.png" alt="Python Validator project settings.py">
+</details>
+
+## Manual Testing
+
+The table provided below presents the test cases that were utilized, with the corresponding results, and references to the corresponding Feature IDs that each test case addressed. These test cases were primarily designed based on the Acceptance Criteria specified for each User Story.
+
+Details here:
+[Manual Testing Document](README_docs/manual_testing_cases.pdf)
+
+All tests passed successfully, indicating that the specified features and functionalities are working as intended.
+
+### Further testing
+
+<p>
+<details><summary>Details</summary><br/>
+I asked friends and family to look at the application on their devices, browsers and report any issues they find. A few responsiveness and semantical issues were resolved as a result of this.
+</details>
+
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
+
 
 ## Bugs
 
@@ -300,27 +429,33 @@ https://stackoverflow.com/questions/46773416/rendering-different-templates-to-th
 
    In the create_or_update_user_profile, needed to also pass the membership_status when we create the user profile. The user object contained all the dat needed, but not the membership_status. We use get_or_create, to set the membership status to 'None', but that also returned a tuple, so eventually the solution was to get seperated by saying: membership_instance, created. This means we get membership_instance as an instance of Membership, and created as True/False.
 
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
+
+# Credits
+
+## Media and Content
+
+All images were taken from [Unsplash.com](https://unsplash.com/)
+
+Herb description sources and inspiration:
+<https://www.naturisimo.com/>
+<https://www.beautypie.com>
+
+Resources:
+ginseng:
+<https://www.medicalnewstoday.com/articles/262982#_noHeaderPrefixedContent>
+rosemary:
+<https://www.medicalnewstoday.com/articles/266370#_noHeaderPrefixedContent>
 
 ## Acknowledgments and Code
 
-I drew inspiration for this project from my personal passion for both yoga and animals, particularly my pets, Whisky and Mia. To ensure I created a successful and well-rounded project, I reviewed numerous yoga studio websites and in addition, the work of other students to gain a better understanding of project scope and to identify best practices for Milestone Project 4.
+I drew inspiration for this project from my personal hobby of creating natural skincare products and my passion for playing around with essential oils, ingredients and cosmetics.
+To ensure the creation of a successful and comprehensive project, I researched similar e-commerce platforms and reviewed the work of fellow students, aiming to gain a clearer perspective on project scope and to identify best practices for the development of a Milestone Project 5.
 
 The below websites and Youtube channels have been used to understand the logic of building this project with Django;
 
 The walk-through project 'Boutique Ado' from Code Institute videos - its codes were also heavily used in the project: <https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/>
 
-Inspiration:
-
-https://www.naturisimo.com/
-<https://www.beautypie.com>
-
-Resources:
-ginseng:
-https://www.medicalnewstoday.com/articles/262982#_noHeaderPrefixedContent
-rosemary:
-<https://www.medicalnewstoday.com/articles/266370#_noHeaderPrefixedContent>
-
-code:
 
 shimmer button : <https://codepen.io/Amarjit/pen/mrbjNy>
 admin site list_display: <https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display>
@@ -345,10 +480,10 @@ https://www.geeksforgeeks.org/python-datetime-timedelta-function/
 
 <https://stackoverflow.com/questions/4406377/django-request-to-find-previous-referrer>
 
-
+I also would like to take the chance and express my sincere gratitude to my mentor, Elaine Roche, and the tutoring team for their steadfast support and invaluable feedback. Their guidance, tips, and resources have played a crucial role in enhancing my coding and testing skills. While Elaine has embarked on a new journey, she was instrumental in initiating this project and guiding me throughout this year and four previous projects. Gareth McGirr has since taken me under his mentoring wings, and I am very appreciative of his assistance, suggestions, and ideas that have contributed to the project's finest appearance and functionality.
 
 ## Disclaimer
 
 This application is for educational use only.
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/downwarddog#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
