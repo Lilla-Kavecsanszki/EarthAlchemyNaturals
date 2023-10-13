@@ -1,3 +1,84 @@
+# EarthAlchemy Naturals
+
+EarthAlchemy Naturals is a B2C e-commerce application specializing in natural and holistic products. The site is designed to offer users a visually appealing and user-friendly online shopping experience. Its core features include product offerings, discounts, a newsletter, social media presence, and a user-friendly profile function for saving customer information.
+
+One standout feature of EarthAlchemy Naturals is the membership option. Customers can purchase a 12-month membership, which unlocks exclusive benefits, including a remarkable 30% discount on every product in the catalog. Additionally, members have the opportunity to customize their packaging box and receive luxurious packaging for a truly premium experience.
+
+The site operates as a virtual retail store, allowing users to browse, search, and filter a wide range of natural products. Customers can select items to add to their shopping cart and make secure payments through a seamless checkout process.
+
+For general users, the platform provides comprehensive product details, along with information about the main (star) ingrediant of each products. Customers can also subscribe to the company's newsletter to stay updated. Registered users can save their profile details, to make their future purchases faster and also have the availability to buy the membership. 
+
+Admin users hold the ability to oversee and manage the product catalog and herb profiles. Their responsibilities encompass tasks such as adding new products, adjusting pricing, explaining the main herb used for each products, and constantly updating these information.
+
+The project involves a variety of web marketing strategies, including organic social media marketing through Facebook, and email marketing via a newsletter subscription managed through Mailchimp. 
+The structure and purpose of EarthAlchemy Naturals take inspiration from the Code Institute's Boutique Ado example application, ensuring a solid foundation for this e-commerce venture.
+
+This full-stack project was built using the Django framework, Python, HTML, Bootstrap, and CSS. Additionally, ElephantSQL and AWS were used to store data, images, and static files. Stripe was used for payment processing.
+
+![Application](README_docs/images/responsive.png "Application")
+
+[Link to the live project](https://earthalchemy-naturals-99139eee523b.herokuapp.com/)
+
+# Contents
+
+- [User Experience (UX)](https://github.com/Lilla-Kavecsanszki/downwarddog#user-experience-ux)
+  - [Ideal client](https://github.com/Lilla-Kavecsanszki/downwarddog#ideal-client)
+  - [User stories & Epics](https://github.com/Lilla-Kavecsanszki/downwarddog#user-stories-and-epics)
+- [Planning](https://github.com/Lilla-Kavecsanszki/downwarddog#planning)
+- [Design](https://github.com/Lilla-Kavecsanszki/downwarddog#design)
+  - [Wireframes](https://github.com/Lilla-Kavecsanszki/downwarddog#wireframes)
+  - [Entity Relationship Diagrams](https://github.com/Lilla-Kavecsanszki/downwarddog#entity-relationship-diagrams)
+  - [Theme](https://github.com/Lilla-Kavecsanszki/downwarddog#theme)
+- [Languages Used](https://github.com/Lilla-Kavecsanszki/downwarddog#languages-used)
+- [Frameworks, Libraries, Programs & Technologies Used](https://github.com/Lilla-Kavecsanszki/downwarddog#frameworks-libraries-programs--technologies-used)
+- [Features](https://github.com/Lilla-Kavecsanszki/downwarddog#features)
+- [User Story - Features Cross-Reference table](https://github.com/Lilla-Kavecsanszki/downwarddog#user-story---features-cross-reference-table)
+- [Deployment](https://github.com/Lilla-Kavecsanszki/downwarddog#deployment)
+- [Testing](https://github.com/Lilla-Kavecsanszki/downwarddog#testing)
+  - [Manual Testing](https://github.com/Lilla-Kavecsanszki/downwarddog#manual-testing)
+  - [Further Testing](https://github.com/Lilla-Kavecsanszki/downwarddog#further-testing)
+  - [Bugs](https://github.com/Lilla-Kavecsanszki/downwarddog#bugs)
+- [Credits](https://github.com/Lilla-Kavecsanszki/downwarddog#credits)
+  - [Media and Content](https://github.com/Lilla-Kavecsanszki/downwarddog#media-and-content)
+  - [Acknowledgments and Code](https://github.com/Lilla-Kavecsanszki/downwarddog#acknowledgments-and-code)
+  - [Disclaimer](https://github.com/Lilla-Kavecsanszki/downwarddog#disclaimer)
+
+# User Experience (UX)
+
+### Ideal client
+
+The ideal client for this business is:
+
+-	English speaking
+-	Health and Wellness Enthusiasts
+-	Value Quality and Customization
+-	Eco-Conscious Consumers
+-   Regular Online Shoppers
+-   Avid Shoppers of Natural Products
+
+Visitors to the EarthAlchemy Naturals website are seeking:
+
+- A user-friendly and informative online store that provides reliable and comprehensive information about natural and holistic products, offering insights into their benefits and uses.
+- Features that foster a sense of community and engagement. Members not only enjoy substantial discounts applied to all products, promoting a shared sense of value and savings within the community but also have the opportunity to select a VIP box in their choice of two beautiful colors as a complimentary add-on.
+- The option to access a wide array of natural and holistic products, supporting a holistic lifestyle and promoting eco-conscious consumer choices.
+- A variety of product categories to choose from, including toners, serums, sun protection and more, catering to diverse individual preferences and needs.
+- A flexible shopping experience, allowing users to adjust their orders and quantities as needed, ensuring a convenient and personalized shopping journey.
+
+This website is the best way to help them achieve these goals because:
+
+- The user-friendly menu makes accessing different functionalities very easy and intuitive.
+- The website's content is carefully curated and regularly updated to provide reliable and up-to-date information to the visitors.
+- The membership program offers substantial discounts on all products and the added benefit of a VIP box in two color choices. This not only provides cost savings but also an element of personalization, creating a sense of value for members.
+- EarthAlchemy Naturals offers a wide variety of natural and holistic products across different categories, catering to individual preferences and needs. Visitors can find an array of items that resonate with their lifestyle and goals.
+- The website ensures a flexible and personalized shopping experience. Visitors can adjust their orders and quantities as needed, reflecting a commitment to customer convenience.
+- The website also ensures a seamless and secure payment process, while registered users can save their profile details making this process even faster or the next time. 
+
+
+In summary, the EarthAlchemy Naturals website effectively supports visitors in achieving their goals by offering information, community engagement, discounts, personalization through the VIP box, a diverse product range, and a user-friendly shopping experience. This combination of features and offerings aligns with the needs and interests of individuals seeking natural cosmetic products while creating a supportive and engaged community.
+
+[Back to top](https://github.com/Lilla-Kavecsanszki/downwarddog#contents)
+
+
 ### User stories and Epics
 
 #### Epic 1: User Management
@@ -71,13 +152,13 @@
 The planning process began by identifying the target clientele, which involved creating a Persona Profile using Code Institute's template based on design thinking principles. This Persona Profile helps in understanding the needs, expectations, and preferences of the identified persona, and the website is designed to cater to these specific requirements.
 You can see the persona profile [HERE](README_docs/design_thinking_persona_template.pdf).
 
-Given the prevalence of mobile usage among our target users, creating a responsive website was a top priority in our design approach. To achieve this, we leveraged the power of Bootstrap grids, elements, and responsive utilities combined with custom CSS, to ensure seamless adaptability across various devices.
+Given the prevalence of mobile usage among our target users, creating a responsive website was a top priority in our design approach. To achieve this, the power of Bootstrap grids, elements, and responsive utilities combined with custom CSS was leveraged, to ensure seamless adaptability across various devices.
 
 ### Agile Methodology
 
-In this project Github issues were used to create the User stories and groupped into Epics, in a Github Project. This served as the Agile tool. The issues' development was managed through a Kanban board. Currently, all the issues have been marked as "Done”.
+In this project Github issues were used to create the User stories and groupped into Epics, Milestones in a Github Project. This served as the Agile tool. The issues' development was managed through a Kanban board. Currently, all the issues have been marked as "Done”.
 
-For easy access, you can find the Epics, Issues/ User Stories with their Acceptance Criteria and Kanban board [HERE](https://github.com/users/Lilla-Kavecsanszki/projects/5).
+For easy access, you can find the Epics, Issues/ User Stories with their Acceptance Criteria and Kanban board [HERE](https://github.com/users/Lilla-Kavecsanszki/projects/6).
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/downwarddog#contents)
 
@@ -124,15 +205,29 @@ The unique_booking constraint in the Booking model ensures that a user can creat
 
 ### Theme
 
-dark forest green - #00563F
-gold - #DAA520
-white powder - #FDFDFD
-light pink - #eae4e2
-dusk pink - #d4c9c5
-light grey - #808080
-medium grey - #555
-dark grey - #222
-black - #000000
+Gold - #DAA520
+White Powder - #FDFDFD
+Light Pink - #eae4e2
+Dusk Pink - #d4c9c5
+Light Grey - #808080
+Medium Grey - #555
+Dark Grey - #222
+Black - #000000
+
+![colour_palette](README_docs/images/colorkit.png "colour_palette")
+
+### Typography
+
+- Poppins (Body Font):
+  - Poppins is a modern and versatile sans-serif font that offers excellent readability. It can provide a clean and organized look for your body text, making it easy for visitors to read and navigate your content.
+- Quicksand (Body Font):
+  - Quicksand is another modern sans-serif font known for its rounded and friendly appearance. It pairs well with Poppins and offers a slightly different feel, contributing to a visually pleasing and approachable design.
+- Cinzel Decorative (Header Font):
+  - Cinzel Decorative brings the alchemical vibes you're looking for. Its decorative and mystical style can make your headers and titles stand out, adding a touch of intrigue and uniqueness to your design.
+
+![Poppins](README_docs/images/poppins.png "poppins")
+
+Overall, this combination provides a clear distinction between body text and headers while maintaining a cohesive and balanced visual appeal, creating the desired ambiance for the shop.
 
 ## Bugs
 
