@@ -205,29 +205,72 @@ The unique_booking constraint in the Booking model ensures that a user can creat
 
 ### Theme
 
-Gold - #DAA520
-White Powder - #FDFDFD
-Light Pink - #eae4e2
-Dusk Pink - #d4c9c5
-Light Grey - #808080
-Medium Grey - #555
-Dark Grey - #222
+Whitesmoke - #f5f5f5
+Wisp Pink - #eae4e2
+Swiss Coffee - #d4c9c5
+Goldenrod - #daa520
+Matterhorn - #555
+Nero - #222
 Black - #000000
 
 ![colour_palette](README_docs/images/colorkit.png "colour_palette")
 
+The chosen color palette for the EarthAlchemy Naturals website serves the purpose of conveying a clean, fresh, and elegant aesthetic that aligns with the brand values and the nature of the products. It combines neutral and vibrant tones to create a sense of purity and well-being, while also highlighting key elements for engagement and readability.
+
 ### Typography
 
 - Poppins (Body Font):
-  - Poppins is a modern and versatile sans-serif font that offers excellent readability. It can provide a clean and organized look for your body text, making it easy for visitors to read and navigate your content.
+  - Poppins is a modern and versatile sans-serif font that offers excellent readability. It provides a clean and organized look for body texts, making it easy for visitors to read and navigate the content.
 - Quicksand (Body Font):
   - Quicksand is another modern sans-serif font known for its rounded and friendly appearance. It pairs well with Poppins and offers a slightly different feel, contributing to a visually pleasing and approachable design.
 - Cinzel Decorative (Header Font):
-  - Cinzel Decorative brings the alchemical vibes you're looking for. Its decorative and mystical style can make your headers and titles stand out, adding a touch of intrigue and uniqueness to your design.
+  - Cinzel Decorative brings the alchemical vibes with its decorative and mystical style, making headers and titles stand out, adding a touch of intrigue and uniqueness to the design.
 
 ![Poppins](README_docs/images/poppins.png "poppins")
 
 Overall, this combination provides a clear distinction between body text and headers while maintaining a cohesive and balanced visual appeal, creating the desired ambiance for the shop.
+
+# Languages Used
+
+- HTML5
+- Python
+- CSS3
+- Jquery
+
+[Back to top](https://github.com/Lilla-Kavecsanszki/downwarddog#contents)
+
+# Frameworks, Libraries, Programs & Technologies Used
+
+- [Balsamiq](https://balsamiq.com/) was used to create the Wireframes
+- [Lucid](https://lucid.app/documents#/documents?folder_id=recent) was used to create the ER Diagrams
+- [Canva](https://www.canva.com/) was used to photoshop the images used
+- [ColorKit](https://colorkit.co/palette/F5F5F5-EAE4E2-D4C9C5-DAA520-555-222-000000/) was used to create the colour palette.
+- Github was used as the repository for the projects code after being pushed from Git
+- CodeAnywhere was used for version control, allowing me to commit changes and push them to GitHub directly from the CodeAnywhere terminal. It was the primary tool used for creating and editing all the code.
+- [Google Fonts](https://fonts.google.com/) used for the Montserrat and Poiret One fonts
+- [Font Awesome](https://fontawesome.com/) was used to add icons for aesthetic and UX purposes
+- [Favicon](https://favicon.io/favicon-converter/) was used to create the favicon
+- [Bootstrap](https://getbootstrap.com/) was used to build a responsive website quicker
+- Microsoft Word was used to create the wireframes during the design process.
+- [Django](https://www.djangoproject.com/) was used as the framework of the application
+- [Gunicorn](https://gunicorn.org/) was used as the Web Server to run Django on Heroku
+- [Pillow](https://pillow.readthedocs.io/en/stable/index.html) - Python Imaging Library used for image handling
+- Django allauth used for account registration and authentication
+- Django crispy forms used for form rendering
+- [Amazon Web Services (AWS)](https://aws.amazon.com) used to store all of static files and images
+- [Boto3](https://pypi.org/project/boto3/) the Amazon Web Services (AWS) Software Development Kit (SDK) for Python.
+- [Stripe](https://js.stripe.com/v3/) used for secure payments
+- [EmailJS](https://www.emailjs.com/) was used to create the contact form functionality
+- [Heroku](https://heroku.com/) was used to deploy the application and provides an enviroment in which the code can execute
+
+
+[Back to top](https://github.com/Lilla-Kavecsanszki/downwarddog#contents)
+
+# Features
+
+## Home Page
+
+### F01 Navigation Bar
 
 ## Bugs
 
@@ -256,6 +299,15 @@ https://stackoverflow.com/questions/46773416/rendering-different-templates-to-th
    Integrity Error occured, when trying to register, login. Foreign Key constraint failed:
 
    In the create_or_update_user_profile, needed to also pass the membership_status when we create the user profile. The user object contained all the dat needed, but not the membership_status. We use get_or_create, to set the membership status to 'None', but that also returned a tuple, so eventually the solution was to get seperated by saying: membership_instance, created. This means we get membership_instance as an instance of Membership, and created as True/False.
+
+
+## Acknowledgments and Code
+
+I drew inspiration for this project from my personal passion for both yoga and animals, particularly my pets, Whisky and Mia. To ensure I created a successful and well-rounded project, I reviewed numerous yoga studio websites and in addition, the work of other students to gain a better understanding of project scope and to identify best practices for Milestone Project 4.
+
+The below websites and Youtube channels have been used to understand the logic of building this project with Django;
+
+The walk-through project 'Boutique Ado' from Code Institute videos - its codes were also heavily used in the project: <https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/>
 
 Inspiration:
 
@@ -293,8 +345,10 @@ https://www.geeksforgeeks.org/python-datetime-timedelta-function/
 
 <https://stackoverflow.com/questions/4406377/django-request-to-find-previous-referrer>
 
-Technologies:
 
-<https://favicon.io/favicon-converter/>
-canva - to photoshop
-https://colorkit.co/color-palette-generator/00563F-DAA520-FDFDFD-d4c9c5-d6c9c0-808080-555-000000/
+
+## Disclaimer
+
+This application is for educational use only.
+
+[Back to top](https://github.com/Lilla-Kavecsanszki/downwarddog#contents)
