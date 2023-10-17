@@ -499,6 +499,10 @@ input[name="q"]::placeholder {
     margin-left: auto;
 }
 
+.error-page {
+    background-color: #d4c9c5;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
