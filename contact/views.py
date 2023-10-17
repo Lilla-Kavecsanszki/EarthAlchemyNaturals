@@ -10,7 +10,8 @@ def contact_us(request):
         if form.is_valid():
             send_mail(
                 form.cleaned_data['subject'],  # subject
-                f"Message from {form.cleaned_data['name']} <{form.cleaned_data['email']}>\n\n"
+                f"Message from {form.cleaned_data['name']} "
+                f"<{form.cleaned_data['email']}>\n\n"
                 f"{form.cleaned_data['message']}",  # message
                 None,  # from email
                 ['earthalchemynaturals@example.com'],

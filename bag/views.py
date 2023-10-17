@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, \
+    HttpResponse, get_object_or_404
 from django.contrib import messages
 from products.models import Product
-from membership.views import is_membership_valid
 
 
 def view_bag(request):
@@ -14,7 +14,8 @@ def add_to_bag(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
 
-    # Check if the product is the membership product and the user is not authenticated
+    # Check if the product is the membership product and the user is not 
+    # authenticated
     if product.sku == 'member100' and not request.user.is_authenticated:
         messages.error(
             request, 'You must be logged in to purchase a membership.')
