@@ -1,9 +1,8 @@
-from .models import Membership
 from django.shortcuts import render, redirect
 from profiles.models import VIPBox
 from django.contrib.auth.decorators import login_required
 from products.models import Product
-from datetime import datetime, timedelta, date
+from datetime import timedelta, date
 from profiles.models import UserProfile
 from django.contrib import messages
 
@@ -17,8 +16,10 @@ def is_membership_valid(user):
         membership_start_date = user_profile.membership_start_date
 
         if membership_start_date:
-            # Calculate the expiration date by adding membership duration to the start date
-            expiration_date = membership_start_date.date() + timedelta(days=365)
+            # Calculate the expiration date by adding membership duration to
+            # the start date
+            expiration_date = (membership_start_date.date() +
+                               timedelta(days=365))
 
             # Fetch the current date as a date object
             today_date = date.today()
@@ -57,9 +58,10 @@ def membership_view(request):
         # Valid membership
         user_profile, created = UserProfile.objects.get_or_create(user=user)
         vip_box_choice = VIPBox.objects.filter(
-        user_profile=user_profile).first()
-        vip_box_color = vip_box_choice.selected_packaging_color if vip_box_choice else 'brown'
-        
+            user_profile=user_profile).first()
+        vip_box_color = (vip_box_choice.selected_packaging_color
+                         if vip_box_choice else 'brown')
+
         context['vip_box_color'] = vip_box_color
 
         return render(request, 'membership_member.html', context)
@@ -75,7 +77,8 @@ def create_vip_box(request):
     user_profile, created = UserProfile.objects.get_or_create(user=user)
     vip_box_choice = VIPBox.objects.filter(
         user_profile=user_profile).first()
-    vip_box_color = vip_box_choice.selected_packaging_color if vip_box_choice else 'brown'
+    vip_box_color = (vip_box_choice.selected_packaging_color
+                     if vip_box_choice else 'brown')
 
     if request.method == 'POST':
         selected_packaging_color = request.POST.get('packaging_choice')

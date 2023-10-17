@@ -32,7 +32,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 
 ALLOWED_HOSTS = ['earthalchemy-naturals.herokuapp.com',
-                 'localhost', 'earthalchemy-naturals-99139eee523b.herokuapp.com', '8000-lilla-kavecsanszki-earth-1sbn79wqnr.us2.codeanyapp.com']
+                 'localhost',
+                 'earthalchemy-naturals-99139eee523b.herokuapp.com',
+                 '8000-lilla-kavecsanszki-earth-1sbn79wqnr.us2.codeanyapp.com']
 
 
 # Application definition
@@ -88,10 +90,10 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth
+                'django.template.context_processors.request',   # allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media',  # to show the images
+                'django.template.context_processors.media',  # show the images
                 'bag.contexts.bag_contents',
             ],
             'builtins': [
@@ -129,32 +131,36 @@ WSGI_APPLICATION = 'earthalchemy_naturals.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 if 'DATABASE_URL' in os.environ:
-        DATABASES = {
-            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
-    else:
-        DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-            }
-        }
-        
+    }
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': ('django.contrib.auth.password_validation.'
+                 'UserAttributeSimilarityValidator'),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': ('django.contrib.auth.password_validation.'
+                 'MinimumLengthValidator'),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': ('django.contrib.auth.password_validation.'
+                 'CommonPasswordValidator'),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': ('django.contrib.auth.password_validation.'
+                 'NumericPasswordValidator'),
     },
 ]
 
@@ -192,7 +198,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-     
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'earthalchemy-naturals'
     AWS_S3_REGION_NAME = 'eu-west-2'

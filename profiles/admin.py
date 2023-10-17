@@ -13,5 +13,6 @@ class UserProfileAdmin(admin.ModelAdmin):
 class VIPBoxAdmin(admin.ModelAdmin):
     list_display = ('user_profile', 'selected_packaging_color',)
 
+
 admin.site.register(UserProfile, UserProfileAdmin)
 admin.site.register(VIPBox, VIPBoxAdmin)

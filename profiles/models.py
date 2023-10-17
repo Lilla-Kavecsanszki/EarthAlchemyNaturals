@@ -46,6 +46,7 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
+
 @ receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
@@ -57,7 +58,7 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         if not isinstance(membership_instance, Membership):
             raise ValueError("Invalid Membership instance")
         UserProfile.objects.create(
-            user=instance, 
+            user=instance,
             membership_status=membership_instance
         )
         # Existing users: just save the profile

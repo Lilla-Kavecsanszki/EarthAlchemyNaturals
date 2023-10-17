@@ -103,7 +103,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in 
+        # Attempt to prefill the form with any info the user maintains in
         # their profile
         if request.user.is_authenticated:
             try:
@@ -153,7 +153,7 @@ def checkout_success(request, order_number):
     # Check if the user purchased the membership product
     membership_product_sku = 'member100'
     has_membership = any(
-        item.product.sku == membership_product_sku 
+        item.product.sku == membership_product_sku
         for item in order.lineitems.all())
 
     if has_membership and request.user.is_authenticated:

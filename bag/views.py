@@ -14,7 +14,7 @@ def add_to_bag(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
 
-    # Check if the product is the membership product and the user is not 
+    # Check if the product is the membership product and the user is not
     # authenticated
     if product.sku == 'member100' and not request.user.is_authenticated:
         messages.error(

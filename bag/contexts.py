@@ -11,7 +11,7 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
-    # Check if the user has a valid membership and set the discount percentage 
+    # Check if the user has a valid membership and set the discount percentage
     # accordingly
     if request.user.is_authenticated:
         has_valid_membership = is_membership_valid(request.user)

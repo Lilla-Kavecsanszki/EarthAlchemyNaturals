@@ -18,7 +18,8 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ('sku',)
 
     def display_skin_types(self, obj):
-        return ", ".join([str(skin_type) for skin_type in obj.skin_types.all()])
+        return ", ".join([str(skin_type)
+                          for skin_type in obj.skin_types.all()])
 
     display_skin_types.short_description = 'Skin Types'
 

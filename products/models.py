@@ -1,7 +1,4 @@
 from django.db import models
-from herbs.models import Herb
-
-# Category model
 
 
 class Category(models.Model):
