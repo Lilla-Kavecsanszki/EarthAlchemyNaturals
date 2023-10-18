@@ -82,7 +82,6 @@ class OrderLineItem(models.Model):
         max_digits=6, decimal_places=2, null=False, blank=False,
         editable=False)
 
-
     def save(self, user, *args, **kwargs):
         """
         Override the original save method to set the lineitem total
@@ -98,8 +97,8 @@ class OrderLineItem(models.Model):
             has_valid_membership = user_profile and is_membership_valid(
                 user_profile.user)
         else:
-           # For not logged-in users, assume no membership
-           has_valid_membership = False
+            # For not logged-in users, assume no membership
+            has_valid_membership = False
 
         if has_valid_membership:
             print("User HAS a valid membership")
@@ -120,7 +119,6 @@ class OrderLineItem(models.Model):
 
         # After saving, update the associated order's total
         self.order.update_total()
-
 
     def __str__(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'
