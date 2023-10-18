@@ -94,9 +94,6 @@
           class="dropdown-item"
           >Serums & Drops</a
         >
-        <a href="{% url 'products' %}?category=eyecreams," class="dropdown-item"
-          >Eye Creams</a
-        >
         <a href="{% url 'products' %}?category=spf" class="dropdown-item"
           >SPF</a
         >
@@ -130,5 +127,10 @@
         Contact
       </a>
     </li>
+    {% if user.is_superuser %}
+    <li class="nav-item dropdown">
+        <a class="banner-font font-weight-bold nav-link text-black mr-5" aria-current="admin page" href="{% url 'admin:index' %}">Admin</a>
+    </li>
+    {% endif %}
   </ul>
 </div>

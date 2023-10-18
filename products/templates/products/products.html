@@ -59,15 +59,25 @@
     <div class="col-lg-4 col-md-6">
       <div class="card h-100 border-0 text-center">
         {% if product.image %}
-        <a href="{% url 'product_detail' product.id %}">
-          <img
-            class="card-img-top img-fluid"
-            src="{{ product.image.url }}"
-            alt="{{ product.name }}"
-          />
-        </a>
+            <!-- Check if the product name is "Membership" -->
+            {% if product.sku == "member100" %}
+                <a href="{% url 'app_membership_view' %}">
+            {% else %}
+                <a href="{% url 'product_detail' product.id %}">
+            {% endif %}
+            <img
+                class="card-img-top img-fluid"
+                src="{{ product.image.url }}"
+                alt="{{ product.name }}"
+            />
+            </a>
         {% else %}
-        <a href="{% url 'product_detail' product.id %}">
+            <!-- Check if the product name is "Membership" -->
+            {% if product.sku == "member100" %}
+                <a href="{% url 'app_membership_view' %}">
+            {% else %}
+                <a href="{% url 'product_detail' product.id %}">
+            {% endif %}
           <img
             class="card-img-top img-fluid"
             src="{{ MEDIA_URL }}noimage.png"

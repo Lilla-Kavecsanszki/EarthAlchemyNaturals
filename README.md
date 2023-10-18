@@ -702,10 +702,14 @@ Inspiration:
 - <https://www.beautypie.com>
 
 Resources:
-ginseng:
+- ginseng:
 <https://www.medicalnewstoday.com/articles/262982#_noHeaderPrefixedContent>
-rosemary:
+- rosemary:
 <https://www.medicalnewstoday.com/articles/266370#_noHeaderPrefixedContent>
+- chamomile:
+<https://www.health.com/chamomile-benefits-7494692>
+- ginger:
+<https://www.health.com/ginger-benefits-7372485>
 
 ## Acknowledgments and Code
 

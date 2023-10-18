@@ -62,7 +62,7 @@
                             </p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="small mb-0">{{ item.quantity }} @ €{{ item.product.price }} each</p>
+                            <p class="small mb-0">{{ item.quantity }}</p>
                         </div>
                     </div>
                     {% endfor %}
@@ -184,7 +184,7 @@
                     <span class="text-uppercase">Back to Profile</span>
                 </a>
                 {% else %}
-				<a href="{% url 'products' %}" class="btn btn-shopping my-2">
+				<a href="{% url 'products' %}" class="btn btn-shopping mt-3 mb-3 my-2">
 					<span class="icon mr-2">
 						<i class="fas fa-gifts"></i>
 					</span>
