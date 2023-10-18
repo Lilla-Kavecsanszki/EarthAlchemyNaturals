@@ -8,6 +8,8 @@ from django_countries.fields import CountryField
 
 from products.models import Product
 from profiles.models import UserProfile
+from membership.views import is_membership_valid
+from decimal import Decimal
 
 
 class Order(models.Model):
@@ -80,13 +82,45 @@ class OrderLineItem(models.Model):
         max_digits=6, decimal_places=2, null=False, blank=False,
         editable=False)
 
-    def save(self, *args, **kwargs):
+
+    def save(self, user, *args, **kwargs):
         """
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.product.price * self.quantity
+        # Calculate the line item total based on the product price and quantity
+        lineitem_total = self.product.price * self.quantity
+
+        if user.is_authenticated:
+            # For logged-in users, check their profile for membership
+            user_profile = user.userprofile if hasattr(
+                user, 'userprofile') else None
+            has_valid_membership = user_profile and is_membership_valid(
+                user_profile.user)
+        else:
+           # For not logged-in users, assume no membership
+           has_valid_membership = False
+
+        if has_valid_membership:
+            print("User HAS a valid membership")
+            # Apply a 30% discount for members
+            discount_percentage = Decimal('0.30')
+        else:
+            print("User does not have a valid membership")
+            # No discount for non-members
+            discount_percentage = Decimal('0.00')
+
+        # Apply the discount to the lineitem total
+        discounted_total = lineitem_total - (lineitem_total * discount_percentage)
+
+        self.lineitem_total = discounted_total
+
+        # Save the line item
         super().save(*args, **kwargs)
+
+        # After saving, update the associated order's total
+        self.order.update_total()
+
 
     def __str__(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'

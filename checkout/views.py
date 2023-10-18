@@ -70,7 +70,7 @@ def checkout(request):
                             product=product,
                             quantity=item_data,
                         )
-                        order_line_item.save()
+                        order_line_item.save(request.user)
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in "
