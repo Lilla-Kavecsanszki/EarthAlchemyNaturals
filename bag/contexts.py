@@ -8,6 +8,7 @@ from membership.views import is_membership_valid
 def bag_contents(request):
     bag_items = []
     total = 0
+    discount_amount = 0
     product_count = 0
     bag = request.session.get('bag', {})
 
@@ -37,6 +38,10 @@ def bag_contents(request):
                 'product': product,
                 'discounted_price': discounted_price,
             })
+            # Calculate the discount amount for this item and add it to 
+            # the total discount amount
+            item_discount_amount = product.price - discounted_price
+            discount_amount += item_discount_amount * item_data
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
@@ -56,6 +61,7 @@ def bag_contents(request):
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
         'discount_percentage': discount_percentage,
+        'discount_amount': discount_amount,  #total discount applied
     }
 
     return context

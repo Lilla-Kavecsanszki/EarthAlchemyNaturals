@@ -261,6 +261,9 @@ input[name="q"]::placeholder {
   color: #daa520;
 }
 
+.discount-amount {
+    text-shadow: 4px 4px 6px #daa520;
+}
 
 /* toasts */
 
