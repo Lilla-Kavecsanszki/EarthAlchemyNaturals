@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Dissalow: /bag/
+Dissalow: /checkout/
+Sitemap: https://earthalchemy-naturals-99139eee523b.herokuapp.com//sitemap.xml

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/bag/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/?skintypes=oilyskin</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/?skintypes=dryskin</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/?skintypes=agingskin</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/?skintypes=normalskin</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/?category=cleansersandexfoliators</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/?category=toners</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/?category=moisturisersandmists</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/?category=serumsanddrops</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/?category=spf</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/about/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/membership/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/contact/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/5/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/2/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/6/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/7/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/3/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/8/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/products/4/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/herbs/5/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/herbs/3/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/herbs/6/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/herbs/4/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://earthalchemy-naturals-99139eee523b.herokuapp.com/herbs/2/</loc>
+  <lastmod>2023-10-20T15:53:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
