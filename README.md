@@ -691,6 +691,34 @@ https://stackoverflow.com/questions/46773416/rendering-different-templates-to-th
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
+# SEO
+
+Keyword Research -> Google to narrow down the list, consider relevance, authoritativeness, volume and competition.
+I need high enough volume, but low enough competition. URL and aria attributes. rel="noopener" in footer
+Useful links for the About page - External link ideas
+image alts
+meta data
+
+![keyword_research](README_docs/images/keyword-search.png "keyword_research")
+
+Wordtracker
+[Wordtracker](https://www.wordtracker.com/search?query=*%20natural%20products%20for%20skin)
+
+Results:
+
+- natural skin care products
+- holistic skin care routine
+- best online shopping sites for women
+- members only discount
+- premium box packaging
+- natural products buy online
+- exclusive discounts
+- custom packaging
+- online shopping with best discounts
+- membership
+- natural
+- organic
+
 # Credits
 
 ## Media and Content
@@ -710,6 +738,9 @@ Resources:
 <https://www.health.com/chamomile-benefits-7494692>
 - ginger:
 <https://www.health.com/ginger-benefits-7372485>
+- rose:
+https://www.health.com/search?q=rose
+
 
 ## Acknowledgments and Code
 
