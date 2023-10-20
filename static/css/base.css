@@ -16,6 +16,18 @@ body {
   color: black;
 }
 
+.home-btn {
+    margin-bottom: 60%;
+}
+
+.login-margin {
+    margin-bottom: 30%;
+}
+
+.logout-margin {
+    margin-bottom: 50%;
+}
+
 .banner-font {
   font-family: "Quicksand", sans-serif;
   color: #daa520;
@@ -494,10 +506,11 @@ input[name="q"]::placeholder {
 /* Footer */
 
 .footer-background {
-  background-color: rgba(212, 201, 197, 0.4);
+  background-color: rgba(212, 201, 197);
 }
 
 .footer {
+    margin-top: 1%;
     margin-right: auto;
     margin-left: auto;
     color: #222;
@@ -513,6 +526,16 @@ input[name="q"]::placeholder {
     text-shadow: 4px 4px 6px #daa520;
     color: #222;
     text-decoration: none;
+}
+
+/* Mailchimp */
+
+#mc_embed_signup {
+    background: rgba(212, 201, 197);
+    clear: left;
+    font: 14px "Quicksand", sans-serif;
+    width: 600px;
+    padding: 0;
 }
 
 .error-page {
