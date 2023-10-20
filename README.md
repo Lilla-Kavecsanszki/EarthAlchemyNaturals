@@ -695,9 +695,10 @@ https://stackoverflow.com/questions/46773416/rendering-different-templates-to-th
 
 Keyword Research -> Google to narrow down the list, consider relevance, authoritativeness, volume and competition.
 I need high enough volume, but low enough competition. URL and aria attributes. rel="noopener" in footer
-Useful links for the About page - External link ideas
+Useful links for the About page - External link ideas - sources for the herb descriptions
 image alts
 meta data
+useful, well informed and trustworthy content also helps in ranking.
 
 ![keyword_research](README_docs/images/keyword-search.png "keyword_research")
 

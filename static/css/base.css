@@ -494,12 +494,25 @@ input[name="q"]::placeholder {
 /* Footer */
 
 .footer-background {
-  background-color: #555;
+  background-color: rgba(212, 201, 197, 0.4);
 }
 
 .footer {
     margin-right: auto;
     margin-left: auto;
+    color: #222;
+    font-family: "Quicksand", sans-serif;
+}
+
+.facebook {
+    color: #222;
+    text-decoration: none;
+}
+
+.facebook:hover {
+    text-shadow: 4px 4px 6px #daa520;
+    color: #222;
+    text-decoration: none;
 }
 
 .error-page {
