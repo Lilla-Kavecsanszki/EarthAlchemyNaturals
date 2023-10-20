@@ -538,6 +538,38 @@ input[name="q"]::placeholder {
     padding: 0;
 }
 
+.privacy-policy {
+    color: #222;
+    text-decoration: none;
+}  
+
+.privacy-policy:hover {
+    color: #222;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.disclaimer {
+    color: #555;
+    font-family: 14px "Quicksand",
+        sans-serif;
+}
+
+.disclaimer-link {
+    color: #555;
+    font-family: 14px "Quicksand",
+        sans-serif;
+}
+
+.disclaimer-link:hover {
+    color: #555;
+    font-family: 14px "Quicksand",
+        sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .error-page {
     background-color: #d4c9c5;
 }
