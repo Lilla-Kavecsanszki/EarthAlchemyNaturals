@@ -532,10 +532,13 @@ input[name="q"]::placeholder {
 
 #mc_embed_signup {
     background: rgba(212, 201, 197);
-    clear: left;
-    font: 14px "Quicksand", sans-serif;
-    width: 600px;
+    font: "Quicksand", sans-serif;
     padding: 0;
+}
+
+#mc_embed_signup form {
+    padding: 0 !important;
+    
 }
 
 .privacy-policy {
@@ -552,19 +555,19 @@ input[name="q"]::placeholder {
 
 .disclaimer {
     color: #555;
-    font-family: 14px "Quicksand",
+    font-family: "Quicksand",
         sans-serif;
 }
 
 .disclaimer-link {
     color: #555;
-    font-family: 14px "Quicksand",
+    font-family: "Quicksand",
         sans-serif;
 }
 
 .disclaimer-link:hover {
     color: #555;
-    font-family: 14px "Quicksand",
+    font-family: "Quicksand",
         sans-serif;
     cursor: pointer;
     text-decoration: none;
@@ -657,3 +660,14 @@ input[name="q"]::placeholder {
     }
 }
 
+@media (max-width: 767px) {
+    .mobile-view {
+        margin-bottom: 5%;
+    }
+    .disclaimer {
+        font-size: 70%;
+    }
+    .footer {
+        font-size: 70%;
+    }
+}
