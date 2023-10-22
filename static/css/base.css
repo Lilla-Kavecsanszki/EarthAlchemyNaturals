@@ -67,6 +67,11 @@ body {
   font-size: large;
 }
 
+.nav-link:hover {
+    text-shadow: 4px 4px 6px #daa520;
+    color: black;
+}
+
 .navbar-toggler-icon {
   background: red;
 }

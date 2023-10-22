@@ -275,6 +275,50 @@ Overall, this combination provides a clear distinction between body text and hea
 
 ### F01 Navigation Bar
 
+The navigation bar provides easy access to all active pages for the user.
+
+**Menu Options:**
+
+- **Account button:** This button provides quick access to register or login and then view and manage the user's profile. In case the user is logged in already, they can find the logout option in this dropdown menu also, and in case the admin user is logged in, they can find an extra, 'Product Management' option. 
+The user can quickly determine their login status by looking at the user icon located at the top left corner of the screen. When the user is not logged in, the user icon is displayed as an outline with the label "Account". In contrast, when the user is logged in, the user icon is solidly filled, and their username is shown underneath the icon.
+
+![Not Logged_In_Account](README_docs/images/not_logged_in_account.png "notlogged_in_account")
+
+![Not Logged_In_Dropdown](README_docs/images/not_logged_in_dropdown.png "notlogged_in_dropdown")
+
+![Logged_In_Account](README_docs/images/logged_in_account.png "logged_in_account")
+
+![Logged_In_Dropdown](README_docs/images/logged_in_dropdown.png "logged_in_dropdown")
+
+- **Logo:** Essentially it indicates the name of the website, while it also serves as a button that is linked to the homepage as an instant solution for the user.
+
+- **Search bar:** Users have the option to find their specific product, or narrow down the list of results by entering a search term, which will be used to search for matches within the products. The number of matching results is shown on screen and the results can be ordered by price, name and category.
+
+- **Shopping bag:** Shows the total price of the items in cart, allowing the user to review and manage the costs of their selections.
+
+![Top Navbar](README_docs/images/top_navbar.png "top_navbar")
+
+- **Home:** This button serves as a quick link to the homepage, enabling users to navigate back to the main landing page at any point.
+- **All Products:** This button enables users to view products sorted by either their price or category.
+
+![All Products](README_docs/images/all_products.png "all_products")
+
+- **Skin Types:**
+- **Shop:**
+- **About Us:**
+- **Membership:**
+- **Contact:**
+
+![Navbar](README_docs/images/navbar.png "navbar")
+
+**Special Case for Administrators**
+
+When the signed-in user is the admin user or superuser, an additional link labeled "Admin" is displayed on the navigation bar.
+
+- **Admin:** This link grants access to the Django Admin window, allowing the superuser to manage the website's data, such as adding new, modifying, deleting or using them.
+  
+![Navbar Admin](README_docs/images/navbar_admin.png "navbar_admin")
+
 ### Future ambitions - Planned for the Next Sprint
 
 - I
