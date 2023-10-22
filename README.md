@@ -290,6 +290,8 @@ The user can quickly determine their login status by looking at the user icon lo
 
 ![Logged_In_Dropdown](README_docs/images/logged_in_dropdown.png "logged_in_dropdown")
 
+![Logged_In_Dropdown_Admin](README_docs/images/logged_in_dropdown_admin.png "logged_in_dropdown_admin")
+
 - **Logo:** Essentially it indicates the name of the website, while it also serves as a button that is linked to the homepage as an instant solution for the user.
 
 - **Search bar:** Users have the option to find their specific product, or narrow down the list of results by entering a search term, which will be used to search for matches within the products. The number of matching results is shown on screen and the results can be ordered by price, name and category.
@@ -303,11 +305,17 @@ The user can quickly determine their login status by looking at the user icon lo
 
 ![All Products](README_docs/images/all_products.png "all_products")
 
-- **Skin Types:**
-- **Shop:**
-- **About Us:**
-- **Membership:**
-- **Contact:**
+- **Skin Types:** This button enables users to view products narrowed down and selected by their skin types, offering a more personalised approach.
+
+![All Products](README_docs/images/all_products.png "all_products")
+
+- **Shop:** This button enables users to view products narrowed down and selected based on their category, again to offer a personalised approach.
+
+![All Products](README_docs/images/all_products.png "all_products")
+
+- **About Us:** This button takes the user to a page, where they can learn more about the company.
+- **Membership:** This button takes the user to a page, where they can learn about the membership and can purchase it too.
+- **Contact:** This button takes the user to the Contact page, where they can fill out a form and get in touch with the company.
 
 ![Navbar](README_docs/images/navbar.png "navbar")
 
@@ -318,6 +326,44 @@ When the signed-in user is the admin user or superuser, an additional link label
 - **Admin:** This link grants access to the Django Admin window, allowing the superuser to manage the website's data, such as adding new, modifying, deleting or using them.
   
 ![Navbar Admin](README_docs/images/navbar_admin.png "navbar_admin")
+
+### F02 Membership Banner
+
+Beneath the navigation bar, each page features a banner that effectively captures the user's attention, piques their interest in the membership, its discounts, and potential purchases. This aligns with the main purpose of the website.
+
+![Membership Banner](README_docs/images/banner.png "membership_banner")
+
+### F03 Hero Image and Overlay Text
+
+On the Home page, just below the navigation bar and banner, you'll find a highly relevant image featuring a cream product labeled as 'Illumination Mask' on some stones, with a herb on the side and a gold accessory under it. This image aligns with the website's purpose and brand ambiance. Additionally, a text overlay is positioned on the top left side of the image, displaying "Luxury awaits." This conveys the idea of exclusive quality available on the website, encouraging users to become regular shoppers and, in turn, members.
+
+![Hero Image and Text](README_docs/images/hero_feature.png "hero_image&text")
+
+### F04 Shop Now button
+
+On top of the hero image, below the overlay text, there is a large, golden button, instantly leading to the goal of the website, which is to get the user to purchase products. The button therefore directs the user to the Products page, that lists all available the products.
+
+![Shop Now Button](README_docs/images/shop_now_button.png "shop_now_button")
+
+### F05 Footer
+
+Just like the navigation bar and banner, the footer is consistently displayed on every page. Located at the very bottom, it provides information about the company's social media presence, with a link for users to easily follow. It also includes a link to the company's Privacy Policy and a user-friendly subscription form, allowing users to sign up for the monthly newsletter. The footer ends with a disclaimer, mentioning the website's creator and providing a convenient link to the developer's LinkedIn profile. It also clarifies that the website was created solely for educational purposes.
+
+![Footer](README_docs/images/footer.png "footer")
+
+## Products Page
+
+### F06 List and View of the Products
+
+The user can effortlessly navigate the assortment of available products for purchase on the website by utilizing the "All Products" option found in the navigation bar. The displayed product cards include an image of each product, along with relevant details such as name, category, skin type it's useful for and its price.
+
+![Product_List](README_docs/images/product_list.png "product_list")
+
+### F07 Information Button
+
+ A gold "Information" button, in the bottom right corner, allowes quick access to the contact page for any questions that could come up while browsing through the products, offering faster solution and better user experience. The button is fixed to the screen, ensuring it remains accessible while the user scrolls up or down. Additionally, it features a jumping effect designed to capture the user's attention.
+
+![Information](README_docs/images/information.png "information")
 
 ### Future ambitions - Planned for the Next Sprint
 
