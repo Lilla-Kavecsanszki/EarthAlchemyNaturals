@@ -307,11 +307,11 @@ The user can quickly determine their login status by looking at the user icon lo
 
 - **Skin Types:** This button enables users to view products narrowed down and selected by their skin types, offering a more personalised approach.
 
-![All Products](README_docs/images/all_products.png "all_products")
+![Skin Types](README_docs/images/skin_type.png "skin_type")
 
 - **Shop:** This button enables users to view products narrowed down and selected based on their category, again to offer a personalised approach.
 
-![All Products](README_docs/images/all_products.png "all_products")
+![Shop](README_docs/images/shop.png "shop")
 
 - **About Us:** This button takes the user to a page, where they can learn more about the company.
 - **Membership:** This button takes the user to a page, where they can learn about the membership and can purchase it too.
@@ -365,12 +365,40 @@ The user can effortlessly navigate the assortment of available products for purc
 
 ![Information](README_docs/images/information.png "information")
 
+### F08 Filter and Sort
+
+Apart from the search bar, which was explained as a feature in the (F01) Navigation Bar, there are another two useful functionality that the users can use to make their purchase experiences more efficient and straight forward.
+
+Users have the option to filter the list of products and tailor their browsing to items of particular interest. For example, users can choose to view the products from a specific category or their their skin type by the drop-down options of Skin Types and Shop buttons on the navbar.
+The chosen skin type or category filter is shown in the title of the page, underneath the membership banner.
+
+![Skin Type](README_docs/images/skin_type.png "skin_type")
+
+![Shop](README_docs/images/shop.png "shop")
+
+![Filter Display](README_docs/images/product_title_filter.png "filter_display")
+
+Additionally users can sort results by price or their category by utilizing the drop-down options of the All Products button in the navbar. Also, under the product page title, there is an on-screen sort box that allows for sorting by price, product name and category.
+
+The number of results is shown on the screen, next to the sort box too.
+
+![All Products](README_docs/images/all_products.png "all_products")
+
+![Filter and Sort](README_docs/images/sort_by_and_count.png "filter_sort")
+
+## Product Detail Page
+
+### View Product Details
+
+
+## Herb Page
+
+### View Herb Details
+
 ### Future ambitions - Planned for the Next Sprint
 
 - I
 - S
-- E
-- j
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 

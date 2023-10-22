@@ -110,7 +110,8 @@ class OrderLineItem(models.Model):
             discount_percentage = Decimal('0.00')
 
         # Apply the discount to the lineitem total
-        discounted_total = lineitem_total - (lineitem_total * discount_percentage)
+        discounted_total = lineitem_total - (
+            lineitem_total * discount_percentage)
 
         self.lineitem_total = discounted_total
 

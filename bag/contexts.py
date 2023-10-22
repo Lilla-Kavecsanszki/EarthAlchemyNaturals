@@ -38,7 +38,7 @@ def bag_contents(request):
                 'product': product,
                 'discounted_price': discounted_price,
             })
-            # Calculate the discount amount for this item and add it to 
+            # Calculate the discount amount for this item and add it to
             # the total discount amount
             item_discount_amount = product.price - discounted_price
             discount_amount += item_discount_amount * item_data
@@ -61,7 +61,7 @@ def bag_contents(request):
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
         'discount_percentage': discount_percentage,
-        'discount_amount': discount_amount,  #total discount applied
+        'discount_amount': discount_amount,  # total discount applied
     }
 
     return context
