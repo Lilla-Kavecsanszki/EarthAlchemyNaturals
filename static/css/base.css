@@ -432,6 +432,10 @@ input[name="q"]::placeholder {
   border-color: #222;
 }
 
+.account_pages {
+    margin-bottom: 40%;
+}
+
 /* Product Management page */
 
 .product-form {

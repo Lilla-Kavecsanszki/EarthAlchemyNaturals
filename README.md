@@ -574,6 +574,10 @@ If the user is not logged in, they have the option to do so:
 
 ![save profile not logged in](README_docs/images/save_profile_not_logged_in.png "save_profile_not_logged_in")
 
+Previously saved and so prepopulated:
+
+![Prepopulated Checkout](README_docs/images/profile_saved_checkout_member.png "prepopulated_checkout_form")
+
 ### F28 Complete Order Button and Secure Payment
 
 When all details are correctly filled in, the shopper can proceed with the payment by clicking the 'Complete Order' button. Alternatively, they can return to the Shopping Bag page to make adjustments using the button on the left-hand side.
@@ -591,6 +595,62 @@ Payments are securely processed by Stripe widgets within the application, with w
 ![Stripe Events](README_docs/images/stripe_events.png "stripe_events")
 
 ### F29 Checkout Success and Order Confirmation
+
+After the order has been successfully submitted and the payment processed, the user is presented with the Checkout Success page and also receives an email confirmation with their order summary.
+
+![Checkout Success](README_docs/images/checkout_success.png "checkout_success")
+
+![Email Confirmation](README_docs/images/email_confirmation.png "email_confirmation")
+
+Logged in users can access their order history by visiting the My Profile page.
+
+![Order History](README_docs/images/order_history.png "order_history")
+
+This can be expanded by clicking on the order number of each past order:
+
+![Past Order](README_docs/images/past_order.png "past_order")
+
+## Authentication
+
+### F30 Registration, Login and Logout
+
+Users have the option to sign up, sign in, and sign out on the site. Certain features, like the Profile or Membership is exclusively accessible to logged-in users. During the registration process, users are required to verify their email addresses to activate their accounts. After verification, the user is redirected to to the sign in page.
+
+![Sign Up](README_docs/images/sign_up.png "sign_up")
+
+![Verify Email](README_docs/images/verify_email.png "verify_email")
+
+![Confirm Email](README_docs/images/confirm_email.png "confirm_email")
+
+![Sign In](README_docs/images/sign_in.png "sign_in")
+
+![Sign Out](README_docs/images/sign_out.png "sign_out")
+
+## Profile
+
+### F31 My Profile Page
+
+When a user is logged in, they have the option to save their delivery address on their profile page. The My Profile page can be accessed by clicking the user icon. If delivery details have been stored for a user, these details are automatically pre-filled on the checkout page, streamlining the checkout process. (shown previously at F27)
+
+Profile information can be easily updated by overwriting the existing values then choosing to save the new information when submitting a new order. Alternatively, users can update their profile information directly through the My Profile page and submit the changes using the 'Update Profile Information' button.
+
+However, the membership status field is a read-only field. Only the admin user can change its value, or it is automatically populated as 'Member' when a logged-in user purchases the Membership."
+
+![My Profile](README_docs/images/my_profile.png "my_profile")
+
+On the right-hand side of the page, users can access their Order History, as explained in F29.
+
+
+
+![Footer](README_docs/images/footer.png "footer")
+
+![Footer](README_docs/images/footer.png "footer")
+
+![Footer](README_docs/images/footer.png "footer")
+
+## F - Custom HTTP 404
+
+To ensure a consistent user experience and address unexpected events in a user-friendly way, a custom page is presented for any unanticipated 404 HTTP response codes.
 
 ![Footer](README_docs/images/footer.png "footer")
 

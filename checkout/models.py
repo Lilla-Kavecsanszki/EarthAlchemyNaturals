@@ -101,11 +101,9 @@ class OrderLineItem(models.Model):
             has_valid_membership = False
 
         if has_valid_membership:
-            print("User HAS a valid membership")
             # Apply a 30% discount for members
             discount_percentage = Decimal('0.30')
         else:
-            print("User does not have a valid membership")
             # No discount for non-members
             discount_percentage = Decimal('0.00')
 

@@ -17,7 +17,7 @@
   user {{ user_display }}.{% endblocktrans %}
 </p>
 
-<form class="mb-5" method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+<form class="account_pages" method="post" action="{% url 'account_confirm_email' confirmation.key %}">
   {% csrf_token %}
   <button type="submit">{% trans 'Confirm' %}</button>
 </form>
