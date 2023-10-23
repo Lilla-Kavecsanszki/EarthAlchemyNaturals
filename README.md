@@ -558,7 +558,39 @@ On this page, users have the option to either return and continue shopping or pr
 
 When users click on the 'Secure Checkout' button, they are redirected to the checkout page. Here, they encounter a checkout form along with an order summary on the right-hand side.
 
+![Checkout Page](README_docs/images/checkout_non_member.png "checkout_page")
+
 The checkout form's fields feature relevant placeholders, enhancing the process's intuitiveness and user-friendliness. Fields marked with a '*' sign are mandatory, and the system will flag any omissions as part of the validation process.
+
+![Checkout Form Validator](README_docs/images/invalid_checkout_form.png "checkout_form_validator")
+
+![Cardnumber Validator](README_docs/images/invalid_cardnumber.png "cardnumber_validator")
+
+If the user has a registered account and is logged in, they can check a checkbox below their details to save or update them to their profile, ensuring a more seamless experience for their next purchase.
+
+![Profile save checkbox](README_docs/images/save_profile_logged_in.png "save_profile_logged_in")
+
+If the user is not logged in, they have the option to do so:
+
+![save profile not logged in](README_docs/images/save_profile_not_logged_in.png "save_profile_not_logged_in")
+
+### F28 Complete Order Button and Secure Payment
+
+When all details are correctly filled in, the shopper can proceed with the payment by clicking the 'Complete Order' button. Alternatively, they can return to the Shopping Bag page to make adjustments using the button on the left-hand side.
+
+Clicking the 'Complete Order' button initiates the payment process, and an overlay is applied to enhance the user experience while waiting for the payment to complete.
+
+Payments are securely processed by Stripe widgets within the application, with webhooks ensuring proper handling in case of any issues during the payment process.
+
+![Complete Order Buttons](README_docs/images/complete_order_buttons.png "complete_order_buttons")
+
+![Payment Overlay](README_docs/images/payment_overlay.png "payment_overlay")
+
+![Stripe Webhooks](README_docs/images/stripe_webhooks.png "stripe_webhooks")
+
+![Stripe Events](README_docs/images/stripe_events.png "stripe_events")
+
+### F29 Checkout Success and Order Confirmation
 
 ![Footer](README_docs/images/footer.png "footer")
 
