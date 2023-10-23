@@ -386,14 +386,75 @@ The number of results is shown on the screen, next to the sort box too.
 
 ![Filter and Sort](README_docs/images/sort_by_and_count.png "filter_sort")
 
+Cleansers & Exfoliators category sorted by price from low to high:
+
+![Sort](README_docs/images/price_low_to_high.png "sort")
+
 ## Product Detail Page
 
-### View Product Details
+### F09 View Product Details
 
+When the user clicks on a product image, they can access the Product Detail page. This page will display the product's image, name, category, recommended skin type, primary or key (star) ingredient, price, description, volume (in milliliters), and an input field where they can specify the quantity they wish to purchase and add it to their shopping bag.
+
+![Product Detail](README_docs/images/product_detail.png "product_detail")
+
+### F10 Star Ingredient
+
+The star ingredient is displayed for each product on the detail page below the recommended skin type. A pulsing golden star captures the shopper's attention, and the herb's name, which is both clickable and bold in a golden color, redirects the user to the herb page. There, they can find valuable and reliable information about the ingredient they may be considering for use.
+
+![Star Ingredient](README_docs/images/star_ingredient.png "star_ingredient")
+
+### F11 Quantity Input
+
+The quantity input is also displayed for each product on the detail page, located just above the 'Add to Bag' button. Shoppers can use this input field to specify the quantity of each product they wish to buy.
+
+The input field also validates the user's input, ensuring that the number is not less than 1 or greater than 10. By using the '+' and '-' buttons, the user is unable to increment beyond this range. If a user attempts to override the numbers by directly typing a larger or smaller value into the input field, a notification will be displayed when they try to proceed and add the items to their shopping bag.
+
+![Quantity Input Plus](README_docs/images/quantity_input.png "quantity_input_plus")
+
+![Quantity Input Minus](README_docs/images/quantity_input_minus.png "quantity_input_minus")
+
+### F12 Add to Bag Buttons
+
+Below the quantity input, there are two buttons. On the left-hand side, users can return to the shop or product list, while on the right-hand side, they can proceed to add the product to their cart.
+
+![Add to Bag Buttons](README_docs/images/add_to_bag_button.png "add_to_bag_button")
 
 ## Herb Page
 
-### View Herb Details
+### F13 View Herb Details
+
+When the user clicks on the star ingredient's name, they can access the Herbs page. This page will display the herb's name, along with valuable information on its medical or remedial uses and specific benefits, allowing users to learn more.
+
+![Herb Detail](README_docs/images/herb_detail.png "herb_detail")
+
+### F14 Herb Image
+
+The notable addition to this page is the large image on the right-hand side, which displays the herb in its natural form, allowing users to visualize it.
+
+![Herb](README_docs/images/herb.png "herb")
+
+### F16 Back to the Shop
+
+At the bottom of the page, you'll find a 'Keep Shopping' button, which provides a seamless way for the user to navigate back to the shop and enhances the overall shopping experience on the site.
+ 
+![Keep Shopping](README_docs/images/keep_shopping.png "keep_shopping")
+
+## About Us Page
+
+### F17 The Company
+
+On the 'About Us' page, users can learn about the company, its values, and their story. The page explains their mission and concludes with an inviting paragraph, encouraging users to join their community. Additionally, a prominent photo on the page shows a woman in a lab coat preparing a serum in a laboratory setting, conveying the company's commitment to a serious approach in creating their products.
+
+![About Us](README_docs/images/about_us.png "about_us")
+
+## Membership Page
+
+### F18
+
+
+
+
 
 ### Future ambitions - Planned for the Next Sprint
 
