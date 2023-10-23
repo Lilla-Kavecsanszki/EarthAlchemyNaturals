@@ -75,6 +75,7 @@ def create_vip_box(request):
     context = {}
     user = request.user
     user_profile, created = UserProfile.objects.get_or_create(user=user)
+    membership_start_date = user_profile.membership_start_date
     vip_box_choice = VIPBox.objects.filter(
         user_profile=user_profile).first()
     vip_box_color = (vip_box_choice.selected_packaging_color
@@ -97,6 +98,7 @@ def create_vip_box(request):
 
     context['user'] = user
     context['vip_box_color'] = vip_box_color
+    context['membership_start_date'] = membership_start_date
     return render(request, 'membership_member.html', context)
 
 

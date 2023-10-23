@@ -452,9 +452,15 @@ On the 'About Us' page, users can learn about the company, its values, and their
 
 ### F18
 
+When a non-member user visits the Membership page, they'll find a descriptive overview of the membership, its price, and the option to purchase it through the 'Add to Bag' button. The description is enhanced with colorful emojis to capture the shopper's attention and maintain engagement.
 
+Additionally, the page includes an image in the brand's signature colors and font prominently labeled 'Membership,' to effectively convey the purpose of the page to users.
 
+As an alternative, users can easily return to the shop by clicking the 'Shop' button.
 
+### F19
+
+![Membership non_member](README_docs/images/membership_non_member.png "membership_non_member")
 
 ### Future ambitions - Planned for the Next Sprint
 
