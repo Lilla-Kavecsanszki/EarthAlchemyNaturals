@@ -505,7 +505,7 @@ Finally, users can locate a 'Back to the Shop' button underneath the contact for
 
 ![Back_to_Shop](README_docs/images/back_to_shop.png "back_to_shop")
 
-## Pop-up Messages
+## F23 Pop-up Messages
 
 Pop-up messages are utilized to inform users of the results of their interactions with the website. Activities such as adding items to the shopping bag, any update on the shopping cart's contents, events related to VIP boxes, submitting orders, or logging in and out etc trigger these messages, offering users immediate feedback on the event.
 
@@ -517,6 +517,50 @@ For example:
 
 ![Login Message](README_docs/images/message_login.png "message_login")
 
+## Shopping Bag and Checkout
+
+### F24 Shopping Bag and its Page
+
+The application utilizes a 'shopping bag' where shoppers can keep track of the items they add to it. The running total of the shopping bag, which includes any applicable member's discounts, is continuously displayed beneath the shopping bag icon at the top right of the screen and is accessible from all pages.
+
+As items are added to the shopping bag, the total is dynamically updated to reflect the cost, taking into consideration the member's discount when applicable. Users are provided with a concise summary in a small pop-up window, as well.
+
+By clicking on the shopping bag icon, users can access the Shopping Bag Page. Here, they can view a breakdown of each item, under each other and have the flexibility to adjust each item's quanty, using the quantity input box, just as in the Product Detail page. They can also remove items entirely, by clicking on the Trash icon or typing 0 (or anything less) into the quantity input box and press Update.
+For members making the purchase, the line item breakdown shows both of the original and their member's price.  
+
+![Shopping Bag](README_docs/images/shopping_bag.png "shopping_bag")
+
+![Bag Cost](README_docs/images/current_bag_cost.png "current_bag_cost")
+
+![Line_item](README_docs/images/lineitem.png "lineitem")
+
+![Line_item Member](README_docs/images/lineitem_member.png "lineitem_member")
+
+When the shopping bag is empty:
+
+![Empty Bag](README_docs/images/bag_empty.png "bag_empty")
+
+### F25 Shopping Bag Calculation
+
+Beneath the list of line items, users are presented with a financial summary of their potential purchase. This summary includes the shopping bag total, delivery cost, and the grand total, with the member's discount factored into the calculation when applicable.
+
+For members making a purchase, the summary also highlights the savings they've made with their current product selection. This information is visible to non-member users as well, displaying €0 (obviously) as a motivational reminder to consider membership.
+
+![Bag Calculations](README_docs/images/bag_calculations.png "bag_calculations")
+
+### F26 Secure Checkout Buttons
+
+On this page, users have the option to either return and continue shopping or proceed to the checkout process using the respective buttons located at the bottom of the page.
+
+![Checkout Button](README_docs/images/checkout_button.png "checkout_button")
+
+### F27 Checkout Page
+
+When users click on the 'Secure Checkout' button, they are redirected to the checkout page. Here, they encounter a checkout form along with an order summary on the right-hand side.
+
+The checkout form's fields feature relevant placeholders, enhancing the process's intuitiveness and user-friendliness. Fields marked with a '*' sign are mandatory, and the system will flag any omissions as part of the validation process.
+
+![Footer](README_docs/images/footer.png "footer")
 
 ## Future ambitions - Planned for the Next Sprint
 

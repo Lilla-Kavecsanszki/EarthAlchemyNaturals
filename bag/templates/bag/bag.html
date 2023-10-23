@@ -41,6 +41,9 @@
                             <div>
                                 <p><strong>{{ item.product.name }}</strong></p>
                                 <p>{{ item.product.milliliter }} ml</p>
+                                {% if user.is_authenticated and user.userprofile.membership_status %}
+                                <p>Your Price: €{{ item.discounted_price }}</p>
+                                {% endif %}
                                 <p class="mb-5">Price: €{{ item.product.price }}</p>
                                 <hr>
                             </div>

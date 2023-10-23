@@ -41,14 +41,19 @@ def adjust_bag(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
+    max_quantity = 10
 
-    if quantity > 0:
+    if 0 < quantity <= max_quantity:
         bag[item_id] = quantity
         messages.success(
             request, f'Updated {product.name} quantity to {bag[item_id]}')
-    else:
+    elif quantity <= 0:
         bag.pop(item_id)
         messages.success(request, f'Removed {product.name} from your bag')
+    else:
+        # If quantity exceeds 10, display an error message
+        messages.error(
+            request, f'Value must be less than or equal to {max_quantity}.')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
