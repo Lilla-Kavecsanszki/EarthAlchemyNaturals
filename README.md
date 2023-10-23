@@ -654,6 +654,77 @@ To ensure a consistent user experience and address unexpected events in a user-f
 
 ![Footer](README_docs/images/footer.png "footer")
 
+## Marketing
+
+### F SEO
+
+Keyword Research -> Google to narrow down the list, consider relevance, authoritativeness, volume and competition.
+I need high enough volume, but low enough competition. URL and aria attributes. rel="noopener" in footer
+Useful links for the About page - External link ideas - sources for the herb descriptions
+image alts
+meta data
+useful, well informed and trustworthy content also helps in ranking.
+
+![keyword_research](README_docs/images/keyword-search.png "keyword_research")
+
+Wordtracker
+[Wordtracker](https://www.wordtracker.com/search?query=*%20natural%20products%20for%20skin)
+
+Results:
+
+- natural skin care products
+- holistic skin care routine
+- best online shopping sites for women
+- members only discount
+- premium box packaging
+- natural products buy online
+- exclusive discounts
+- custom packaging
+- online shopping with best discounts
+- membership
+- natural
+- organic
+
+sitemap.xml and robots.txt files have also been added to the application to help search engine crawling.
+
+### Facebook
+
+Another essential tool of the web marketing strategy involves leveraging social media to promote the site. A Facebook page was established for the company, and a link to it is accessible in the footer of every page also. 
+
+[Facebook page](https://www.facebook.com/profile.php?id=61552317252926)
+
+![Social_Media_Link](README_docs/images/social_media.png "social_media_link")
+
+Screenshots from both mobile and desktop view, also the first post of the company:
+
+![Footer](README_docs/images/facebook.png "footer")
+
+![Footer](README_docs/images/facebook_mobile.jpg "footer")
+
+![Footer](README_docs/images/bio_facebook_mobile.jpg "footer")
+
+![Footer](README_docs/images/post-facebook.png "footer")
+
+![Footer](README_docs/images/first_post_facebook.png "footer")
+
+![Footer](README_docs/images/mobile_post_facebook.jpg "footer")
+
+### Newsletter - MailChimp
+
+As one of the web marketing tools for the application, a newsletter subscription option was introduced. This feature is conveniently located in the footer of every page on the site. Users can simply enter their email address and click the 'Subscribe' button to join the mailing list. This was accomplished by using Mailchimp.
+
+![Newsletter](README_docs/images/newsletter.png "newsletter")
+
+![Subscribers](README_docs/images/subscribers.png "subscribers")
+
+### F Privacy Policy and GDPR
+
+To comply with GDPR requirements, a privacy policy was generated, using the website [Privacy Policy Generator](https://www.privacypolicygenerator.info/). Users can find the link in the footer, and by clicking on it, they can download the page.
+
+![Privacy_Policy_button](README_docs/images/privacy_policy_button.png "privacy_policy_button")
+
+![Privacy_Policy](README_docs/images/privacy_policy.png "privacy_policy")
+
 ## Future ambitions - Planned for the Next Sprint
 
 - Prompting members to renew after membership expires
@@ -1066,35 +1137,6 @@ https://stackoverflow.com/questions/46773416/rendering-different-templates-to-th
    In the create_or_update_user_profile, needed to also pass the membership_status when we create the user profile. The user object contained all the dat needed, but not the membership_status. We use get_or_create, to set the membership status to 'None', but that also returned a tuple, so eventually the solution was to get seperated by saying: membership_instance, created. This means we get membership_instance as an instance of Membership, and created as True/False.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
-
-# SEO
-
-Keyword Research -> Google to narrow down the list, consider relevance, authoritativeness, volume and competition.
-I need high enough volume, but low enough competition. URL and aria attributes. rel="noopener" in footer
-Useful links for the About page - External link ideas - sources for the herb descriptions
-image alts
-meta data
-useful, well informed and trustworthy content also helps in ranking.
-
-![keyword_research](README_docs/images/keyword-search.png "keyword_research")
-
-Wordtracker
-[Wordtracker](https://www.wordtracker.com/search?query=*%20natural%20products%20for%20skin)
-
-Results:
-
-- natural skin care products
-- holistic skin care routine
-- best online shopping sites for women
-- members only discount
-- premium box packaging
-- natural products buy online
-- exclusive discounts
-- custom packaging
-- online shopping with best discounts
-- membership
-- natural
-- organic
 
 # Credits
 
