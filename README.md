@@ -327,6 +327,8 @@ When the signed-in user is the admin user or superuser, an additional link label
   
 ![Navbar Admin](README_docs/images/navbar_admin.png "navbar_admin")
 
+![Admin](README_docs/images/admin.png "admin")
+
 ### F02 Membership Banner
 
 Beneath the navigation bar, each page features a banner that effectively captures the user's attention, piques their interest in the membership, its discounts, and potential purchases. This aligns with the main purpose of the website.
@@ -450,7 +452,7 @@ On the 'About Us' page, users can learn about the company, its values, and their
 
 ## Membership Page
 
-### F18
+### F18 Non-Member View
 
 When a non-member user visits the Membership page, they'll find a descriptive overview of the membership, its price, and the option to purchase it through the 'Add to Bag' button. The description is enhanced with colorful emojis to capture the shopper's attention and maintain engagement.
 
@@ -458,14 +460,67 @@ Additionally, the page includes an image in the brand's signature colors and fon
 
 As an alternative, users can easily return to the shop by clicking the 'Shop' button.
 
-### F19
-
 ![Membership non_member](README_docs/images/membership_non_member.png "membership_non_member")
 
-### Future ambitions - Planned for the Next Sprint
+### F19 Member View
 
-- I
-- S
+When a member user navigates to the Membership page, they will find a different view. It will show the same membership image on the left side, however the rest of the page will display the membership details of the user, and the VIP Box feature.
+
+![Membership member](README_docs/images/membership_member.png "membership_member")
+
+### F20 Membership Details
+
+This section provides the user's membership details, customizing the title by incorporating their username, creating a personalized and engaging touch. It also displays the user's join date to the program and reminds them that their membership remains valid for 365 days. Finally, it also shows the user's current packaging choice.
+
+![Membership Details](README_docs/images/current_situation.png "membership_details")
+
+### F21 VIP Box
+
+Members also enjoy exclusive access to the VIP Box feature, allowing them to create personalized packaging for their orders. The packaging is available in two luxurious colors, matching the brand's signature pink and gold. This conveys the sense of luxury and exclusivity that comes with being a member.
+
+Members can update their packaging choice at any time using the same dropdown menu they initially used to create their box. In both cases, they can proceed by clicking the 'Get VIP Box' button, located next to the color selection dropdown.
+
+The updated choice is instantly visible in the membership details section of the page.
+
+Furthermore, members have the flexibility to cancel their VIP Box and return to the default brown packaging available to all users. This can be done by clicking the 'Cancel VIP Box' button at the bottom of the page. A confirmation window will pop up, asking the user to confirm the cancellation. Once they decide to proceed, their choice will be automatically updated.
+
+![Create_Update](README_docs/images/create_update_box.png "create_update_box")
+
+![Updated Details](README_docs/images/updated_situation.png "updated_details")
+
+![Delete Box](README_docs/images/delete_box.png "delete_box")
+
+## Contact Us Page
+
+### F22 Contact Form
+
+The Contact page includes a contact form where users can provide their name, email address, subject, message, and then send their questions, messages, or reviews by clicking the 'Submit' button. This page offers users a convenient way to reach out to the company, whether for product inquiries, delivery-related questions, or any other reason. By including their email address in the form, users make it possible for the admin team to respond promptly.
+Therefore all fields in the form are mandatory, and the site validates the correctness of the email address before allowing the user to proceed with the submission.
+
+![Contact Us](README_docs/images/contact_us.png "contact_us")
+
+![Contact Form Validator](README_docs/images/contact_form_validator.png "contact_form_validator")
+
+Finally, users can locate a 'Back to the Shop' button underneath the contact form, which directs them to the products page, further supporting the website's core objectives.
+
+![Back_to_Shop](README_docs/images/back_to_shop.png "back_to_shop")
+
+## Pop-up Messages
+
+Pop-up messages are utilized to inform users of the results of their interactions with the website. Activities such as adding items to the shopping bag, any update on the shopping cart's contents, events related to VIP boxes, submitting orders, or logging in and out etc trigger these messages, offering users immediate feedback on the event.
+
+For example:
+
+![Shopping bag Message](README_docs/images/message_shopping_bag.png "message_shopping_bag")
+
+![VIP Box Message](README_docs/images/message_vip_box.png "message_vip_box")
+
+![Login Message](README_docs/images/message_login.png "message_login")
+
+
+## Future ambitions - Planned for the Next Sprint
+
+- Prompting members to renew after membership expires
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 

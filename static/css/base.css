@@ -282,6 +282,10 @@ input[name="q"]::placeholder {
     text-shadow: 4px 4px 6px #daa520;
 }
 
+.empty-bag {
+    margin-bottom: 20%;
+}
+
 /* toasts */
 
 .message-container {
