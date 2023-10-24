@@ -702,7 +702,7 @@ In this project, several measures were taken to tackle SEO. These measures inclu
 - relevant site title and well informed, trustworthy page contents (especially, the About Us and Herbs pages) to help ranking
 - useful links on the Herbs pages - External links, that are the sources for the herb descriptions - to ensure trustworthiness
 - descriptive alt tags, URL and aria attributes
-- rel="noopener" in footer
+- rel="noopener nofollow" added to footer and all external links
 
 The keyword research was conducted as follows:
 
@@ -1090,47 +1090,9 @@ to validate the javascript code written and used in this website
 <img src="README_docs/images/jshint.png" alt="JSHint">
 </details>
 
-<p>
-<details><summary>CI Python Linter - views.py</summary><br/>
-to validate python code written and used in the views.py
-<img src="README_docs/images/python_linter_views.png" alt="Python Validator views.py">
-</details>
+Validation for Python was conducted using the command: python3 -m flake8. No critical errors were detected. Below are messages that are not related to migrations:
 
-<p>
-<details><summary>CI Python Linter - models.py</summary><br/>
-to validate python code written and used in the models.py
-<img src="README_docs/images/python_linter_models.png" alt="Python Validator models.py">
-</details>
-
-<p>
-<details><summary>CI Python Linter - forms.py</summary><br/>
-to validate python code written and used in the forms.py
-<img src="README_docs/images/python_linter_forms.png" alt="Python Validator forms.py">
-</details>
-
-<p>
-<details><summary>CI Python Linter - admin.py</summary><br/>
-to validate python code written and used in the admin.py
-<img src="README_docs/images/python_linter_admin.png" alt="Python Validator admin.py">
-</details>
-
-<p>
-<details><summary>CI Python Linter - application urls.py</summary><br/>
-to validate python code written and used in the app's urls.py
-<img src="README_docs/images/python_linter_urls.png" alt="Python Validator urls.py">
-</details>
-
-<p>
-<details><summary>CI Python Linter - project urls.py</summary><br/>
-to validate python code written and used in the project's urls.py
-<img src="README_docs/images/python_linter_p_urls.png" alt="Python Validator project urls.py">
-</details>
-
-<p>
-<details><summary>CI Python Linter - project settings.py</summary><br/>
-to validate python code written and used in the project's settings.py
-<img src="README_docs/images/python_linter_p_settings.png" alt="Python Validator project settings.py">
-</details>
+- 
 
 ## Manual Testing
 
@@ -1203,6 +1165,7 @@ Resources:
 - rose:
 https://www.health.com/search?q=rose
 
+The overall content and wording of the website, enriched with the collaborative contributions of my sister, Georgina Kavecsanszki, a distinguished story-teller and PR expert, reflects her valuable input and assistance. Her creative contributions have significantly enhanced the quality of this work. My gratitude for her contribution!
 
 ## Acknowledgments and Code
 
@@ -1236,6 +1199,9 @@ membership
 https://www.geeksforgeeks.org/python-datetime-timedelta-function/
 
 <https://stackoverflow.com/questions/4406377/django-request-to-find-previous-referrer>
+
+round up
+<https://www.freecodecamp.org/news/how-to-round-to-2-decimal-places-in-python/>
 
 I also would like to take the chance and express my sincere gratitude to my mentor, Elaine Roche, and the tutoring team for their steadfast support and invaluable feedback. Their guidance, tips, and resources have played a crucial role in enhancing my coding and testing skills. While Elaine has embarked on a new journey, she was instrumental in initiating this project and guiding me throughout this year and four previous projects. Gareth McGirr has since taken me under his mentoring wings, and I am very appreciative of his assistance, suggestions, and ideas that have contributed to the project's finest appearance and functionality.
 

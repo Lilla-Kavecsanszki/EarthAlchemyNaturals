@@ -36,7 +36,7 @@ def bag_contents(request):
                 'item_id': item_id,
                 'quantity': item_data,
                 'product': product,
-                'discounted_price': discounted_price,
+                'discounted_price': round(discounted_price, 2)
             })
             # Calculate the discount amount for this item and add it to
             # the total discount amount
@@ -54,14 +54,14 @@ def bag_contents(request):
 
     context = {
         'bag_items': bag_items,
-        'total': total,
+        'total': round(total, 2),
         'product_count': product_count,
-        'delivery': delivery,
-        'free_delivery_delta': free_delivery_delta,
+        'delivery': round(delivery, 2),
+        'free_delivery_delta': round(free_delivery_delta, 2),
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'grand_total': grand_total,
+        'grand_total': round(grand_total, 2),
         'discount_percentage': discount_percentage,
-        'discount_amount': discount_amount,  # total discount applied
+        'discount_amount': round(discount_amount, 2),  # total discount applied
     }
 
     return context
