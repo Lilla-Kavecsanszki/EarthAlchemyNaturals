@@ -640,19 +640,46 @@ However, the membership status field is a read-only field. Only the admin user c
 
 On the right-hand side of the page, users can access their Order History, as explained in F29.
 
+## Membership
 
+### F32 Join, purchase Membership
+
+Some functionalities of the application are based on the role of the user, just like the membership, as well. The user needs to be registered and logged in, to be able to purchase the membership and therefore join, otherwise they will receive an error message.
+
+![Must_Be_Loggedin_Membership](README_docs/images/must_be_loggedin_for_membership.png "must_be_loggedin_for_membership")
+
+When the user is logged in, they can add the membership to their shopping bag and proceed to checkout, just like any other item they want to purchase.
+
+![Buy_Membership](README_docs/images/buy_membership.png "buy_membership")
+
+During the checkout process, the application recognizes the SKU number of the membership product and updates the user's profile to 'Member' status. This change activates a 30% discount on all products they wish to purchase and grants access to the member-version on the Membership page, allowing them to track their membership details and access the VIP Box feature.
+
+The is_membership_valid function checks the validity of a membership when it is intended to be used. If the membership has expired, it resets the membership_status to 'None' in the user's profile. Consequently, the user will need to repurchase the membership to regain access to its benefits.
+
+![Non_Member_Profile](README_docs/images/non_member_profile.png "non_member_profile")
+
+![Member_Profile](README_docs/images/member_profile.png "member_profile")
+
+## Admin
+
+### F33 Data Management
+
+Data management is solely accessible to logged-in administrators (superusers).
 
 ![Footer](README_docs/images/footer.png "footer")
 
 ![Footer](README_docs/images/footer.png "footer")
 
+### F34 Product Management
+
 ![Footer](README_docs/images/footer.png "footer")
+
 
 ## F - Custom HTTP 404
 
 To ensure a consistent user experience and address unexpected events in a user-friendly way, a custom page is presented for any unanticipated 404 HTTP response codes.
 
-![Footer](README_docs/images/footer.png "footer")
+![404](README_docs/images/404.png "404")
 
 ## Marketing
 

@@ -5,6 +5,7 @@ from products.models import Product
 from datetime import timedelta, date
 from profiles.models import UserProfile
 from django.contrib import messages
+from .models import Membership
 
 
 def is_membership_valid(user):
@@ -25,7 +26,14 @@ def is_membership_valid(user):
             today_date = date.today()
 
             # Check if the membership is still valid
-            return today_date < expiration_date
+            if today_date < expiration_date:
+                return True
+            else:
+                # Membership is not valid, set membership_status to 'None'
+                user_profile.membership_status = Membership.objects.get(
+                    status="None")
+                user_profile.save()
+                return False
 
     except UserProfile.DoesNotExist:
         # User doesn't have a profile, so it's not valid
