@@ -662,20 +662,31 @@ The is_membership_valid function checks the validity of a membership when it is 
 
 ## Admin
 
-### F33 Data Management
-
 Data management is solely accessible to logged-in administrators (superusers).
 
-![Footer](README_docs/images/footer.png "footer")
+### F33 Data Management
 
-![Footer](README_docs/images/footer.png "footer")
+The administrator has complete access and authority to make alterations across every module of the website. This includes manipulation of the website's data, for example the ability to add new data, modify existing information, delete entries, or utilize the data as necessary. In essence, the administrator holds comprehensive control over the website's various modules, ensuring the efficient management and utilization of its data.
+
+![Admin_Button](README_docs/images/navbar_admin.png "admin_button")
+
+![Admin_Window](README_docs/images/admin.png "admin_window")
 
 ### F34 Product Management
 
-![Footer](README_docs/images/footer.png "footer")
+This feature is exclusively accessible to the admin user. Administrators have the capability to add, edit, and delete products on the website, allowing them to manage the shop without needing to access the Django Admin Window. To access the Product Management page, the logged-in admin can click the 'Product Management' option from the user icon menu. On this page, there is a product form that can be filled out and submitted by using the 'Add Product' button located at the bottom of the page.
 
+The 'Edit' and 'Delete' functions are accessible from the 'Products' and 'Product Detail' pages. When the admin user clicks the 'Edit' link, they will be redirected to the Product Management page, where the form is pre-populated with the details of the product they intend to edit. After making the desired changes, they can save the modifications by clicking the 'Update Product' button.
 
-## F - Custom HTTP 404
+Once a product is added, it becomes visible to all site users and can be added to their shopping bags. If the admin decides to delete a product, it is permanently removed from the site.
+
+![Product_Add](README_docs/images/product_add.png "product_add")
+
+![Product_Edit_Delete](README_docs/images/product_edit_delete.png "product_edit_delete")
+
+![Product_Edit_Delete_Detail](README_docs/images/product_edit_delete_detail.png "product_edit_delete_detail")
+
+## F35 - Custom HTTP 404
 
 To ensure a consistent user experience and address unexpected events in a user-friendly way, a custom page is presented for any unanticipated 404 HTTP response codes.
 
@@ -683,22 +694,26 @@ To ensure a consistent user experience and address unexpected events in a user-f
 
 ## Marketing
 
-### F SEO
+### F36 Site Engine Optimization (SEO)
 
-Keyword Research -> Google to narrow down the list, consider relevance, authoritativeness, volume and competition.
-I need high enough volume, but low enough competition. URL and aria attributes. rel="noopener" in footer
-Useful links for the About page - External link ideas - sources for the herb descriptions
-image alts
-meta data
-useful, well informed and trustworthy content also helps in ranking.
+In this project, several measures were taken to tackle SEO. These measures includes the incorporation of related keywords and phrases as follows:
+
+- "description" and "keyword" meta tags in the html
+- relevant site title and well informed, trustworthy page contents (especially, the About Us and Herbs pages) to help ranking
+- useful links on the Herbs pages - External links, that are the sources for the herb descriptions - to ensure trustworthiness
+- descriptive alt tags, URL and aria attributes
+- rel="noopener" in footer
+
+The keyword research was conducted as follows:
+
+- brain storm for keyword ideas
+- Google the ideas to narrow down the list, taking advantage of the google search auto-complete feature; consider relevance, authoritativeness.
+- use of the [Wordtracker](https://www.wordtracker.com/search?query=*%20natural%20products%20for%20skin) website to filter the keywords further and find new ideas to end up with the most efficient ones; consider volume and competition.
+The company needs high enough volume, but low enough competition.  
 
 ![keyword_research](README_docs/images/keyword-search.png "keyword_research")
 
-Wordtracker
-[Wordtracker](https://www.wordtracker.com/search?query=*%20natural%20products%20for%20skin)
-
-Results:
-
+The most valuable short and long-tail keywords identified are:
 - natural skin care products
 - holistic skin care routine
 - best online shopping sites for women
@@ -714,7 +729,7 @@ Results:
 
 sitemap.xml and robots.txt files have also been added to the application to help search engine crawling.
 
-### Facebook
+### F37 Facebook
 
 Another essential tool of the web marketing strategy involves leveraging social media to promote the site. A Facebook page was established for the company, and a link to it is accessible in the footer of every page also. 
 
@@ -736,7 +751,7 @@ Screenshots from both mobile and desktop view, also the first post of the compan
 
 ![Footer](README_docs/images/mobile_post_facebook.jpg "footer")
 
-### Newsletter - MailChimp
+### F38 Newsletter - MailChimp
 
 As one of the web marketing tools for the application, a newsletter subscription option was introduced. This feature is conveniently located in the footer of every page on the site. Users can simply enter their email address and click the 'Subscribe' button to join the mailing list. This was accomplished by using Mailchimp.
 
@@ -744,7 +759,7 @@ As one of the web marketing tools for the application, a newsletter subscription
 
 ![Subscribers](README_docs/images/subscribers.png "subscribers")
 
-### F Privacy Policy and GDPR
+### F39 Privacy Policy and GDPR
 
 To comply with GDPR requirements, a privacy policy was generated, using the website [Privacy Policy Generator](https://www.privacypolicygenerator.info/). Users can find the link in the footer, and by clicking on it, they can download the page.
 
@@ -755,6 +770,7 @@ To comply with GDPR requirements, a privacy policy was generated, using the webs
 ## Future ambitions - Planned for the Next Sprint
 
 - Prompting members to renew after membership expires
+- Being able to share Feedback and Reviews (US 42)
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
