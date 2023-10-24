@@ -545,7 +545,7 @@ input[name="q"]::placeholder {
 
 #mc_embed_signup {
     background: rgba(212, 201, 197);
-    font: "Quicksand", sans-serif;
+    font-family: "Quicksand", sans-serif;
     padding: 0;
 }
 

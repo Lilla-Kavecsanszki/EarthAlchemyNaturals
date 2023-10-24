@@ -240,7 +240,7 @@ Overall, this combination provides a clear distinction between body text and hea
 - HTML5
 - Python
 - CSS3
-- Jquery
+- Javascript - Jquery
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
@@ -1072,27 +1072,41 @@ With your S3 bucket now set up, you can create a new folder called media and upl
 
 # Testing
 
-<p>
-<details><summary>W3C HTML Validator result</summary><br/>
-to validate all HTML code written and used in this website
-<img src="README_docs/images/html_validator.png" alt="HTML Validator">
+The HTML was validated by manually navigating through the application pages and using the W3C Validator.
+The results:
+
+<details><summary>Home</summary><br/>
+<img src="README_docs/images/html_validator.png" alt="HTML Validator About Us">
 </details>
 
-<p>
-<details><summary>W3C CSS Validator result</summary><br/>
-to validate all CSS code written and used in this website
-<img src="README_docs/images/css_validator.png" alt="CSS Validator">
+
+To validate all CSS code written and used in this website, W3C CSS Validator was used.
+The results:
+
+<details><summary>base.ccs</summary><br/>
+<img src="README_docs/images/base_css.png" alt="CSS Validator base.css">
 </details>
 
-<p>
-<details><summary>JS Hint result</summary><br/>
-to validate the javascript code written and used in this website
-<img src="README_docs/images/jshint.png" alt="JSHint">
+<details><summary>profile.ccs</summary><br/>
+<img src="README_docs/images/profile_css.png" alt="CSS Validator profile.css">
 </details>
 
-Validation for Python was conducted using the command: python3 -m flake8. No critical errors were detected. Below are messages that are not related to migrations:
+<details><summary>checkout.ccs</summary><br/>
+<img src="README_docs/images/checkout_css.png" alt="CSS Validator checkout.css">
+</details>
 
-- 
+Validation for Python was conducted by using the command: python3 -m flake8. No critical errors were detected. Below are messages that are not related to migrations or devcontainer:
+<p>
+<details><summary>Flake8</summary>
+
+- ./checkout/apps.py:8:9: F401 'checkout.signals' imported but unused
+- ./checkout/webhooks.py:28:5: F841 local variable 'e' is assigned to but never used
+- ./checkout/webhooks.py:31:5: F841 local variable 'e' is assigned to but never used
+- ./earthalchemy_naturals/settings.py:16:5: F401 'env' imported but unused
+- ./earthalchemy_naturals/urls.py:36:1: F811 redefinition of unused 'handler404' from line 20
+- ./env.py:4:80: E501 line too long (143 > 79 characters)
+- ./env.py:5:80: E501 line too long (143 > 79 characters)
+</details>
 
 ## Manual Testing
 
