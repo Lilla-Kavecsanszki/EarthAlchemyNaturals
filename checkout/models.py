@@ -82,18 +82,17 @@ class OrderLineItem(models.Model):
         max_digits=6, decimal_places=2, null=False, blank=False,
         editable=False)
 
-    def save(self, user, *args, **kwargs):
+    def save(self, *args, **kwargs):
         """
         Override the original save method to set the lineitem total
         and update the order total.
         """
+        user_profile = self.order.user_profile
         # Calculate the line item total based on the product price and quantity
         lineitem_total = self.product.price * self.quantity
 
-        if user.is_authenticated:
+        if user_profile:
             # For logged-in users, check their profile for membership
-            user_profile = user.userprofile if hasattr(
-                user, 'userprofile') else None
             has_valid_membership = user_profile and is_membership_valid(
                 user_profile.user)
         else:

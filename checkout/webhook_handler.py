@@ -143,7 +143,7 @@ class StripeWH_Handler:
                             product=product,
                             quantity=item_data,
                         )
-                        order_line_item.save(self.request.user)
+                        order_line_item.save()
                 print("Created order in webhook:", order)
             except Exception as e:
                 if order:

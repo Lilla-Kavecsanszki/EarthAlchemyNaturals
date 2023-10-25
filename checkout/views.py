@@ -62,23 +62,26 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+            if request.user.is_authenticated:
+                profile = UserProfile.objects.get(user=request.user)
+                order.user_profile = profile
             order.save()
             for item_id, item_data in bag.items():
                 try:
-                    product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
+                   product = Product.objects.get(id=item_id)
+                   if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
                             quantity=item_data,
                         )
-                        order_line_item.save(request.user)
+                        order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in "
                         "our database. "
-                        "Please call us for assistance!")
-                    )
+                        "Please call us for assistance!"
+                    ))
                     order.delete()
                     return redirect(reverse('view_bag'))
 
