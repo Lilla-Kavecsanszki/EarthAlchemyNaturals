@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect, reverse, \
     get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
@@ -14,6 +15,7 @@ from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
 from datetime import datetime, timedelta
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 import stripe
 import json

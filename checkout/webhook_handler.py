@@ -6,6 +6,7 @@ from django.conf import settings
 from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
+from django.contrib.auth.models import User
 
 import json
 import time
@@ -47,6 +48,7 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe
         """
+        print(f'user: {self.request.user}')
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
@@ -141,7 +143,7 @@ class StripeWH_Handler:
                             product=product,
                             quantity=item_data,
                         )
-                        order_line_item.save()
+                        order_line_item.save(self.request.user)
                 print("Created order in webhook:", order)
             except Exception as e:
                 if order:
@@ -154,7 +156,7 @@ class StripeWH_Handler:
             content=(f'Webhook received: {event["type"]} | '
                      f'SUCCESS: Created order in webhook'),
             status=200)
-
+    
     def handle_payment_intent_payment_failed(self, event):
         """
         Handle the payment_intent.payment_failed webhook from Stripe
