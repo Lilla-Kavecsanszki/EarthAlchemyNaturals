@@ -175,33 +175,36 @@ For easy access, you can find the Epics, Issues/ User Stories with their Accepta
 
 ### Entity Relationship Diagrams
 
-To support the functionality of the DownwardDog app, five models have been designed and implemented to store essential information in databases.
+To support the functionality of the EarthAlchemy Naturals app, the below models have been designed and implemented to store essential information in databases.
 
-To showcase the relationships between the models, I have divided them into two categories: one relevant to the Articles and the other to the Booking functionality.
-The Likes and User tables in the ER diagrams are for conceptual representation only and do not directly correspond to the models.py file or the physical database tables. They provide a logical view of data relationships without showing all the actual database details managed by Django and the database system.
+The User tables in the ER diagram is for conceptual representation only and do not directly correspond to the models.py files or the physical database tables. It provides a logical view of data relationships without showing all the actual database details managed by Django and the database system.
 
-The Entity Relationship Diagrams below illustrate how the models are connected to each other for the Articles section:
+The Entity Relationship Diagrams below illustrate how the models are connected to each other:
 
-- Post and Comment have a one-to-many relationship, where one post can have multiple comments, but each comment is associated with only one post.
-- User and Likes have a many-to-many relationship, where multiple users can like multiple posts, and each like is linked to both a user and a post.
-- User and Post have a one-to-many relationship, where one user can be associated with multiple posts, but each post is linked to only one user (the author). This feature is however limited for the admin.
+- UserProfile Model:
+    - It is related to the built-in Django User model using a OneToOneField. This establishes a one-to-one relationship between user profiles and users, ensuring that each user has one user profile and vice versa.
+    - It also has a ForeignKey to the Membership model, allowing each user profile to be associated with a specific membership status.
+- The VIPBox model:
+    - It is related to the UserProfile model using a ForeignKey. This establishes a relationship where a VIP box is associated with a user profile.
+- ContactSubmission Model:
+    - This model doesn't have direct relationships with other models. It represents a standalone model for storing the contact form submissions.
+- Herb Model:
+    - The Herb model is related to the Product model through a ForeignKey. This relationship allows a specific herb to be associated with a product as its "star ingredient."
+- Membership Model:
+    - The Membership model is related to the built-in Django User model using a ForeignKey. This relationship associates a user with their membership status.
+- Product Model:
+    - The Product model is related to the Category model using a ForeignKey, allowing products to be categorized.
+    - The Product model has a ManyToManyField to the SkinType model, indicating that a product can be associated with multiple skin types.
+    - It also has a ForeignKey to the Herb model, representing the "star ingredient" in the product.
+- Order Model:
+    - The Order model is related to the UserProfile model through a ForeignKey, indicating that each order is associated with a user profile.
+- OrderLineItem Model:
+    - The OrderLineItem model is related to the Order and Product models using ForeignKeys. It represents individual line items within an order and is associated with the products ordered in each order.
+
 
 <p>
-<details><summary>Article ERD</summary><br/>
-<img src="README_docs/images/article_erd.png" alt="Article ERD">
-</details>
-
-The Entity Relationship Diagrams below illustrate how the models are connected to each other for the Booking section:
-
-- Classes and Timetable have a one-to-many relationship, where one class can have multiple timetables, but each timetable is associated with only one class.
-- Timetable and Booking have a one-to-many relationship, where one timetable can have multiple bookings, but each booking is linked to only one timetable.
-- Booking and User have a many-to-one relationship, where one user can create many bookings.
-
-The unique_booking constraint in the Booking model ensures that a user can create multiple bookings, but only one booking for the same class on the same date/time.
-
-<p>
-<details><summary>Booking ERD</summary><br/>
-<img src="README_docs/images/booking_erd.png" alt="Booking ERD">
+<details><summary>ER Diagram</summary><br/>
+<img src="README_docs/images/er_diagram.png" alt="ER Diagram">
 </details>
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
@@ -1218,7 +1221,7 @@ https://www.geeksforgeeks.org/python-datetime-timedelta-function/
 round up
 <https://www.freecodecamp.org/news/how-to-round-to-2-decimal-places-in-python/>
 
-I also would like to take the chance and express my sincere gratitude to my mentor, Elaine Roche, and the tutoring team for their steadfast support and invaluable feedback. Their guidance, tips, and resources have played a crucial role in enhancing my coding and testing skills. While Elaine has embarked on a new journey, she was instrumental in initiating this project and guiding me throughout this year and four previous projects. Gareth McGirr has since taken me under his mentoring wings, and I am very appreciative of his assistance, suggestions, and ideas that have contributed to the project's finest appearance and functionality.
+I also would like to take the chance and express my sincere gratitude to my mentor, Elaine Roche, and the tutoring team, especially Oisin and Jason, for their steadfast support and invaluable feedback. Their guidance, tips, and resources have played a crucial role in enhancing my coding and testing skills. While Elaine has embarked on a new journey, she was instrumental in initiating this project and guiding me throughout this year and four previous projects. Gareth McGirr has since taken me under his mentoring wings, and I am very appreciative of his assistance, suggestions, and ideas that have contributed to the project's finest appearance and functionality.
 
 ## Disclaimer
 
