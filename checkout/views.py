@@ -1,4 +1,3 @@
-from django.contrib.auth.models import User
 from django.shortcuts import render, redirect, reverse, \
     get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
@@ -15,7 +14,6 @@ from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
 from datetime import datetime, timedelta
 from django.utils import timezone
-from django.contrib.auth.models import User
 
 import stripe
 import json
@@ -68,13 +66,13 @@ def checkout(request):
             order.save()
             for item_id, item_data in bag.items():
                 try:
-                   product = Product.objects.get(id=item_id)
-                   if isinstance(item_data, int):
+                    product = Product.objects.get(id=item_id)
+                    if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
                             quantity=item_data,
-                        )
+                            )
                         order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (

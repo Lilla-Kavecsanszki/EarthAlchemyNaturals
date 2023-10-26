@@ -855,7 +855,8 @@ After having our instance created on Elephant SQL and the app on Heroku:
     import os
     import dj_database_url
 - Update the DATABASES to the following code, so that the original connection to sqlite3 is commented out and we connect to the new ElephantSQL database instead. Paste in your ElephantSQL database URL.
-'
+
+```
     # DATABASES = {
     #     'default': {
     #         'ENGINE': 'django.db.backends.sqlite3',
@@ -866,9 +867,9 @@ After having our instance created on Elephant SQL and the app on Heroku:
     DATABASES = {
         'default': dj_database_url.parse('database-url-here')
     }
-    `
+```
 
-    Do not commit with this database string in the code to avoid leaving database URL in version control. It is a temporary solution so that you can connect to the new database and make migrations. This setting needs to be removed afterwards.
+Do not commit with this database string in the code to avoid leaving database URL in version control. It is a temporary solution so that you can connect to the new database and make migrations. This setting needs to be removed afterwards.
 - In the terminal, run the showmigrations command to confirm you are connected to the external database:
   - python3 manage.py showmigrations
   - If you are, the list of all migrations should appear, but none of them should be checked off.
@@ -947,17 +948,17 @@ After having our instance created on Elephant SQL and the app on Heroku:
 
 Config Vars in Heroku should have:
 
-  AWS_ACCESS_KEY_ID = 'your variable'
-  AWS_SECRET_ACCESS_KEY = 'your variable'
-  DATABASE_URL = 'your variable'
-  DISABLE_COLLECTSTATIC = 1
-  EMAIL_HOST_PASS = 'your variable'
-  EMAIL_HOST_USER = 'your variable'
-  SECRET_KEY = 'your variable'
-  STRIPE_PUBLIC_KEY = 'your variable'
-  STRIPE_SECRET_KEY = 'your variable'
-  STRIPE_WH_SECRET = 'your variable'
-  USE_AWS = True
+- AWS_ACCESS_KEY_ID = 'your variable'
+- AWS_SECRET_ACCESS_KEY = 'your variable'
+- DATABASE_URL = 'your variable'
+- DISABLE_COLLECTSTATIC = 1
+- EMAIL_HOST_PASS = 'your variable'
+- EMAIL_HOST_USER = 'your variable'
+- SECRET_KEY = 'your variable'
+- STRIPE_PUBLIC_KEY = 'your variable'
+- STRIPE_SECRET_KEY = 'your variable'
+- STRIPE_WH_SECRET = 'your variable'
+- USE_AWS = True
 
 </details>
 
