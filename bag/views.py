@@ -6,8 +6,6 @@ from products.models import Product
 
 def view_bag(request):
     """ A view that renders the bag contents page """
-    user_profile = request.user.userprofile
-    membership_status = user_profile.membership_status
     return render(request, 'bag/bag.html')
 
 
