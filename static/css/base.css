@@ -661,9 +661,19 @@ input[name="q"]::placeholder {
   }
 }
 
+@media (max-width: 450px) {
+    .home-btn {
+        margin-bottom: 180%;
+    }
+}
+
 @media (max-width: 576px) {
     .attention-text {
         font-size: 24px;
+    }
+
+    .home-btn {
+        margin-bottom: 100%;
     }
 }
 

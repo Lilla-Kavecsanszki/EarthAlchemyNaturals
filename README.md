@@ -1,19 +1,14 @@
 # EarthAlchemy Naturals
 
-EarthAlchemy Naturals is a B2C e-commerce application specializing in natural and holistic products. The site is designed to offer users a visually appealing and user-friendly online shopping experience. Its core features include product offerings, discounts, a newsletter, social media presence, and a user-friendly profile function for saving customer information.
+EarthAlchemy Naturals is a B2C e-commerce platform offering a selection of natural and holistic products. The site is designed for a seamless shopping experience, with core features such as product listings, discounts, a newsletter, and easy-to-use customer profiles.
 
-One standout feature of EarthAlchemy Naturals is the membership option. Customers can purchase a 12-month membership, which unlocks exclusive benefits, including a remarkable 30% discount on every product in the catalog. Additionally, members have the opportunity to customize their packaging box and receive luxurious packaging for a truly premium experience.
+A unique highlight of EarthAlchemy Naturals is its 12-month membership option, providing members with an impressive 30% discount on all products. Members can also customize their packaging for a premium touch.
 
-The site operates as a virtual retail store, allowing users to browse, search, and filter a wide range of natural products. Customers can select items to add to their shopping cart and make secure payments through a seamless checkout process.
+The platform functions as a virtual store, enabling users to explore, filter, sort and purchase natural products securely. Product details include information about key ingredients.
+General users can subscribe to the newsletter. Registered users can save profiles for quick shopping and and also have access to purchase the membership. Once a user becomes a member by purchasing the membership, they can then enjoy exclusive membership benefits.
+Admin users oversee and maintain the product catalog and herb profiles, ensuring product information is up-to-date. They also have the authority to manage registered users on the website, further extending their control, capabilities and responsibility.
 
-For general users, the platform provides comprehensive product details, along with information about the main (star) ingrediant of each products. Customers can also subscribe to the company's newsletter to stay updated. Registered users can save their profile details, to make their future purchases faster and also have the availability to buy the membership. 
-
-Admin users hold the ability to oversee and manage the product catalog and herb profiles. Their responsibilities encompass tasks such as adding new products, adjusting pricing, explaining the main herb used for each products, and constantly updating these information.
-
-The project involves a variety of web marketing strategies, including organic social media marketing through Facebook, and email marketing via a newsletter subscription managed through Mailchimp. 
-The structure and purpose of EarthAlchemy Naturals take inspiration from the Code Institute's Boutique Ado example application, ensuring a solid foundation for this e-commerce venture.
-
-This full-stack project was built using the Django framework, Python, HTML, Bootstrap, and CSS. Additionally, ElephantSQL and AWS were used to store data, images, and static files. Stripe was used for payment processing.
+Web marketing strategies include organic social media marketing via Facebook and email marketing through a newsletter managed via Mailchimp. The project is built on Django, Python, HTML, Bootstrap, and CSS, with data storage on ElephantSQL and AWS. Payment processing is handled by Stripe.
 
 ![Application](README_docs/images/responsive.png "Application")
 
@@ -84,67 +79,66 @@ In summary, the EarthAlchemy Naturals website effectively supports visitors in a
 
 #### Epic 1: User Management
 
-- US0101: User Registration: As a new user, I can register an account with my email and password so that I can view my profile.
-- US0102: User Authentication: As a returning user, I can log in using my existing credentials or log out so that I can access my personal information in a secure way.
-- US0103: Receive Email Confirmation After Registration: As a new user, I can receive an email confirmation after registering so that I can verify that my account registration was successful.
-- US0104: Personal User Profile: As a site user, I can access my personalized user profile so that I can view my order history and payment information and keep track of purchases
+- US101: User Registration: As a new user, I can register an account with my email and password so that I can view my profile.
+- US102: User Authentication: As a returning user, I can log in using my existing credentials or log out so that I can access my personal information in a secure way.
+- US103:  Receive Email Confirmation After Registration: As a new user, I can receive an email confirmation after registering so that I can verify that my account registration was successful.
+- US104:  Personal User Profile: As a site user, I can access my personalized user profile so that I can view my order history and payment information and keep track of purchases
 
 #### Epic 2: Product Management
 
-- US0201: Purpose of website and navigation: As a site user I can quickly identify what the website is selling and easily navigate the pages so that I can quickly find the information and functionality I am looking for
-
-- US0202: Product Creation: As an admin, I can add new products to the website so that I can keep my shop up to date.
+- US201: Purpose of website and navigation: As a site user I can quickly identify what the website is selling and easily navigate the pages so that I can quickly find the information and functionality I am looking for
+- US202: Product Creation: As an admin, I can add new products to the website so that I can keep my shop up to date.
 - US203: Product Update: As an admin, I can edit product information so that all products have the most relevant and useful information.
-- US0204: Product Deletion: As an admin, I can remove products that are no longer available so that I can keep my shop up to date.
-- US0205: Product View: As a shopper, I can view a list of products so that I can browse and discover the collection.
-- US0206: Product Details: As a shopper, I can view detailed information about each product so that I can make the best decision for my purchase.
-- US0207: View main herb: As a site user I can view bio details of the main herb of the product was made of so that I can easily learn more about it.
-- US0208: Product Search: As a shopper, I can search for products by keywords or categories so that I can target and speed up my purchase time.
-- US0209: Product Filtering: As a shopper, I can filter products based on various criteria (e.g., price, ingredients, skin type) so that I can find the best selection of products specifically for me.
-- US0210: Sort Products: As a shopper, I can sort specific category of products so that I can find the cheapest, most purchased, most expensive products easier.
-- US0211: Handle 404 and 500 errors: As a site user I can return to Home after http 404 or 500 response so that I feel I am still working within the website and can navigate easily
+- US204: Product Deletion: As an admin, I can remove products that are no longer available so that I can keep my shop up to date.
+- US205: Product View: As a shopper, I can view a list of products so that I can browse and discover the collection.
+- US206: Product Details: As a shopper, I can view detailed information about each product so that I can make the best decision for my purchase.
+- US207: View Main Herb: As a site user I can view details of the main herb of the product was made of so that I can easily learn more about it.
+- US208: Product Search: As a shopper, I can search for products by keywords or categories so that I can target and speed up my purchase time.
+- US209: Product Filtering: As a shopper, I can filter products based on their recommended skin type or category so that I can find the best selection of products specifically for me. 
+- US210: Sort Products: As a shopper, I can sort the presented products so that I can find the cheapest, most expensive etc products easier.
+- US211: Handle 404 Error: As a shopper I can return to Home after http 404 response so that I feel I am still working within the website and can navigate easily.
 
 #### Epic 3: Shopping Cart and Checkout
 
-- US0301: Add to Cart: As a shopper, I can add products to my shopping cart so that I can purchase 1 or multiple items at the same time.
-- US0302: Cart Management: As a shopper, I can update the quantity or remove items from my cart so that I can make changes later on in the process and/ or rectify any mistakes.
-- US0303: View shopping cart total: As a shopper, I can view the total of my cart at any time so that I can avoid over-spending.
-- US0304: Secure Payment Process: As a shopper, I can enter my card details with an intuitive checkout process so that I proceed with a secure and payment and purchase.
-- US0305: Checkout Summary: As a, I can view a checkout page so that see details of my order and my delivery and payment details.
-- US0306: Order Confirmation: As a shopper I can view an order confirmation so that I see the relevant details after completing my purchase.
-- US0307: Email Confirmation: As a shopper, I can receive an email confirmation so that I have records of my purchases.
-- US0308: Notifications: As a shopper, I can receive small messages from the website so that I am reassured on all actions and interactions throughout my visit.
+- US301: Add to Cart: As a shopper, I can add products to my shopping cart so that I can purchase 1 or multiple items at the same time.
+- US302: Cart Management: As a shopper, I can update the quantity or remove items from my cart so that I can make changes later on in the process and/ or rectify any mistakes.
+- US303: View shopping cart total: As a shopper, I can view the total of my cart at any time so that I can avoid over-spending.
+- US304: Secure Payment Process: As a shopper, I can enter my card details with an intuitive checkout process so that I proceed with a secure and payment and purchase.
+- US305: Checkout Summary: As a, I can view a checkout page so that see details of my order and my delivery and payment details.
+- US306: Order Confirmation: As a shopper I can view an order confirmation so that I see the relevant details after completing my purchase.
+- US307: Email Confirmation: As a shopper, I can receive an email confirmation so that I have records of my purchases.
+- US308: Notifications: As a shopper, I can receive small messages from the website so that I am reassured on all actions and interactions throughout my visit.
 
 #### Epic 4: Membership
 
-- US0501: Understand Membership Benefits: As a shopper, I can learn about the benefits of being a member so that I can make informed decisions about joining.
-- US0502: Join Membership Program: As a shopper, I can enroll in the membership program to access bonus points and exclusive offers.
-- US0503: Member’s Price: As a member, I can access the member’s price for each product so that I can select that.
-- US0504: VIP Access: As a member, I can see new products before they would go public so that I can purchase them first.
-- US0505: Savings: As a member, I can view and track how much I have saved, paying the member price, in my user profile so that I can see the worth of my membership.
-- US0506: Opt-Out of Membership: As a member, I can opt-out of the membership program if I no longer wish to participate so that I have flexibility.
+- US401: Understand Membership Benefits: As a shopper, I can learn about the benefits of being a member so that I can make informed decisions about joining.
+- US402: Join Membership Program: As a shopper, I can enroll in the membership program so that I can access a 30% discount and exclusive features.
+- US403: Member’s Price: As a member I can access a percentage-based discount on each product, so that I can save money and receive a better value.
+- US404: VIP Access: As a member I can access the exclusive VIP Box feature so that I can personalise my packaging.
+- US405: Savings: As a member I can view and track how much I am saving, while paying the member price, in the shopping bag so that I can see the worth of my membership.
+- US406: My Membership Details: As a member I can view the details of my membership; the date I joined, how long it is valid for and my current packaging choice so that I have control over it.
 
-#### Epic 5: Events and Blog
+#### Epic 5: VIP Box
 
-- US0601: Event Announcements: As an admin, I can announce upcoming events so that I can make my customers aware of new opportunities.
-- US0602: Event Details: As a shopper, I can view detailed information about each event so I can decide to join.
-- US0603: Educational Blog Posts: As an admin, I can publish informative blog posts about natural cosmetics so that I can spread information in the topic.
-- US0604: Blog Reading: As a shopper, I can read blog posts and articles so that I can learn. more in the topic.
+- US501: VIP Box View: As a member I can view and check what my currently selected packaging is so that I can ensure my preferred packaging choice is accurate and matches my preferences.
+- US502: Create VIP Box: As a member I can create my personalised package so that I receive an exclusive and premium touch to my order.
+- US503: Update VIP Box: As a member I can modify and update the colour of my packaging so that I can explore the variety of options and enhance my exclusive experience.
+- US504: Cancel VIP Box: As a member I can cancel my VIP packaging so that I have the flexibility.
 
 #### Epic 6: Admin Panel
 
-- US0701: Admin Dashboard: As an admin, I can have a dashboard to manage products, discounts, and memberships so that I can stay organised.
-- US0702: User Management: As an admin, I can manage user accounts and their activities so that I can take responsibility for my website.
+- US601: Admin Dashboard: As an admin I can have a dashboard to manage products, discounts, VIP boxes and memberships so that I can stay organised.
+- US602: User Management: As an admin, I can manage user accounts and their activities so that I can take responsibility for my website. 
 
 #### Epic 7: SEO and Web Marketing
 
-- US0801: Subscribe to Newsletter: As a site user, I can subscribe to the company newsletter so that I can keep up with company news and offers.
-- US0802: Follow Brand Updates and Explore on Social Media: As a site user, I can find, visit and and follow the company's Facebook page so that I can stay connected with brand updates and announcements.
-- US0803: SEO: As a site user, I can find the site through web searches so that I can easily access the site.
-- US0804: View Privacy Policy: As a site user, I can access and view the company's privacy policy so that I can ensure the company is GDPR compliant and respects my privacy.
-- US0805: Access Educational Content: As a site user, I can access blog posts and educational content about natural cosmetics and skincare so that I can learn more about the products.
-- US0806: Easily Contact Customer Support: As a site user, I can find clear contact information and options for reaching out to customer support so that I can get assistance when needed.
-- US0807: Share Feedback and Reviews: As a site user, I can leave reviews and feedback about products I've purchased so that I can share my experiences and help other shoppers.
+- US701: Subscribe to Newsletter: As a site user, I can subscribe to the company newsletter so that I can keep up with company news and offers.
+- US702: Follow Brand Updates and Explore on Social Media: As a site user, I can find, visit and and follow the company's Facebook page so that I can stay connected with brand updates and announcements.
+- US703: SEO: As a site user, I can find the site through web searches so that I can easily access the site.
+- US704: View Privacy Policy: As a site user, I can access and view the company's privacy policy so that I can ensure the company is GDPR compliant and respects my privacy.
+- US705: Access Educational Content: As a site user I can access educational content about the herbal ingredients so that I can learn more about the products themselves.
+- US706: Easily Contact Customer Support: As a site user I can find clear contact information and options for reaching out to customer support so that I can get assistance when needed.
+- US707: Share Feedback and Reviews: As a site user I can leave reviews and feedback about products I've purchased so that I can share my experiences and help other shoppers.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
@@ -157,7 +151,7 @@ Given the prevalence of mobile usage among our target users, creating a responsi
 
 ### Agile Methodology
 
-In this project Github issues were used to create the User stories and groupped into Epics, Milestones in a Github Project. This served as the Agile tool. The issues' development was managed through a Kanban board. Currently, all the issues have been marked as "Done”.
+In this project Github issues were used to create the User stories and groupped into Epics, Milestones in a Github Project. This served as the Agile tool. The issues' development was managed through a Kanban board. Currently all the issues are marked as "Done" except for issue #42, which is labeled as 'Could have" and "Won't be included this time - next sprint", aligned with the MoSCoW prioritization, indicating that this feature is desirable but not critical for the current sprint.
 
 For easy access, you can find the Epics, Issues/ User Stories with their Acceptance Criteria and Kanban board [HERE](https://github.com/users/Lilla-Kavecsanszki/projects/6).
 
@@ -167,11 +161,10 @@ For easy access, you can find the Epics, Issues/ User Stories with their Accepta
 
 ### Wireframes
 
-[Desktop Wireframes](README_docs/wireframes_desktop.pdf)
+Wireframes were utilized during the design process, generated with Balsamiq to plan and design the interface layout for different screen sizes.
 
-[Tablet Wireframes](README_docs/wireframes_ipad.pdf)
+[Wireframe - Home page](README_docs/wireframes_homepage.pdf)
 
-[Mobile Wireframes](README_docs/wireframes_mobile.pdf)
 
 ### Entity Relationship Diagrams
 
@@ -227,12 +220,17 @@ The chosen color palette for the EarthAlchemy Naturals website serves the purpos
 
 - Poppins (Body Font):
   - Poppins is a modern and versatile sans-serif font that offers excellent readability. It provides a clean and organized look for body texts, making it easy for visitors to read and navigate the content.
+
+![Poppins](README_docs/images/poppins.png
 - Quicksand (Body Font):
   - Quicksand is another modern sans-serif font known for its rounded and friendly appearance. It pairs well with Poppins and offers a slightly different feel, contributing to a visually pleasing and approachable design.
+
+![Quicksand](README_docs/images/quicksand.png "quicksand")
+
 - Cinzel Decorative (Header Font):
   - Cinzel Decorative brings the alchemical vibes with its decorative and mystical style, making headers and titles stand out, adding a touch of intrigue and uniqueness to the design.
 
-![Poppins](README_docs/images/poppins.png "poppins")
+![Cinzel_Decorative](README_docs/images/cinzel_decorative.png "cinzel_decorative")
 
 Overall, this combination provides a clear distinction between body text and headers while maintaining a cohesive and balanced visual appeal, creating the desired ambiance for the shop.
 
