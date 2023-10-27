@@ -661,12 +661,6 @@ input[name="q"]::placeholder {
   }
 }
 
-@media (max-width: 450px) {
-    .home-btn {
-        margin-bottom: 180%;
-    }
-}
-
 @media (max-width: 576px) {
     .attention-text {
         font-size: 24px;
@@ -688,9 +682,6 @@ input[name="q"]::placeholder {
         margin-bottom: 5%;
     }
     .disclaimer {
-        font-size: 70%;
-    }
-    .footer {
         font-size: 70%;
     }
 }

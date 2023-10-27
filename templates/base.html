@@ -4,8 +4,8 @@
 <html lang="en">
   <head>
     {% block meta %}
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta charset="utf-8"/>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -21,14 +21,14 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Quicksand:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
     {% endblock %} {% block extra_css %} {% endblock %} {% block corejs %}
     <script
       src="https://kit.fontawesome.com/b4a11e6ad7.js"
@@ -69,7 +69,8 @@
       <div id="topnav" class="row nav-background pt-lg-2 d-none d-lg-flex">
         <div class="col-2 d-flex justify-content-start">
           <!-- Sign-In Link -->
-          <li class="list-inline-item dropdown">
+          <ul>
+            <li class="list-inline-item dropdown">
             <a
               class="text-black nav-link"
               href="#"
@@ -109,7 +110,8 @@
               >
               {% endif %}
             </div>
-          </li>
+            </li>
+          </ul>
         </div>
         <div class="col-8 d-flex justify-content-center">
           <!-- Logo -->
@@ -289,12 +291,12 @@
 <!-- /.footer -->
 
     {% block after_footer %} {% endblock %} {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
       $(".toast").toast("show");
     </script>
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script
-        type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+        >(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
     {% endblock %}
   </body>
 </html>
