@@ -1077,10 +1077,69 @@ With your S3 bucket now set up, you can create a new folder called media and upl
 The HTML was validated by manually navigating through the application pages and using the W3C Validator.
 The results:
 
-<details><summary>Home</summary><br/>
-<img src="README_docs/images/html_validator.png" alt="HTML Validator About Us">
+<details><summary>Home page</summary><br/>
+<img src="README_docs/images/home_validation.png" alt="Home page validation">
 </details>
 
+<details><summary>Product page</summary><br/>
+<img src="README_docs/images/product_validation.png" alt="Product page validation">
+</details>
+
+<details><summary>Product Detail page</summary><br/>
+<img src="README_docs/images/product_detail_validation.png" alt="Product Detail page validation">
+</details>
+
+<details><summary>Herb page</summary><br/>
+<img src="README_docs/images/herb_validation.png" alt="Herb page validation">
+</details>
+
+<details><summary>About Us page</summary><br/>
+<img src="README_docs/images/about_us_validation.png" alt="About Us page validation">
+</details>
+
+<details><summary>Membership members page</summary><br/>
+<img src="README_docs/images/membership_member_validation.png" alt="Membership members page validation">
+</details>
+
+<details><summary>Membership page</summary><br/>
+<img src="README_docs/images/membership_validation.png" alt="Membership page validation">
+</details>
+
+<details><summary>Contact page</summary><br/>
+<img src="README_docs/images/contact_validation.png" alt="Contact page validation">
+</details>
+
+<details><summary>Shopping bag page</summary><br/>
+<img src="README_docs/images/bag_validation.png" alt="Shopping bag page validation">
+</details>
+
+<details><summary>Checkout page</summary><br/>
+<img src="README_docs/images/checkout_validation.png" alt="Checkout validation">
+</details>
+
+<details><summary>Checkout Success page</summary><br/>
+<img src="README_docs/images/checkout_success_validation.png" alt="Checkout Success page validation">
+</details>
+
+<details><summary>My profile page</summary><br/>
+<img src="README_docs/images/my_profile_validation.png" alt="My profile page validation">
+</details>
+
+<details><summary>404 page</summary><br/>
+<img src="README_docs/images/404_validation.png" alt="404 page validation">
+</details>
+
+<details><summary>Sign Up page</summary><br/>
+<img src="README_docs/images/registration_validation.png" alt="Sign Up page validation">
+</details>
+
+<details><summary>Sign In page</summary><br/>
+<img src="README_docs/images/login_validation.png" alt="Sign In page validation">
+</details>
+
+<details><summary>Sign Out page</summary><br/>
+<img src="README_docs/images/logout_validation.png" alt="Sign Out page validation">
+</details>
 
 To validate all CSS code written and used in this website, W3C CSS Validator was used.
 The results:
