@@ -7,8 +7,12 @@ class ContactForm(forms.ModelForm):
         model = ContactSubmission
         fields = ['name', 'email', 'subject', 'message']
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'custom-field'}),
-            'email': forms.EmailInput(attrs={'class': 'custom-field'}),
-            'subject': forms.TextInput(attrs={'class': 'custom-field'}),
-            'message': forms.Textarea(attrs={'class': 'custom-field'}),
+            'name': forms.TextInput(attrs={'class': 'custom-field',
+                                           'placeholder': 'Name'}),
+            'email': forms.EmailInput(attrs={'class': 'custom-field',
+                                             'placeholder': 'Email'}),
+            'subject': forms.TextInput(attrs={'class': 'custom-field',
+                                              'placeholder': 'Subject'}),
+            'message': forms.Textarea(attrs={'class': 'custom-field',
+                                             'placeholder': 'Message'}),
         }

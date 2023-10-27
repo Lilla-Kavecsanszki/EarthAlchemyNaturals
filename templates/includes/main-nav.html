@@ -129,7 +129,7 @@
     </li>
     {% if user.is_superuser %}
     <li class="nav-item dropdown">
-        <a class="banner-font font-weight-bold nav-link text-black mr-5" aria-current="admin page" href="{% url 'admin:index' %}">Admin</a>
+        <a class="banner-font font-weight-bold nav-link text-black mr-5" href="{% url 'admin:index' %}">Admin</a>
     </li>
     {% endif %}
   </ul>

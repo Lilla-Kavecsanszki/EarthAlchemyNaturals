@@ -474,17 +474,18 @@ input[name="q"]::placeholder {
 
 /* Contact Form */
 
-.custom-label {
-  font-weight: bold;
-}
-
 .custom-field {
   box-shadow: 1px 3px 6px 0 #daa520;
+text-align: center;
   border: transparent;
   border-radius: 20px;
   background-color: whitesmoke;
   padding: 5px;
   width: 50%;
+}
+
+.custom-field::placeholder {
+    text-align: center;
 }
 
 .contact-button {

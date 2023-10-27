@@ -15,7 +15,6 @@
       <hr />
     </div>
   </div>
-
   <div class="row">
     <div class="col-12 col-md-6">
       <form
@@ -37,12 +36,12 @@
       </form>
     </div>
   </div>
-  {% endblock %}
 </div>
+{% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];
             $('#filename').text(`Image will be set to: ${file.name}`);

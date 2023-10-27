@@ -21,19 +21,15 @@
       <form method="post">
   {% csrf_token %}
   <div class="form-group">
-    <label for="{{ form.name.id }}" class="custom-label">Name:</label>
     {{ form.name }}
   </div>
   <div class="form-group">
-    <label for="{{ form.email.id }}" class="custom-label">Email:</label>
     {{ form.email }}
   </div>
   <div class="form-group">
-    <label for="{{ form.subject.id }}" class="custom-label">Subject:</label>
     {{ form.subject }}
   </div>
   <div class="form-group">
-    <label for="{{ form.message.id }}" class="custom-label">Message:</label>
     {{ form.message }}
   </div>
   <button type="submit" class="btn contact-button">Submit</button>

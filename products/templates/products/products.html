@@ -139,13 +139,11 @@
       </div>
       {% if forloop.counter|divisibleby:2 %}
       <div class="col-12 d-md-none d-lg-none mb-5">
-        <hr />
+        <hr/>
       </div>
       {% endif %} {% endfor %}
     </div>
   </div>
-</div>
-</div>
 <div class="help-button shadow-sm rounded-0">
     <a class="help-link d-flex h-100" href="{% url 'contact_us' %}">
         <i class="fa-solid fa-circle-info fa-bounce fa-xl mx-auto my-auto" style="color: #daa520;"></i>
@@ -156,7 +154,7 @@
 {% block postloadjs %}
 {{ block.super }}
 
-<script type="text/javascript">
+<script>
     $('#sort-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);

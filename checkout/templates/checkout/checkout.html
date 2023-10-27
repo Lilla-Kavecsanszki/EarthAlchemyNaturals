@@ -122,14 +122,14 @@
               checked
             />
             {% else %}
-            <label class="form-check-label" for="id-save-info">
+            <p class="form-check-label">
               <a class="text-gold" href="{% url 'account_signup' %}"
                 >Create an account</a
               >
               or
               <a class="text-gold" href="{% url 'account_login' %}">login</a> to
               save this information
-            </label>
+            </p>
             {% endif %}
           </div>
         </fieldset>
@@ -174,14 +174,14 @@
   </div>
 </div>
 <div id="loading-overlay">
-  <h1 class="logo-font loading-spinner">
+  <div class="logo-font loading-spinner">
     <span class="icon">
       <i
         class="fa-solid fa-arrows-rotate fa-spin fa-3x"
         style="color: #222222"
       ></i>
     </span>
-  </h1>
+  </div>
 </div>
 {% endblock %} {% block postloadjs %} {{ block.super }}
 <!-- public key -->
