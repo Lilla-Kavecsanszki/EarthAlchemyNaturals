@@ -6,9 +6,20 @@ body {
   background: url("/media/photoshopped_homepage.jpg") no-repeat center center
     fixed;
   background-size: cover;
-  height: calc(100vh - 164px);
+  min-height: calc(100vh - 164px);
   color: #555;
   font-family: "Poppins", sans-serif;
+}
+
+/* for mobile user icon dropdown 
+https: //stackoverflow.com/questions/41917383/bootstrap-center-align-a-dropdown-menu
+*/
+.dropdown-menu-center {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
 }
 
 .logo-font {
@@ -96,7 +107,6 @@ body {
 }
 
 /* Gold shimmer - https: //codepen.io/Amarjit/pen/mrbjNy */
-
 .light {
   background: -moz-linear-gradient(
     -45deg,
@@ -476,7 +486,7 @@ input[name="q"]::placeholder {
 
 .custom-field {
   box-shadow: 1px 3px 6px 0 #daa520;
-text-align: center;
+  text-align: center;
   border: transparent;
   border-radius: 20px;
   background-color: whitesmoke;

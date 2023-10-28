@@ -1286,8 +1286,13 @@ The below websites and Youtube channels have been used to understand the logic o
 
 - The walk-through project 'Boutique Ado' from Code Institute videos - its codes were also heavily used in the project: <https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/>
 
+- <https://www.youtube.com/watch?v=YZvRrldjf1Y>
+
 - shimmer button: <https://codepen.io/Amarjit/pen/mrbjNy>
 - admin site list_display: <https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display>
+
+- to reference a model, as FK from a different app:
+<https://stackoverflow.com/questions/47114569/creating-a-foreign-key-for-user-from-one-app-to-another-in-django>
 
 - contact - email send: 
   - <https://docs.djangoproject.com/en/3.2/topics/email/>
@@ -1317,6 +1322,9 @@ https://stackoverflow.com/questions/324477 in-a-django-form-how-do-i-make-a-fiel
 
 - Rendering different templates to the same URL:
 <https://stackoverflow.com/questions/46773416/rendering-different-templates-to-the-same-url-pattern-in-django>
+
+- Center dropdown menu:
+<https://stackoverflow.com/questions/41917383/bootstrap-center-align-a-dropdown-menu>
 
 I'd like to express my sincere thanks to my mentor, Elaine Roche, and the tutoring team for their unwavering support and valuable feedback. Their guidance, tips, and resources have been instrumental in improving my coding and testing skills. I'd also like to highlight Oisin and Jason for helping me with my most challenging bugs. While Elaine has embarked on a new journey, she was instrumental in initiating this project and guiding me throughout this year and four previous projects. Gareth McGirr has since taken me under his mentoring wings, and I am very appreciative of his assistance, suggestions, and ideas that have contributed to the project's finest appearance and functionality.
 
