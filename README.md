@@ -163,8 +163,29 @@ For easy access, you can find the Epics, Issues/ User Stories with their Accepta
 
 Wireframes were utilized during the design process, generated with Balsamiq to plan and design the interface layout for different screen sizes.
 
-[Wireframe - Home page](README_docs/wireframes_homepage.pdf)
+[Wireframe - Home page](README_docs/home.pdf)
 
+[Wireframe - Authentication pages](README_docs/authentication.pdf)
+
+[Wireframe - Product related pages](README_docs/product_related.pdf)
+
+[Wireframe - Herb page](README_docs/herb.pdf)
+
+[Wireframe - About Us page](README_docs/about_us.pdf)
+
+[Wireframe - Contact page](README_docs/contact.pdf)
+
+[Wireframe - Shopping Bag related pages](README_docs/shopping_bag_related.pdf)
+
+[Wireframe - Checkout related pages](README_docs/checkout_related.pdf)
+
+[Wireframe - My Profile page](README_docs/my_profile.pdf)
+
+[Wireframe - Membership related pages](README_docs/membership_related.pdf)
+
+[Wireframe - Product Management page](README_docs/product_management.pdf)
+
+[Wireframe - 404 page](README_docs/404.pdf)
 
 ### Entity Relationship Diagrams
 
