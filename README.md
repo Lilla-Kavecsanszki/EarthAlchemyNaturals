@@ -722,7 +722,6 @@ In this project, several measures were taken to tackle SEO. These measures inclu
 
 - "description" and "keyword" meta tags in the html
 - relevant site title and well informed, trustworthy page contents (especially, the About Us and Herbs pages) to help ranking
-- useful links on the Herbs pages - External links, that are the sources for the herb descriptions - to ensure trustworthiness
 - descriptive alt tags, URL and aria attributes
 - rel="noopener nofollow" added to footer and all external links
 
@@ -793,6 +792,7 @@ To comply with GDPR requirements, a privacy policy was generated, using the webs
 
 - Prompting members to renew after membership expires
 - Being able to share Feedback and Reviews (US 42)
+- Improving UX, (to make sure that all links and button hover translates the feel and look of the rest of the website)
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
@@ -856,7 +856,6 @@ How the Features align with and fulfill the User Stories by providing the necess
   
 </details>
 <br>
-
 
 <p>
 <details><summary>ElephantSQL</summary><br/>
@@ -1212,10 +1211,11 @@ I asked friends and family to look at the application on their devices, browsers
 ## Bugs
 
 1. 
-  The checkout_success function brake when I added the membership purchase logic to it. The error occured essentially because the profile variable was not defined in the scope of the checkout_success function when however it was called. I could resolve the problem by adding the 'profile = UserProfile.objects.get(user=request.user)' line inside the if statement, just as it was done under this for the authentication bit.
+  The checkout_success function brake when I added the membership purchase logic to it. The error occured essentially because the profile variable was not defined in the scope of the checkout_success function when however it was called. The problem could be resolved by adding the 'profile = UserProfile.objects.get(user=request.user)' line inside the if statement, just as it was done under this for the authentication bit.
 
 debugging statement in profile.html:
 
+```
 {% if user.is_authenticated %}
 <p>User is authenticated</p>
 <p>Membership Status: {{ user.userprofile.membership_status }}</p>
@@ -1227,15 +1227,26 @@ debugging statement in profile.html:
 {% else %}
 <p>User is not authenticated</p>
 {% endif %}
-
-result: not present in the form
-
-https://stackoverflow.com/questions/46773416/rendering-different-templates-to-the-same-url-pattern-in-django
+```
+result was: not present in the form
 
 2. 
    Integrity Error occured, when trying to register, login. Foreign Key constraint failed:
 
-   In the create_or_update_user_profile, needed to also pass the membership_status when we create the user profile. The user object contained all the dat needed, but not the membership_status. We use get_or_create, to set the membership status to 'None', but that also returned a tuple, so eventually the solution was to get seperated by saying: membership_instance, created. This means we get membership_instance as an instance of Membership, and created as True/False.
+   In the create_or_update_user_profile, needed to also pass the membership_status when creating the user profile. The user object contained all the data needed, but not the membership_status. By using get_or_create, the membership status was set to 'None', but that also returned a tuple. Therefore the solution was to get seperated by saying: membership_instance, created. This means we get membership_instance as an instance of Membership, and created as True/False.
+
+3. 
+   The payment intents in Stripe and the confirmation emails also were failing to arrive. The issue was that I tried to use the user to determine whether the order was made by a member, in the save method (OrderLineItem model) to calculate the discount. But since the request is coming from Stripe to the webhook handler, there is no user.
+   Solution was to to access the user profile instead of the user.
+   So instead, to ensure that when a logged-in user creates an order, their profile is saved to the order immediately, this had to be done in the checkout view (just like in the checkout success view) before saving order line items.
+   Then the orderlineitem save method needed to get the user_profile from the order instead of using the user. An if statement was also needed as the user_profile field on the order could be blank;
+
+```
+def save(self, *args, **kwargs):
+user_profile = self.order.user_profile
+
+if user_profile: -> then apply the discount
+```
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
@@ -1245,8 +1256,11 @@ https://stackoverflow.com/questions/46773416/rendering-different-templates-to-th
 
 All images were taken from [Unsplash.com](https://unsplash.com/)
 
-Inspiration:
+Inspiration for feel, look, general idea:
 - <https://www.naturisimo.com/>
+- <https://www.beautypie.com>
+
+For the logic of the membership system (however ended up with a % solution):
 - <https://www.beautypie.com>
 
 Resources:
@@ -1261,7 +1275,7 @@ Resources:
 - rose:
 https://www.health.com/search?q=rose
 
-The overall content and wording of the website, enriched with the collaborative contributions of my sister, Georgina Kavecsanszki, a distinguished story-teller and PR expert, reflects her valuable input and assistance. Her creative contributions have significantly enhanced the quality of this work. My gratitude for her contribution!
+My sister, Georgina Kavecsanszki, a talented storyteller and PR expert, greatly improved the content and wording of this website with her valuable contributions. I'm thankful for her help!
 
 ## Acknowledgments and Code
 
@@ -1270,36 +1284,41 @@ To ensure the creation of a successful and comprehensive project, I researched s
 
 The below websites and Youtube channels have been used to understand the logic of building this project with Django;
 
-The walk-through project 'Boutique Ado' from Code Institute videos - its codes were also heavily used in the project: <https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/>
+- The walk-through project 'Boutique Ado' from Code Institute videos - its codes were also heavily used in the project: <https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/>
 
+- shimmer button: <https://codepen.io/Amarjit/pen/mrbjNy>
+- admin site list_display: <https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display>
 
-shimmer button : <https://codepen.io/Amarjit/pen/mrbjNy>
-admin site list_display: <https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display>
-forms: https://docs.djangoproject.com/en/3.2/ref/forms/fields/
-https://docs.djangoproject.com/en/3.2/ref/forms/fields/
+- contact - email send: 
+  - <https://docs.djangoproject.com/en/3.2/topics/email/>
+  - <https://medium.com/powered-by-django/send-emails-with-django-contact-form-example-d8820c875731>
 
-contact - email send: <https://docs.djangoproject.com/en/3.2/topics/email/>
-<https://medium.com/powered-by-django/send-emails-with-django-contact-form-example-d8820c875731>
+- forms: 
+  - https://docs.djangoproject.com/en/3.2/ref/forms/fields/
+  - https://docs.djangoproject.com/en/3.2/ref/forms/fields/
 
-customising the form fields
-https://stackoverflow.com/questions/65730017/using-widgets-to-change-the-css-of-label-in-django-forms
-https://stackoverflow.com/questions/43762471/how-to-use-the-attrs-in-forms-charfieldwidget-forms-passwordinput
-how to make a form field read only, not editable
-https://stackoverflow.com/questions/324477/in-a-django-form-how-do-i-make-a-field-readonly-or-disabled-so-that-it-cannot
+- customising the form fields:
+  - https://stackoverflow.com/questions/65730017/using-widgets-to-change-the-css-of-label-in-django-forms
+  - https://stackoverflow.com/questions/43762471 how-to-use-the-attrs-in-forms-charfieldwidget-forms-passwordinput
+  - how to make a form field read only, not editable
+https://stackoverflow.com/questions/324477 in-a-django-form-how-do-i-make-a-field-readonly-or-disabled-so-that-it-cannot
 
-membership
+- membership (as the start off, as not going with subscription but a one off payment):
 <https://levelup.gitconnected.com/building-a-membership-system-in-django-under-5-mins-5efd7e03627d>
 
-<https://stackoverflow.com/questions/57019042/django-time-zone-and-timezone-now>
-
-https://www.geeksforgeeks.org/python-datetime-timedelta-function/
+- date and time:
+  - <https://stackoverflow.com/questions/57019042/django-time-zone-and-timezone-now>
+  - https://www.geeksforgeeks.org/python-datetime-timedelta-function/
 
 <https://stackoverflow.com/questions/4406377/django-request-to-find-previous-referrer>
 
-round up
+- round up decimals:
 <https://www.freecodecamp.org/news/how-to-round-to-2-decimal-places-in-python/>
 
-I also would like to take the chance and express my sincere gratitude to my mentor, Elaine Roche, and the tutoring team, especially Oisin and Jason, for their steadfast support and invaluable feedback. Their guidance, tips, and resources have played a crucial role in enhancing my coding and testing skills. While Elaine has embarked on a new journey, she was instrumental in initiating this project and guiding me throughout this year and four previous projects. Gareth McGirr has since taken me under his mentoring wings, and I am very appreciative of his assistance, suggestions, and ideas that have contributed to the project's finest appearance and functionality.
+- Rendering different templates to the same URL:
+<https://stackoverflow.com/questions/46773416/rendering-different-templates-to-the-same-url-pattern-in-django>
+
+I'd like to express my sincere thanks to my mentor, Elaine Roche, and the tutoring team for their unwavering support and valuable feedback. Their guidance, tips, and resources have been instrumental in improving my coding and testing skills. I'd also like to highlight Oisin and Jason for helping me with my most challenging bugs. While Elaine has embarked on a new journey, she was instrumental in initiating this project and guiding me throughout this year and four previous projects. Gareth McGirr has since taken me under his mentoring wings, and I am very appreciative of his assistance, suggestions, and ideas that have contributed to the project's finest appearance and functionality.
 
 ## Disclaimer
 
