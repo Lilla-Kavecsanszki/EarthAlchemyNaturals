@@ -242,7 +242,8 @@ The chosen color palette for the EarthAlchemy Naturals website serves the purpos
 - Poppins (Body Font):
   - Poppins is a modern and versatile sans-serif font that offers excellent readability. It provides a clean and organized look for body texts, making it easy for visitors to read and navigate the content.
 
-![Poppins](README_docs/images/poppins.png
+![Poppins](README_docs/images/poppins.png "poppins")
+
 - Quicksand (Body Font):
   - Quicksand is another modern sans-serif font known for its rounded and friendly appearance. It pairs well with Poppins and offers a slightly different feel, contributing to a visually pleasing and approachable design.
 
@@ -718,7 +719,9 @@ To ensure a consistent user experience and address unexpected events in a user-f
 
 ### F35 Site Engine Optimization (SEO)
 
-In this project, several measures were taken to tackle SEO. These measures includes the incorporation of related keywords and phrases as follows:
+In this website, a B2C (Business-to-Consumer) e-commerce model is employed, which involves selling products directly to customers. The customers make single online payments to complete their purchases.
+
+In the project several measures were taken to tackle SEO. These measures includes the incorporation of related keywords and phrases as follows:
 
 - "description" and "keyword" meta tags in the html
 - relevant site title and well informed, trustworthy page contents (especially, the About Us and Herbs pages) to help ranking
@@ -793,6 +796,7 @@ To comply with GDPR requirements, a privacy policy was generated, using the webs
 - Prompting members to renew after membership expires
 - Being able to share Feedback and Reviews (US 42)
 - Improving UX, (to make sure that all links and button hover translates the feel and look of the rest of the website)
+  - Better photoshopping work on product images
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
@@ -1211,7 +1215,7 @@ I asked friends and family to look at the application on their devices, browsers
 ## Bugs
 
 1. 
-  The checkout_success function brake when I added the membership purchase logic to it. The error occured essentially because the profile variable was not defined in the scope of the checkout_success function when however it was called. The problem could be resolved by adding the 'profile = UserProfile.objects.get(user=request.user)' line inside the if statement, just as it was done under this for the authentication bit.
+   The checkout_success function brake when I added the membership purchase logic to it. The error occured essentially because the profile variable was not defined in the scope of the checkout_success function when however it was called. The problem could be resolved by adding the 'profile = UserProfile.objects.get(user=request.user)' line inside the if statement, just as it was done under this for the authentication bit.
 
 debugging statement in profile.html:
 
