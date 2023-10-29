@@ -12,7 +12,7 @@
             {% endif %}
         </div>
     </a>
-    <div class="dropdown-menu dropdown-menu-center  border-0" aria-labelledby="user-options2">
+    <div class="dropdown-menu dropdown-menu-center border-0" aria-labelledby="user-options2">
         {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
         {% endif %}

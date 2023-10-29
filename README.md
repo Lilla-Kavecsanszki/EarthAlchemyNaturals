@@ -81,7 +81,7 @@ In summary, the EarthAlchemy Naturals website effectively supports visitors in a
 
 - US101: User Registration: As a new user, I can register an account with my email and password so that I can view my profile.
 - US102: User Authentication: As a returning user, I can log in using my existing credentials or log out so that I can access my personal information in a secure way.
-- US103:  Receive Email Confirmation After Registration: As a new user, I can receive an email confirmation after registering so that I can verify that my account registration was successful.
+- US103:  Receive Email Confirmation After Registration: As a new user I can receive an email confirmation after submitting the registration form so that I can verify my email address and complete the registration process.
 - US104:  Personal User Profile: As a site user, I can access my personalized user profile so that I can view my order history and payment information and keep track of purchases
 
 #### Epic 2: Product Management
@@ -458,7 +458,7 @@ The notable addition to this page is the large image on the right-hand side, whi
 
 ![Herb](README_docs/images/herb.png "herb")
 
-### F16 Back to the Shop
+### F15 Back to the Shop
 
 At the bottom of the page, you'll find a 'Keep Shopping' button, which provides a seamless way for the user to navigate back to the shop and enhances the overall shopping experience on the site.
  
@@ -466,7 +466,7 @@ At the bottom of the page, you'll find a 'Keep Shopping' button, which provides 
 
 ## About Us Page
 
-### F17 The Company
+### F16 The Company
 
 On the 'About Us' page, users can learn about the company, its values, and their story. The page explains their mission and concludes with an inviting paragraph, encouraging users to join their community. Additionally, a prominent photo on the page shows a woman in a lab coat preparing a serum in a laboratory setting, conveying the company's commitment to a serious approach in creating their products.
 
@@ -474,7 +474,7 @@ On the 'About Us' page, users can learn about the company, its values, and their
 
 ## Membership Page
 
-### F18 Non-Member View
+### F17 Non-Member View
 
 When a non-member user visits the Membership page, they'll find a descriptive overview of the membership, its price, and the option to purchase it through the 'Add to Bag' button. The description is enhanced with colorful emojis to capture the shopper's attention and maintain engagement.
 
@@ -484,19 +484,19 @@ As an alternative, users can easily return to the shop by clicking the 'Shop' bu
 
 ![Membership non_member](README_docs/images/membership_non_member.png "membership_non_member")
 
-### F19 Member View
+### F18 Member View
 
 When a member user navigates to the Membership page, they will find a different view. It will show the same membership image on the left side, however the rest of the page will display the membership details of the user, and the VIP Box feature.
 
 ![Membership member](README_docs/images/membership_member.png "membership_member")
 
-### F20 Membership Details
+### F19 Membership Details
 
 This section provides the user's membership details, customizing the title by incorporating their username, creating a personalized and engaging touch. It also displays the user's join date to the program and reminds them that their membership remains valid for 365 days. Finally, it also shows the user's current packaging choice.
 
 ![Membership Details](README_docs/images/current_situation.png "membership_details")
 
-### F21 VIP Box
+### F20 VIP Box
 
 Members also enjoy exclusive access to the VIP Box feature, allowing them to create personalized packaging for their orders. The packaging is available in two luxurious colors, matching the brand's signature pink and gold. This conveys the sense of luxury and exclusivity that comes with being a member.
 
@@ -514,7 +514,7 @@ Furthermore, members have the flexibility to cancel their VIP Box and return to 
 
 ## Contact Us Page
 
-### F22 Contact Form
+### F21 Contact Form
 
 The Contact page includes a contact form where users can provide their name, email address, subject, message, and then send their questions, messages, or reviews by clicking the 'Submit' button. This page offers users a convenient way to reach out to the company, whether for product inquiries, delivery-related questions, or any other reason. By including their email address in the form, users make it possible for the admin team to respond promptly.
 Therefore all fields in the form are mandatory, and the site validates the correctness of the email address before allowing the user to proceed with the submission.
@@ -527,7 +527,7 @@ Finally, users can locate a 'Back to the Shop' button underneath the contact for
 
 ![Back_to_Shop](README_docs/images/back_to_shop.png "back_to_shop")
 
-## F23 Pop-up Messages
+## F22 Pop-up Messages
 
 Pop-up messages are utilized to inform users of the results of their interactions with the website. Activities such as adding items to the shopping bag, any update on the shopping cart's contents, events related to VIP boxes, submitting orders, or logging in and out etc trigger these messages, offering users immediate feedback on the event.
 
@@ -541,7 +541,7 @@ For example:
 
 ## Shopping Bag and Checkout
 
-### F24 Shopping Bag and its Page
+### F23 Shopping Bag and its Page
 
 The application utilizes a 'shopping bag' where shoppers can keep track of the items they add to it. The running total of the shopping bag, which includes any applicable member's discounts, is continuously displayed beneath the shopping bag icon at the top right of the screen and is accessible from all pages.
 
@@ -562,7 +562,7 @@ When the shopping bag is empty:
 
 ![Empty Bag](README_docs/images/bag_empty.png "bag_empty")
 
-### F25 Shopping Bag Calculation
+### F24 Shopping Bag Calculation
 
 Beneath the list of line items, users are presented with a financial summary of their potential purchase. This summary includes the shopping bag total, delivery cost, and the grand total, with the member's discount factored into the calculation when applicable.
 
@@ -570,13 +570,13 @@ For members making a purchase, the summary also highlights the savings they've m
 
 ![Bag Calculations](README_docs/images/bag_calculations.png "bag_calculations")
 
-### F26 Secure Checkout Buttons
+### F25 Secure Checkout Buttons
 
 On this page, users have the option to either return and continue shopping or proceed to the checkout process using the respective buttons located at the bottom of the page.
 
 ![Checkout Button](README_docs/images/checkout_button.png "checkout_button")
 
-### F27 Checkout Page
+### F26 Checkout Page
 
 When users click on the 'Secure Checkout' button, they are redirected to the checkout page. Here, they encounter a checkout form along with an order summary on the right-hand side.
 
@@ -600,7 +600,7 @@ Previously saved and so prepopulated:
 
 ![Prepopulated Checkout](README_docs/images/profile_saved_checkout_member.png "prepopulated_checkout_form")
 
-### F28 Complete Order Button and Secure Payment
+### F27 Complete Order Button and Secure Payment
 
 When all details are correctly filled in, the shopper can proceed with the payment by clicking the 'Complete Order' button. Alternatively, they can return to the Shopping Bag page to make adjustments using the button on the left-hand side.
 
@@ -616,7 +616,7 @@ Payments are securely processed by Stripe widgets within the application, with w
 
 ![Stripe Events](README_docs/images/stripe_events.png "stripe_events")
 
-### F29 Checkout Success and Order Confirmation
+### F28 Checkout Success and Order Confirmation
 
 After the order has been successfully submitted and the payment processed, the user is presented with the Checkout Success page and also receives an email confirmation with their order summary.
 
@@ -634,7 +634,7 @@ This can be expanded by clicking on the order number of each past order:
 
 ## Authentication
 
-### F30 Registration, Login and Logout
+### F29 Registration, Login and Logout
 
 Users have the option to sign up, sign in, and sign out on the site. Certain features, like the Profile or Membership is exclusively accessible to logged-in users. During the registration process, users are required to verify their email addresses to activate their accounts. After verification, the user is redirected to to the sign in page.
 
@@ -650,7 +650,7 @@ Users have the option to sign up, sign in, and sign out on the site. Certain fea
 
 ## Profile
 
-### F31 My Profile Page
+### F30 My Profile Page
 
 When a user is logged in, they have the option to save their delivery address on their profile page. The My Profile page can be accessed by clicking the user icon. If delivery details have been stored for a user, these details are automatically pre-filled on the checkout page, streamlining the checkout process. (shown previously at F27)
 
@@ -664,7 +664,7 @@ On the right-hand side of the page, users can access their Order History, as exp
 
 ## Membership
 
-### F32 Join, purchase Membership
+### F31 Join, purchase Membership
 
 Some functionalities of the application are based on the role of the user, just like the membership, as well. The user needs to be registered and logged in, to be able to purchase the membership and therefore join, otherwise they will receive an error message.
 
@@ -686,7 +686,7 @@ The is_membership_valid function checks the validity of a membership when it is 
 
 Data management is solely accessible to logged-in administrators (superusers).
 
-### F33 Data Management
+### F32 Data Management
 
 The administrator has complete access and authority to make alterations across every module of the website. This includes manipulation of the website's data, for example the ability to add new data, modify existing information, delete entries, or utilize the data as necessary. In essence, the administrator holds comprehensive control over the website's various modules, ensuring the efficient management and utilization of its data.
 
@@ -694,7 +694,7 @@ The administrator has complete access and authority to make alterations across e
 
 ![Admin_Window](README_docs/images/admin.png "admin_window")
 
-### F34 Product Management
+### F33 Product Management
 
 This feature is exclusively accessible to the admin user. Administrators have the capability to add, edit, and delete products on the website, allowing them to manage the shop without needing to access the Django Admin Window. To access the Product Management page, the logged-in admin can click the 'Product Management' option from the user icon menu. On this page, there is a product form that can be filled out and submitted by using the 'Add Product' button located at the bottom of the page.
 
