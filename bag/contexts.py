@@ -17,7 +17,7 @@ def bag_contents(request):
     if request.user.is_authenticated:
         has_valid_membership = is_membership_valid(request.user)
     else:
-        has_valid_membership = False  # Not authenticated, so not a valid
+        has_valid_membership = False  # Not authenticated, so not valid
 
     if has_valid_membership:
         discount_percentage = 30  # 30% discount for members

@@ -7,8 +7,6 @@ from django.db.models.functions import Lower
 
 from .forms import ProductForm
 
-# Create your views here.
-
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -93,7 +91,6 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            # print('form data: ', form.cleaned_data)
             product = form.save()
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
