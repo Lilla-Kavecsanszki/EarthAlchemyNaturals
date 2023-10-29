@@ -708,7 +708,7 @@ Once a product is added, it becomes visible to all site users and can be added t
 
 ![Product_Edit_Delete_Detail](README_docs/images/product_edit_delete_detail.png "product_edit_delete_detail")
 
-## F35 - Custom HTTP 404
+## F34 - Custom HTTP 404
 
 To ensure a consistent user experience and address unexpected events in a user-friendly way, a custom page is presented for any unanticipated 404 HTTP response codes.
 
@@ -716,7 +716,7 @@ To ensure a consistent user experience and address unexpected events in a user-f
 
 ## Marketing
 
-### F36 Site Engine Optimization (SEO)
+### F35 Site Engine Optimization (SEO)
 
 In this project, several measures were taken to tackle SEO. These measures includes the incorporation of related keywords and phrases as follows:
 
@@ -750,7 +750,7 @@ The most valuable short and long-tail keywords identified are:
 
 sitemap.xml and robots.txt files have also been added to the application to help search engine crawling.
 
-### F37 Facebook
+### F36 Facebook
 
 Another essential tool of the web marketing strategy involves leveraging social media to promote the site. A Facebook page was established for the company, and a link to it is accessible in the footer of every page also. 
 
@@ -772,7 +772,7 @@ Screenshots from both mobile and desktop view, also the first post of the compan
 
 ![Footer](README_docs/images/mobile_post_facebook.jpg "footer")
 
-### F38 Newsletter - MailChimp
+### F37 Newsletter - MailChimp
 
 As one of the web marketing tools for the application, a newsletter subscription option was introduced. This feature is conveniently located in the footer of every page on the site. Users can simply enter their email address and click the 'Subscribe' button to join the mailing list. This was accomplished by using Mailchimp.
 
@@ -780,7 +780,7 @@ As one of the web marketing tools for the application, a newsletter subscription
 
 ![Subscribers](README_docs/images/subscribers.png "subscribers")
 
-### F39 Privacy Policy and GDPR
+### F38 Privacy Policy and GDPR
 
 To comply with GDPR requirements, a privacy policy was generated, using the website [Privacy Policy Generator](https://www.privacypolicygenerator.info/). Users can find the link in the footer, and by clicking on it, they can download the page.
 
