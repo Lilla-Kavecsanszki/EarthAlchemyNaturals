@@ -31,6 +31,7 @@ Web marketing strategies include organic social media marketing via Facebook and
 - [User Story - Features Cross-Reference table](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#user-story---features-cross-reference-table)
 - [Deployment](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#deployment)
 - [Testing](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#testing)
+  - [Code Validation](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#code-validation)
   - [Manual Testing](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#manual-testing)
   - [Further Testing](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#further-testing)
   - [Bugs](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#bugs)
@@ -191,7 +192,7 @@ Wireframes were utilized during the design process, generated with Balsamiq to p
 
 To support the functionality of the EarthAlchemy Naturals app, the below models have been designed and implemented to store essential information in databases.
 
-The User tables in the ER diagram is for conceptual representation only and do not directly correspond to the models.py files or the physical database tables. It provides a logical view of data relationships without showing all the actual database details managed by Django and the database system.
+The User table in the ER diagram is for conceptual representation only and do not directly correspond to the models.py files or the physical database tables. It provides a logical view of data relationships without showing all the actual database details managed by Django and the database system.
 
 The Entity Relationship Diagrams below illustrate how the models are connected to each other:
 
@@ -830,7 +831,6 @@ How the Features align with and fulfill the User Stories by providing the necess
  Modifications pushed to the main branch will be implemented in the live project after re-deployment from Heroku. Ensure that you do not include DEBUG=True in the settings.py file on GitHub; this setting is intended exclusively for local use.
 
 </details>
-<br>
 
 **How to Fork**
 <p>
@@ -840,7 +840,6 @@ How the Features align with and fulfill the User Stories by providing the necess
 2. Click the fork button in the top right of the screen, between the watch, and the star buttons.
 
 </details>
-<br>
 
 **Deployment of the project**
 <p>
@@ -859,9 +858,7 @@ How the Features align with and fulfill the User Stories by providing the necess
   - Set the environment variables (same values as later in Heroku Config Vars)
   
 </details>
-<br>
 
-<p>
 <details><summary>ElephantSQL</summary><br/>
 
 - Create an account on [ElephantSQL](https://www.elephantsql.com/) and click "Create New Instance"
@@ -927,7 +924,6 @@ Do not commit with this database string in the code to avoid leaving database UR
 - This is your proof that the tables have been created and you can add data to your database.
 
 </details>
-<br>
 
 <details>
 <summary>Heroku</summary>
@@ -1097,6 +1093,8 @@ With your S3 bucket now set up, you can create a new folder called media and upl
 [Back to top](https://github.com/Lilla-Kavecsanszki/EarthAlchemyNaturals#contents)
 
 # Testing
+
+## Code Validation
 
 The HTML was validated by manually navigating through the application pages and using the W3C Validator.
 The results:
