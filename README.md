@@ -82,7 +82,7 @@ In summary, the EarthAlchemy Naturals website effectively supports visitors in a
 
 - US101: User Registration: As a new user, I can register an account with my email and password so that I can view my profile.
 - US102: User Authentication: As a returning user, I can log in using my existing credentials or log out so that I can access my personal information in a secure way.
-- US103:  Receive Email Confirmation After Registration: As a new user I can receive an email confirmation after submitting the registration form so that I can verify my email address and complete the registration process.
+- US103:  Receive Verification Email After Registration: As a new user I can receive an email confirmation after submitting the registration form so that I can verify my email address and complete the registration process.
 - US104:  Personal User Profile: As a site user, I can access my personalized user profile so that I can view my order history and payment information and keep track of purchases
 
 #### Epic 2: Product Management
